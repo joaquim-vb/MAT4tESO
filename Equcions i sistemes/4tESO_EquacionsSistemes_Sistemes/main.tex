@@ -1,0 +1,153 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{amsmath}
+
+% 1. MARGES I CAPÇALERA
+\geometry{top=4cm, bottom=3cm, left=2cm, right=2cm, headheight=2.5cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\includegraphics[height=1.8cm]{Logo_Departament.png}} 
+\fancyhead[R]{\includegraphics[height=1.8cm]{Logo_Institut.png}}
+
+\fancyfoot[L]{}
+\fancyfoot[C]{Pàgina \thepage\ de \pageref{LastPage}}
+\fancyfoot[R]{}
+
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+
+% --- CAPÇALERA D'IDENTIFICACIÓ ---
+\begingroup
+\renewcommand{\arraystretch}{2.2}
+\begin{tabularx}{\textwidth}{|X|p{4cm}|}
+    \hline
+    \textbf{Nom i cognoms:} & \textbf{Grup:} \\ \hline
+    \textbf{Activitat:} Sistemes d'equacions lineals & \textbf{Data:} \\ \hline
+\end{tabularx}
+\endgroup
+
+\vspace{0.8cm}
+
+\begin{center}
+    {\Large \textbf{FITXA DE TREBALL: SISTEMES D'EQUACIONS LINEALS}}
+\end{center}
+
+% --- EXERCICI 1: IGUALACIÓ ---
+\section*{Exercici 1: Mètode d'Igualació}
+Resoleu els següents sistemes mitjançant el mètode d'igualació. Indiqueu clarament quina variable aïlleu.
+
+\begin{enumerate}[label=\alph*), itemsep=1cm]
+    \begin{minipage}[t]{0.45\textwidth}
+    \item $\begin{cases} y = 2x - 3 \\ y = x + 1 \end{cases}$
+    \item $\begin{cases} x = 3y + 2 \\ x = 5y + 4 \end{cases}$
+    \item $\begin{cases} x + y = 5 \\ x - y = 1 \end{cases}$
+    \item $\begin{cases} y + 2x = 8 \\ y - x = 2 \end{cases}$
+    \item $\begin{cases} x + 3y = 10 \\ x - y = 2 \end{cases}$
+    \item $\begin{cases} 2(x - 1) = y \\ 3x - y = 4 \end{cases}$
+    \end{minipage}
+    \begin{minipage}[t]{0.45\textwidth}
+    \item $\begin{cases} x + 3y = 7 \\ 2x - y = 7 \end{cases}$
+    \item $\begin{cases} 3(x + y) = 15 \\ 2x - y = 1 \end{cases}$
+    \item $\begin{cases} 2x + y = 4 \\ 4x - y = 2 \end{cases}$
+    \item $\begin{cases} 2x + 3y = 2 \\ x - y = 0 \end{cases}$
+    \item $\begin{cases} 2x + y = 5 \\ 3x - 2y = 1 \end{cases}$
+    \item $\begin{cases} \frac{x}{2} + y = 3 \\ x - \frac{y}{3} = 4 \end{cases}$
+    \end{minipage}
+\end{enumerate}
+
+\newpage
+
+% --- EXERCICI 2: SUBSTITUCIÓ ---
+\section*{Exercici 2: Mètode de Substitució}
+Resoleu els següents sistemes mitjançant el mètode de substitució. Es recomana aïllar la variable amb coeficient 1 o -1.
+
+\begin{enumerate}[label=\alph*), itemsep=1cm]
+    \begin{minipage}[t]{0.45\textwidth}
+    \item $\begin{cases} x = 2y + 1 \\ 3x + y = 10 \end{cases}$
+    \item $\begin{cases} y = 5 - x \\ 2x - 3y = 0 \end{cases}$
+    \item $\begin{cases} x + 2y = 8 \\ 3x - y = 3 \end{cases}$
+    \item $\begin{cases} 2x + y = 7 \\ 3(x + y) = 15 \end{cases}$
+    \item $\begin{cases} 4x - y = 9 \\ 2x + 3y = 1 \end{cases}$
+    \item $\begin{cases} 2x + 3y = 12 \\ x - 2y = -1 \end{cases}$
+    \end{minipage}
+    \begin{minipage}[t]{0.45\textwidth}
+    \item $\begin{cases} 3x + 2y = 5 \\ 2x + y = 2 \end{cases}$
+    \item $\begin{cases} 2x + y = 3 \\ 3x - 2y = 2 \end{cases}$
+    \item $\begin{cases} 5x + y = 6 \\ 3x - 2y = 1 \end{cases}$
+    \item $\begin{cases} x - 3y = -7 \\ 2x + 5y = 19 \end{cases}$
+    \item $\begin{cases} 2(x-y) = 4 \\ 3x + y = 10 \end{cases}$
+    \item $\begin{cases} \frac{x+y}{2} = 3 \\ 2x - y = 1 \end{cases}$
+    \end{minipage}
+\end{enumerate}
+
+\newpage
+
+% --- EXERCICI 3: REDUCCIÓ ---
+\section*{Exercici 3: Mètode de Reducció}
+Resoleu els següents sistemes mitjançant el mètode de reducció (suma i resta).
+
+\begin{enumerate}[label=\alph*), itemsep=1cm]
+    \begin{minipage}[t]{0.45\textwidth}
+    \item $\begin{cases} 3x + y = 7 \\ 2x - y = 3 \end{cases}$
+    \item $\begin{cases} x + 4y = 10 \\ x + 2y = 6 \end{cases}$
+    \item $\begin{cases} x + 2y = 5 \\ 3x - 4y = 5 \end{cases}$
+    \item $\begin{cases} 2x + 3y = 8 \\ x - y = -1 \end{cases}$
+    \item $\begin{cases} 2x + 3y = 7 \\ 3x + 2y = 8 \end{cases}$
+    \item $\begin{cases} 5x - 2y = 1 \\ 4x + 3y = 10 \end{cases}$
+    \end{minipage}
+    \begin{minipage}[t]{0.45\textwidth}
+    \item $\begin{cases} 2(x + y) = 10 \\ 3x - 4y = 1 \end{cases}$
+    \item $\begin{cases} 3x + 4y = 2 \\ 2x + 3y = 1 \end{cases}$
+    \item $\begin{cases} 4x - 3y = 1 \\ 3x + 2y = 5 \end{cases}$
+    \item $\begin{cases} 2x + 5y = -1 \\ 3x - 2y = 8 \end{cases}$
+    \item $\begin{cases} x + y = 10 \\ 0.5x - 0.5y = 1 \end{cases}$
+    \item $\begin{cases} 10x + 2y = 12 \\ 5x - 3y = -2 \end{cases}$
+    \end{minipage}
+\end{enumerate}
+
+\newpage
+
+% --- EXERCICI 4: CLASSIFICACIÓ ---
+\section*{Exercici 4: Tipus de sistemes}
+Classifiqueu els següents sistemes. Indiqueu si són \textbf{SCD} (una solució), \textbf{SCI} (infinites solucions) o \textbf{SI} (sense solució). Ho podeu fer representant les corresponents rectes i/o procedint a resoldre els sistemes.
+
+\begin{enumerate}[label=\alph*), itemsep=1cm]
+    \begin{minipage}[t]{0.45\textwidth}
+    \item $\begin{cases} x + y = 5 \\ x + y = 8 \end{cases}$ \textbf{Tipus:} \\ 
+    \item $\begin{cases} 2x - y = 4 \\ 4x - 2y = 8 \end{cases}$ \textbf{Tipus:} \\ 
+    \item $\begin{cases} x + 2y = 3 \\ 3x + 6y = 10 \end{cases}$ \textbf{Tipus:} \\ 
+    \end{minipage}
+    \begin{minipage}[t]{0.45\textwidth}
+    \item $\begin{cases} x + y = 4 \\ x - y = 2 \end{cases}$ \textbf{Tipus:} \\ 
+    \item $\begin{cases} 0x + 0y = 0 \\ 2x - y = 3 \end{cases}$ \textbf{Tipus:} \\ 
+    \item $\begin{cases} 5x + 5y = 10 \\ x + y = 2 \end{cases}$ \textbf{Tipus:} \\ 
+    \end{minipage}
+\end{enumerate}
+
+
+% --- EXERCICI 5: ELECCIÓ DE L'ESTRATÈGIA ---
+\section*{Exercici 5: Estratègia i Eficiència}
+Observeu cada sistema i decidiu quin mètode (igualació, substitució o reducció) és més ràpid o genera menys errors. Justifiqueu breument la vostra elecció i resoleu-los.
+
+\begin{enumerate}[label=\alph*), itemsep=1cm]
+    \begin{minipage}[t]{0.45\textwidth}
+    \item $\begin{cases} x = 3y - 5 \\ x = 7 - y \end{cases}$ \\
+    \item $\begin{cases} 4x + 5y = 12 \\ 4x - 3y = 4 \end{cases}$\\
+    \item $\begin{cases} 2x + 7y = 15 \\ y = 2x - 3 \end{cases}$\\
+    \end{minipage}
+    \begin{minipage}[t]{0.45\textwidth}
+    \item $\begin{cases} 3x + 2y = 10 \\ 5x - 4y = 2 \end{cases}$ \\
+    \item $\begin{cases} x + y = 10 \\ 2x + 2y = 20 \end{cases}$ \\
+    \item $\begin{cases} 11x - 9y = 2 \\ 11x - 9y = 15 \end{cases}$\\
+    \end{minipage}
+\end{enumerate}
+\end{document}
