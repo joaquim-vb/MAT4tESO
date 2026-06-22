@@ -1,0 +1,224 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{amsmath}
+
+% 1. MARGES I CAPÇALERA
+\geometry{top=4cm, bottom=3cm, left=2cm, right=2cm, headheight=2.5cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+% Assegura't que tens els fitxers d'imatge o comenta aquestes línies si no els tens
+\fancyhead[L]{\includegraphics[height=1.8cm]{Logo_Departament.png}} 
+\fancyhead[R]{\includegraphics[height=1.8cm]{Logo_Institut.png}}
+
+\fancyfoot[L]{}
+\fancyfoot[C]{Pàgina \thepage\ de \pageref{LastPage}}
+\fancyfoot[R]{}
+
+\renewcommand{\headrulewidth}{0.4pt}
+
+% --- COMANDA PER DIVIDIR ELS TÍTOLS DE LES COLUMNES EN DUES LÍNIES ---
+\newcommand{\splitcell}[2]{\begin{tabular}{@{}c@{}}#1 \\ #2\end{tabular}}
+
+\begin{document}
+
+% --- CAPÇALERA D'IDENTIFICACIÓ ---
+\begingroup
+\renewcommand{\arraystretch}{2.2}
+\begin{tabularx}{\textwidth}{|X|p{4cm}|}
+    \hline
+    \textbf{Nom i cognoms:} & \textbf{Grup:} \\ \hline
+    \textbf{Fitxa 2 estadística:} Taules de freqüències i paràmetres & \textbf{Data:} \\ \hline
+\end{tabularx}
+\endgroup
+
+\vspace{0.4cm}
+
+% --- BREU EXPLICACIÓ (RECORDATORI) ---
+\begin{center}
+\fbox{\parbox{0.95\textwidth}{
+\textbf{Recordatori de conceptes clau:}
+\begin{itemize}[itemsep=2pt, leftmargin=1.5em]
+    \item \textbf{Freqüència absoluta ($f_i$):} Quantitat de vegades que es repeteix una dada exacta.
+    \item \textbf{Freqüència relativa ($h_i$):} Resultat de dividir $f_i$ pel total de dades ($N$). Per tenir el \textbf{\%}, multiplica aquest decimal per 100.
+    \item \textbf{Freq. acumulades ($F_i$, $H_i$):} S'obtenen anant sumant les freqüències de les files anteriors.
+\end{itemize}
+}}
+\end{center}
+\vspace{0.6cm}
+
+% --- EXERCICI 1 (AS) ---
+\noindent \textbf{EXERCICI 1 (Nivell AS): Nombre de mascotes} \\
+Hem preguntat a 15 alumnes quantes mascotes tenen a casa. Respostes:
+\begin{center}
+0, 1, 2, 1, 0, 0, 3, 1, 2, 4, 1, 0, 1, 2, 0
+\end{center}
+
+\begin{enumerate}[label=\alph*)]
+    \item Completa la taula de freqüències: calcula primer la columna de la freqüència absoluta, després la relativa, i finalment les acumulades.
+    
+    \begin{center}
+    \renewcommand{\arraystretch}{2.4}
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        \textbf{$x_i$} & \splitcell{\textbf{Freq abs}}{\textbf{($f_i$)}} & \multicolumn{2}{c|}{\splitcell{\textbf{Freq rel}}{\textbf{($h_i$)}}} & \splitcell{\textbf{Freq cum}}{\textbf{($F_i$)}} & \multicolumn{2}{c|}{\splitcell{\textbf{Freq cum rel}}{\textbf{($H_i$)}}} \\ \cline{3-4} \cline{6-7}
+        & & \textbf{càlcul} & \textbf{\%} & & \textbf{càlcul} & \textbf{\%} \\ \hline
+        0 & 5 & $\frac{5}{15} = 0,33$ & 33\% & 5 & 0,33 & 33\% \\ \hline
+        1 &   & $\frac{\hspace{0.8cm}}{\hspace{0.8cm}} = $ & & & & \\ \hline
+        2 &   & $\frac{\hspace{0.8cm}}{\hspace{0.8cm}} = $ & & & & \\ \hline
+        3 &   & $\frac{\hspace{0.8cm}}{\hspace{0.8cm}} = $ & & & & \\ \hline
+        4 &   & $\frac{\hspace{0.8cm}}{\hspace{0.8cm}} = $ & & & & \\ \hline
+        \textbf{Total} & \textbf{N = 15} & \textbf{1} & \textbf{100\%} & \multicolumn{3}{c|}{} \\ \hline
+    \end{tabular}
+    \end{center}
+
+    \begin{center}
+        \fbox{\parbox{0.95\textwidth}{
+        \textbf{Recordatori de conceptes clau:}
+        \begin{itemize}[itemsep=2pt, leftmargin=1.5em]
+            \item \textbf{Mitjana ($\bar{x}$):} Sumar tots els valors i dividir entre el total ($N$). 
+            \item \textbf{Mediana ($Me$):} El valor que queda just al mig quan ordenem totes les dades de petita a gran.
+            \item \textbf{Moda ($Mo$):} La dada (o l'interval) que té la freqüència absoluta ($f_i$) més alta; la que més es repeteix.
+        \end{itemize}
+        }}
+    \end{center}
+    \item Calcula les \textbf{mesures de centralització} (Mitjana, mediana i moda): \\[0.3cm]
+    $\bar{x} = $ \hspace{4cm} $Me = $ \hspace{4cm} $Mo = $
+\end{enumerate}
+\vspace{0.5cm}
+
+
+% --- EXERCICI 2 (AS) ---
+\noindent \textbf{EXERCICI 2 (Nivell AS): Llibres llegits} \\
+Durant aquest estiu, 20 estudiants han llegit la següent quantitat de llibres:
+\begin{center}
+2, 3, 1, 4, 2, 5, 2, 1, 3, 2, 2, 4, 3, 1, 2, 3, 2, 1, 5, 2
+\end{center}
+
+\begin{enumerate}[label=\alph*)]
+    \item Construeix la taula de freqüències completa:
+    \begin{center}
+    \renewcommand{\arraystretch}{2.4}
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        \textbf{$x_i$} & \splitcell{\textbf{Freq abs}}{\textbf{($f_i$)}} & \multicolumn{2}{c|}{\splitcell{\textbf{Freq rel}}{\textbf{($h_i$)}}} & \splitcell{\textbf{Freq cum}}{\textbf{($F_i$)}} & \multicolumn{2}{c|}{\splitcell{\textbf{Freq cum rel}}{\textbf{($H_i$)}}} \\ \cline{3-4} \cline{6-7}
+        & & \textbf{càlcul} & \textbf{\%} & & \textbf{càlcul} & \textbf{\%} \\ \hline
+        1 &   & $\frac{\hspace{0.8cm}}{\hspace{0.8cm}} = $ & & & & \\ \hline
+        2 &   & $\frac{\hspace{0.8cm}}{\hspace{0.8cm}} = $ & & & & \\ \hline
+        3 &   & $\frac{\hspace{0.8cm}}{\hspace{0.8cm}} = $ & & & & \\ \hline
+        4 &   & $\frac{\hspace{0.8cm}}{\hspace{0.8cm}} = $ & & & & \\ \hline
+        5 &   & $\frac{\hspace{0.8cm}}{\hspace{0.8cm}} = $ & & & & \\ \hline
+        \textbf{Total} & \textbf{N = } & \textbf{1} & \textbf{100\%} & \multicolumn{3}{c|}{} \\ \hline
+    \end{tabular}
+    \end{center}
+    
+    \item Calcula les \textbf{mesures de centralització} (Mitjana, mediana i moda): \\[0.3cm]
+    $\bar{x} = $ \hspace{4cm} $Me = $ \hspace{4cm} $Mo = $
+\end{enumerate}
+\vspace{0.8cm}
+
+\noindent \textbf{EXERCICI 3 (Nivell AS): Diari d'aula} \\
+Anota tots els aprenentatges sobre com fer taules de freqüència i calcular mesures de centralització al diari d'aula. Si fas els exercicis de AN i AE també cal que anotis els aprenentatges al diari d'aula un cop els hagis fet.
+
+\vspace{0.5cm}
+
+\noindent \textbf{A continuació tens un exemple resolt per poder fer els exercicis de AN i AE.}
+
+\vspace{0.5cm}
+
+% --- EXEMPLE RESOLT (PRE-AN) ---
+\noindent \textbf{EXEMPLE RESOLT: Treballar amb dades agrupades (Intervals)} \\
+Quan tenim molts valors diferents, els agrupem en \textbf{intervals}. L'interval $[10, 20)$ vol dir que inclou des del 10 fins just abans del 20. La \textbf{marca de classe ($x_i$)} és el punt exacte del mig de l'interval i s'utilitza per fer els càlculs, com la mitjana. Ex: $\frac{10+20}{2} = 15$.
+\begin{center}
+\renewcommand{\arraystretch}{2.2}
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+    \hline
+    \textbf{Interval} & \splitcell{\textbf{Marca}}{\textbf{($x_i$)}} & \splitcell{\textbf{Freq abs}}{\textbf{($f_i$)}} & \multicolumn{2}{c|}{\splitcell{\textbf{Freq rel}}{\textbf{($h_i$)}}} & \splitcell{\textbf{Freq cum}}{\textbf{($F_i$)}} & \multicolumn{2}{c|}{\splitcell{\textbf{Freq cum rel}}{\textbf{($H_i$)}}} \\ \cline{4-5} \cline{7-8}
+    & & & \textbf{càlcul} & \textbf{\%} & & \textbf{valor} & \textbf{\%} \\ \hline
+    $[0, 10)$  & 5  & 2 & $\frac{2}{10} = 0,2$ & 20\% & 2 & $0,2$ & 20\% \\ \hline
+    $[10, 20)$ & 15 & 5 & $\frac{5}{10} = 0,5$ & 50\% & 7 & $0,7$ & 70\% \\ \hline
+    $[20, 30]$ & 25 & 3 & $\frac{3}{10} = 0,3$ & 30\% & 10& $1,0$ & 100\% \\ \hline
+    \textbf{Total}    & --- & \textbf{N=10}& \textbf{1} & \textbf{100\%} & \multicolumn{3}{c|}{} \\ \hline
+\end{tabular}
+\end{center}
+\vspace{0.6cm}
+
+\newpage 
+
+
+% --- EXERCICI 4 (AN) ---
+\noindent \textbf{EXERCICI 4 (Nivell AN): Temps d'estudi} \\
+A l'institut hem registrat els minuts diaris que dediquen a l'estudi 16 alumnes:
+\begin{center}
+15, 25, 30, 45, 10, 55, 20, 35, 40, 50, 22, 38, 42, 18, 28, 48
+\end{center}
+
+\begin{enumerate}[label=\alph*)]
+    \item Completa la taula agrupant les dades en intervals de 15 minuts:
+    \begin{center}
+    \renewcommand{\arraystretch}{2.4}
+    \setlength{\tabcolsep}{5pt}
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+        \hline
+        \textbf{Interval} & \splitcell{\textbf{Marca}}{\textbf{($x_i$)}} & \splitcell{\textbf{Freq abs}}{\textbf{($f_i$)}} & \multicolumn{2}{c|}{\splitcell{\textbf{Freq rel}}{\textbf{($h_i$)}}} & \splitcell{\textbf{Freq cum}}{\textbf{($F_i$)}} & \multicolumn{2}{c|}{\splitcell{\textbf{Freq cum rel}}{\textbf{($H_i$)}}} \\ \cline{4-5} \cline{7-8}
+        & & & \textbf{càlcul} & \textbf{\%} & & \textbf{valor} & \textbf{\%} \\ \hline
+        $[0, 15)$  & 7,5  & & $\frac{\hspace{0.8cm}}{\hspace{0.8cm}} = $ & & & & \\ \hline
+        $[15, 30)$ & 22,5 & & $\frac{\hspace{0.8cm}}{\hspace{0.8cm}} = $ & & & & \\ \hline
+        $[30, 45)$ & 37,5 & & $\frac{\hspace{0.8cm}}{\hspace{0.8cm}} = $ & & & & \\ \hline
+        $[45, 60]$ & 52,5 & & $\frac{\hspace{0.8cm}}{\hspace{0.8cm}} = $ & & & & \\ \hline
+        \textbf{Total}    & --- & \textbf{N=16} & \textbf{1} & \textbf{100\%} & \multicolumn{3}{c|}{} \\ \hline
+    \end{tabular}
+    \end{center}
+    
+    \item Calcula les \textbf{mesures de centralització} (Mitjana, mediana i moda). Per a la mitjana fes servir la marca de classe $x_i$: \\[0.3cm]
+    $\bar{x} = $ \hspace{3cm} Interval $Me$ = \hspace{3cm} Interval $Mo$ =
+\end{enumerate}
+
+\newpage
+
+% --- EXERCICI 4 (AE) ---
+\noindent \textbf{EXERCICI 5 (Nivell AE): Creació d'intervals des de zero} \\
+Hem mesurat l'alçada (en cm) de 20 alumnes i hem obtingut les dades següents:
+\begin{center}
+150, 162, 178, 155, 168, 171, 165, 159, 182, 160,\\
+175, 166, 158, 170, 163, 172, 180, 154, 169, 161
+\end{center}
+
+Ara et toca a tu decidir els intervals abans de fer la taula. 
+
+\begin{enumerate}[label=\alph*)]
+    \item Quin és el valor màxim i el valor mínim de l'alçada?
+    \vspace{0.8cm}
+    \item Quin és el \textbf{rang} o recorregut de les dades? (Màxim $-$ Mínim).
+    \vspace{0.8cm}
+    \item Volem agrupar les dades en \textbf{4 intervals}. Quina \textbf{amplitud} hauria de tenir aproximadament cada interval? (Divideix el rang entre 4).
+    \vspace{0.8cm}
+    \item Escriu els 4 intervals (començant pel valor mínim) i completa la taula:
+    \begin{center}
+    \renewcommand{\arraystretch}{2.4}
+    \setlength{\tabcolsep}{5pt}
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+        \hline
+        \textbf{Interval} & \splitcell{\textbf{Marca}}{\textbf{($x_i$)}} & \splitcell{\textbf{Freq abs}}{\textbf{($f_i$)}} & \multicolumn{2}{c|}{\splitcell{\textbf{Freq rel}}{\textbf{($h_i$)}}} & \splitcell{\textbf{Freq cum}}{\textbf{($F_i$)}} & \multicolumn{2}{c|}{\splitcell{\textbf{Freq cum rel}}{\textbf{($H_i$)}}} \\ \cline{4-5} \cline{7-8}
+        & & & \textbf{càlcul} & \textbf{\%} & & \textbf{valor} & \textbf{\%} \\ \hline
+        [ \hspace{1.3cm} , \hspace{1.3cm} ) & & & $\frac{\hspace{0.8cm}}{\hspace{0.8cm}} = $ & & & & \\ \hline
+        [ \hspace{1.3cm} , \hspace{1.3cm} ) & & & $\frac{\hspace{0.8cm}}{\hspace{0.8cm}} = $ & & & & \\ \hline
+        [ \hspace{1.3cm} , \hspace{1.3cm} ) & & & $\frac{\hspace{0.8cm}}{\hspace{0.8cm}} = $ & & & & \\ \hline
+        [ \hspace{1.3cm} , \hspace{1.3cm} ] & & & $\frac{\hspace{0.8cm}}{\hspace{0.8cm}} = $ & & & & \\ \hline
+        \textbf{Total} & --- & \textbf{N = } & \textbf{1} & \textbf{100\%} & \multicolumn{3}{c|}{} \\ \hline
+    \end{tabular}
+    \end{center}
+    \vspace{0.5cm}
+    \item Calcula les \textbf{mesures de centralització} (Mitjana, mediana i moda): \\[0.3cm]
+    $\bar{x} = $ \hspace{3cm} Interval $Me$ = \hspace{3cm} Interval $Mo$ =
+\end{enumerate}
+
+\end{document}

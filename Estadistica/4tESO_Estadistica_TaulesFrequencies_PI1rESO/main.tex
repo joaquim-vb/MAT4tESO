@@ -1,0 +1,482 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+% Configuració dels gràfics
+\pgfplotsset{compat=1.15}
+
+% 1. MARGES I CAPÇALERA
+\geometry{top=4cm, bottom=3cm, left=2cm, right=2cm, headheight=2.5cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+% Comenta aquestes línies si no tens les imatges del logo
+% \fancyhead[L]{\includegraphics[height=1.8cm]{Logo_Departament.png}} 
+% \fancyhead[R]{\includegraphics[height=1.8cm]{Logo_Institut.png}}
+
+\fancyfoot[L]{}
+\fancyfoot[C]{Pàgina \thepage\ de \pageref{LastPage}}
+\fancyfoot[R]{}
+
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Comanda per dividir títols de columnes
+\newcommand{\splitcell}[2]{\begin{tabular}{@{}c@{}}#1 \\ #2\end{tabular}}
+
+\begin{document}
+
+% --- CAPÇALERA D'IDENTIFICACIÓ ---
+\begingroup
+\renewcommand{\arraystretch}{2.2}
+\begin{tabularx}{\textwidth}{|X|p{4cm}|}
+    \hline
+    \textbf{Nom i cognoms:} & \textbf{Grup:} \\ \hline
+    \textbf{Activitat:} Interpretació i creació de gràfics & \textbf{Data:} \\ \hline
+\end{tabularx}
+\endgroup
+
+\vspace{0.4cm}
+
+\begin{center}
+    {\Large \textbf{FITXA: LLEGIM I CREEM DADES VISUALS}}
+\end{center}
+\vspace{0.2cm}
+
+% --- EXERCICI 1 ---
+\noindent \textbf{EXERCICI 1: L'esport preferit (Gràfic de barres bàsic)} \\
+Hem preguntat als alumnes de la classe quin és el seu esport preferit. Observa el gràfic i respon:
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    ybar,
+    symbolic x coords={Futbol, Bàsquet, Natació, Tennis, Ciclisme},
+    xtick=data,
+    nodes near coords,
+    ymin=0, ymax=12,
+    ylabel={Nombre d'alumnes},
+    width=10cm, height=5cm,
+    bar width=20pt
+]
+\addplot[fill=gray!40] coordinates {(Futbol,10) (Bàsquet,6) (Natació,4) (Tennis,2) (Ciclisme,3)};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}[label=\alph*)]
+    \item Quin és l'esport més popular a la classe?
+    \vspace{0.6cm}
+    \item Quants alumnes han triat la Natació?
+    \vspace{0.6cm}
+    \item Quants alumnes hi ha en TOTAL a la classe? (Suma totes les barres)
+    \vspace{0.6cm}
+\end{enumerate}
+
+% --- EXERCICI 2 ---
+\noindent \textbf{EXERCICI 2: Llibres a la biblioteca (Barres horitzontals)} \\
+Aquest gràfic mostra quants llibres s'han llegit a l'institut cada trimestre:
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    xbar,
+    symbolic y coords={1r Trim., 2n Trim., 3r Trim.},
+    ytick=data,
+    nodes near coords,
+    xmin=0, xmax=200,
+    xlabel={Llibres llegits},
+    width=12cm, height=4.5cm,
+    bar width=20pt
+]
+\addplot[fill=gray!60] coordinates {(50,1r Trim.) (120,2n Trim.) (180,3r Trim.)};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}[label=\alph*)]
+    \item En quin trimestre els alumnes han llegit menys llibres?
+    \vspace{0.6cm}
+    \item Quants llibres més s'han llegit al 3r Trimestre en comparació al 2n?
+    \vspace{0.6cm}
+\end{enumerate}
+
+\newpage
+
+% --- EXERCICI 3 ---
+\noindent \textbf{EXERCICI 3: Quina calor! (Gràfic de línies senzilla)} \\
+El gràfic següent mostra la temperatura a les 12:00h del migdia a Vic durant una setmana.
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    symbolic x coords={Dilluns, Dimarts, Dimecres, Dijous, Divendres, Dissabte, Diumenge},
+    xtick=data,
+    ymin=10, ymax=30,
+    ylabel={Temperatura (ºC)},
+    grid=major,
+    width=14cm, height=5.5cm
+]
+\addplot[mark=*, thick, black] coordinates {(Dilluns,15) (Dimarts,18) (Dimecres,14) (Dijous,22) (Divendres,25) (Dissabte,28) (Diumenge,20)};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}[label=\alph*)]
+    \item Quin dia va fer exactament 22ºC?
+    \vspace{0.4cm}
+    \item Quin dia va fer més fred? Quina temperatura marcava?
+    \vspace{0.4cm}
+    \item Quants dies la temperatura va ser de 20ºC o més?
+    \vspace{0.4cm}
+\end{enumerate}
+
+% --- EXERCICI 4 ---
+\noindent \textbf{EXERCICI 4: Com venim a l'institut? (Gràfic de sectors bàsic)} \\
+Hem preguntat a 200 alumnes de 4t d'ESO com venen a l'institut cada matí.
+
+\begin{center}
+\begin{tikzpicture}
+    % Caminant 50%
+    \fill[gray!20] (0,0) -- (180:3.2) arc (180:360:3.2) -- cycle;
+    \node at (270:1.6) {\textbf{Caminant (50\%)}};
+    % Cotxe 25%
+    \fill[gray!50] (0,0) -- (0:3.2) arc (0:90:3.2) -- cycle;
+    \node at (45:1.8) {\textbf{Cotxe (25\%)}};
+    % Bus 25%
+    \fill[gray!90] (0,0) -- (90:3.2) arc (90:180:3.2) -- cycle;
+    \node[text=white] at (135:1.8) {\textbf{Bus (25\%)}};
+    
+    \draw[thick, white] (0,0) -- (0:3.2);
+    \draw[thick, white] (0,0) -- (90:3.2);
+    \draw[thick, white] (0,0) -- (180:3.2);
+    \draw[thick, white] (0,0) -- (360:3.2);
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}[label=\alph*)]
+    \item Visualment, quina fracció del cercle representa venir Caminant? (La meitat, un quart...)
+    \vspace{0.4cm}
+    \item Si en TOTAL hi ha 200 alumnes, quants venen Caminant? (Calcula el 50\%)
+    \vspace{0.4cm}
+    \item I quants venen en Bus? (Pensa que un 25\% és la meitat de la meitat)
+    \vspace{0.4cm}
+\end{enumerate}
+
+\newpage
+
+% --- EXERCICI 5 ---
+\noindent \textbf{EXERCICI 5: El consum del telèfon mòbil (Línies comparatives)} \\
+L'Anna i en Pol han apuntat les hores diàries que han passat mirant el mòbil els últims 4 dies. Fixa't que utilitzen línies diferents per distingir-se en blanc i negre:
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    symbolic x coords={Dia 1, Dia 2, Dia 3, Dia 4},
+    xtick=data,
+    ymin=0, ymax=6,
+    ylabel={Hores d'ús},
+    grid=major,
+    legend pos=north west,
+    width=12cm, height=5.5cm
+]
+\addplot[mark=square*, thick, solid, black] coordinates {(Dia 1, 2) (Dia 2, 4) (Dia 3, 5) (Dia 4, 3)};
+\addlegendentry{Anna}
+\addplot[mark=triangle*, thick, dashed, black] coordinates {(Dia 1, 3) (Dia 2, 3) (Dia 3, 2) (Dia 4, 4)};
+\addlegendentry{Pol}
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}[label=\alph*)]
+    \item Quin dia l'Anna va fer servir més el mòbil que en Pol?
+    \vspace{0.6cm}
+    \item Quantes hores en total ha fet servir en Pol el mòbil durant aquests 4 dies?
+    \vspace{0.6cm}
+    \item Hi ha algun dia que hagin utilitzat el mòbil les mateixes hores?
+    \vspace{0.6cm}
+    \item Quin dia hi ha més diferència entre el que el fa servir l'un i l'altre? De quantes hores és aquesta diferència?
+    \vspace{0.6cm}
+\end{enumerate}
+
+% --- EXERCICI 6 ---
+\noindent \textbf{EXERCICI 6: Què fem a la tarda? (Sectors i càlculs senzills)} \\
+Hem preguntat a 50 estudiants quina és la seva activitat principal a la tarda. 
+
+\begin{center}
+\begin{tikzpicture}
+    % Estudiar 40% (144 graus)
+    \fill[gray!20] (0,0) -- (0:3.2) arc (0:144:3.2) -- cycle;
+    \node at (72:1.8) {Estudiar (40\%)};
+    % Esport 30% (108 graus)
+    \fill[gray!50] (0,0) -- (144:3.2) arc (144:252:3.2) -- cycle;
+    \node at (198:1.8) {Esport (30\%)};
+    % Xarxes 20% (72 graus)
+    \fill[gray!80] (0,0) -- (252:3.2) arc (252:324:3.2) -- cycle;
+    \node[text=white] at (288:2.0) {Xarxes (20\%)};
+    % Llegir 10% (36 graus)
+    \fill[black] (0,0) -- (324:3.2) arc (324:360:3.2) -- cycle;
+    \node[text=white] at (342:2.2) {Llegir (10\%)};
+    
+    \draw[thick, white] (0,0) -- (0:3.2);
+    \draw[thick, white] (0,0) -- (144:3.2);
+    \draw[thick, white] (0,0) -- (252:3.2);
+    \draw[thick, white] (0,0) -- (324:3.2);
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}[label=\alph*)]
+    \item Si ordenem les activitats de més a menys votades, quina queda en tercer lloc?
+    \vspace{0.6cm}
+    \item Recorda que hi ha 50 estudiants en total. Quants estudiants representen el 10\% que prefereix llegir? (El 10\% és dividir entre 10)
+    \vspace{0.6cm}
+\end{enumerate}
+
+
+% --- EXERCICI 7 ---
+\noindent \textbf{EXERCICI 7: Els estalvis de l'any (Gràfic Acumulatiu)} \\
+El següent gràfic no mostra què estalvia l'Ivan cada mes, sinó els \textbf{diners totals acumulats} a la seva guardiola a mesura que avança el temps.
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    symbolic x coords={Gener, Febrer, Març, Abril, Maig},
+    xtick=data,
+    ymin=0, ymax=60,
+    ylabel={Diners TOTALS (€)},
+    grid=major,
+    width=14cm, height=5.5cm
+]
+\addplot[mark=*, thick, dashed, black] coordinates {(Gener,10) (Febrer,25) (Març,25) (Abril,40) (Maig,50)};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}[label=\alph*)]
+    \item Al mes de Gener tenia 10€ i al Febrer la línia puja fins a 25€. Quants diners va posar a la guardiola \textbf{durant} el mes de Febrer?
+    \vspace{0.6cm}
+    \item Hi ha hagut un mes en què l'Ivan no ha estalviat ni un sol cèntim (la guardiola s'ha quedat amb els mateixos diners). Quin mes ha estat? Com ho has detectat al gràfic?
+    \vspace{0.6cm}
+\end{enumerate}
+
+% --- EXERCICI 8 ---
+\noindent \textbf{EXERCICI 8: De Gràfic a Taula} \\
+Observa el gràfic de barres sobre quants germans tenen els alumnes d'una classe i completa la taula.
+
+\vspace{0.2cm}
+\noindent
+\begin{minipage}{0.55\textwidth}
+\begin{tikzpicture}
+\begin{axis}[
+    ybar,
+    symbolic x coords={0, 1, 2, 3},
+    xtick=data,
+    nodes near coords,
+    ymin=0, ymax=10,
+    ylabel={Alumnes},
+    xlabel={Nombre de germans},
+    width=8.5cm, height=5.5cm,
+    bar width=18pt
+]
+\addplot[fill=gray!50] coordinates {(0,4) (1,8) (2,5) (3,1)};
+\end{axis}
+\end{tikzpicture}
+\end{minipage}%
+\begin{minipage}{0.45\textwidth}
+\begin{center}
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{|c|c|}
+    \hline
+    \splitcell{\textbf{Nombre de}}{\textbf{germans ($x_i$)}} & \splitcell{\textbf{Freq. abs.}}{\textbf{($f_i$)}} \\ \hline
+    0 & \\ \hline
+    1 & \\ \hline
+    2 & \\ \hline
+    3 & \\ \hline
+    \textbf{Total} & \textbf{N = } \\ \hline
+\end{tabular}
+\end{center}
+\end{minipage}
+
+\vspace{0.6cm}
+
+% --- EXERCICI 9 ---
+\noindent \textbf{EXERCICI 9: De Taula a Gràfic de Barres} \\
+La taula mostra el color d'ulls de 20 persones. Dibuixa les barres a la quadrícula.
+
+\vspace{0.2cm}
+\noindent
+\begin{minipage}{0.35\textwidth}
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|c|c|}
+    \hline
+    \textbf{Color d'ulls} & \textbf{Alumnes} \\ \hline
+    Marró & 8 \\ \hline
+    Blau & 4 \\ \hline
+    Verd & 5 \\ \hline
+    Negre & 3 \\ \hline
+\end{tabular}
+\end{center}
+\end{minipage}%
+\begin{minipage}{0.65\textwidth}
+\begin{center}
+\begin{tikzpicture}
+    % Quadrícula
+    \draw[step=0.8cm,gray,very thin,dashed] (0,0) grid (6.4,7.2);
+    % Eixos
+    \draw[thick,->] (0,0) -- (6.8,0);
+    \draw[thick,->] (0,0) -- (0,7.6) node[anchor=south east] {Alumnes};
+    % Nombres eix Y
+    \foreach \y in {1,2,3,4,5,6,7,8,9} \draw (1pt,\y*0.8 cm) -- (-1pt,\y*0.8 cm) node[anchor=east] {\y};
+    % Etiquetes eix X
+    \node at (1.2, -0.4) {Marró};
+    \node at (2.8, -0.4) {Blau};
+    \node at (4.4, -0.4) {Verd};
+    \node at (6.0, -0.4) {Negre};
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+
+
+% --- EXERCICI 10 ---
+\noindent \textbf{EXERCICI 10: De Línies a Taula} \\
+Aquest gràfic mostra els dies que ha plogut cada mes. Omple la taula amb les dades exactes:
+
+\vspace{0.2cm}
+\noindent
+\begin{minipage}{0.55\textwidth}
+\begin{tikzpicture}
+\begin{axis}[
+    symbolic x coords={Des, Gen, Feb, Mar},
+    xtick=data,
+    ymin=0, ymax=15,
+    ylabel={Dies de pluja},
+    grid=major,
+    width=8.5cm, height=5cm
+]
+\addplot[mark=*, thick, black] coordinates {(Des, 5) (Gen, 12) (Feb, 8) (Mar, 10)};
+\end{axis}
+\end{tikzpicture}
+\end{minipage}%
+\begin{minipage}{0.45\textwidth}
+\begin{center}
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{|c|c|}
+    \hline
+    \textbf{Mes} & \splitcell{\textbf{Dies de}}{\textbf{pluja}} \\ \hline
+    Desembre & \\ \hline
+    Gener & \\ \hline
+    Febrer & \\ \hline
+    Març & \\ \hline
+\end{tabular}
+\end{center}
+\end{minipage}
+
+\vspace{0.6cm}
+
+\newpage
+% --- EXERCICI 11 ---
+\noindent \textbf{EXERCICI 11: De Taula a Gràfic de Línies} \\
+Marca els punts de la velocitat del vent a la quadrícula i uneix-los amb una línia. 
+
+\vspace{0.2cm}
+\noindent
+\begin{minipage}{0.35\textwidth}
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|c|c|}
+    \hline
+    \textbf{Hora} & \splitcell{\textbf{Velocitat}}{\textbf{(km/h)}} \\ \hline
+    8:00 & 10 \\ \hline
+    9:00 & 30 \\ \hline
+    10:00 & 40 \\ \hline
+    11:00 & 20 \\ \hline
+    12:00 & 50 \\ \hline
+\end{tabular}
+\end{center}
+\end{minipage}%
+\begin{minipage}{0.65\textwidth}
+\begin{center}
+\begin{tikzpicture}
+    % Quadrícula
+    \draw[step=1cm,gray,very thin,dashed] (0,0) grid (8,6);
+    % Eixos
+    \draw[thick,->] (0,0) -- (8.5,0);
+    \draw[thick,->] (0,0) -- (0,6.5) node[anchor=south east] {km/h};
+    % Etiquetes eix X
+    \node at (1, -0.4) {8:00};
+    \node at (2.5, -0.4) {9:00};
+    \node at (4, -0.4) {10:00};
+    \node at (5.5, -0.4) {11:00};
+    \node at (7, -0.4) {12:00};
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+
+\vspace{0.8cm}
+
+% --- EXERCICI 12 ---
+\noindent \textbf{EXERCICI 12: Pensar en l'acumulació (Sense fer la columna)} \\
+Hem preguntat a 25 famílies quants televisors tenen. Completa els percentatges que falten a la taula. Pista: Divideix la freqüència absoluta entre el Total (25) i multiplica per 100.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{|c|c|c|}
+    \hline
+    \textbf{Televisors ($x_i$)} & \splitcell{\textbf{Freq abs}}{\textbf{($f_i$)}} & \splitcell{\textbf{Freq rel}}{\textbf{(\%)}} \\ \hline
+    0 & 2 & $\frac{2}{25} \cdot 100 = 8\%$ \\ \hline
+    1 & 10 & $\frac{\hspace{0.6cm}}{25} \cdot 100 = \dots\dots\%$ \\ \hline
+    2 & 8 & $\frac{\hspace{0.6cm}}{25} \cdot 100 = \dots\dots\%$ \\ \hline
+    3 & 4 & \\ \hline
+    4 & 1 & \\ \hline
+    \textbf{Total} & \textbf{N = 25} & \textbf{100\%} \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{enumerate}[label=\alph*)]
+    \item Quantes famílies tenen \textbf{exactament} 2 televisors?
+    \vspace{0.3cm}
+    \item Quantes famílies tenen \textbf{2 televisors O MENYS}? (Suma els que en tenen 0, 1 i 2).
+    \vspace{0.3cm}
+    \item Quantes famílies tenen \textbf{més d'1 televisor}?
+    \vspace{0.3cm}
+\end{enumerate}
+
+\newpage
+
+% --- EXERCICI 13 ---
+\noindent \textbf{EXERCICI 13: L'acumulació dels percentatges} \\
+Aquesta taula ens mostra la talla de peu dels alumnes d'una classe. Completa els percentatges buits i contesta:
+
+\begin{center}
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{|c|c|c|}
+    \hline
+    \splitcell{\textbf{Talla de}}{\textbf{peu ($x_i$)}} & \splitcell{\textbf{Freq abs}}{\textbf{($f_i$)}} & \splitcell{\textbf{Freq rel}}{\textbf{(\%)}} \\ \hline
+    37 & 3 & 10\% \\ \hline
+    38 & 6 & $\frac{\hspace{0.6cm}}{30} \cdot 100 = \dots\dots\%$ \\ \hline
+    39 & 12 & $\frac{\hspace{0.6cm}}{30} \cdot 100 = \dots\dots\%$ \\ \hline
+    40 & 6 & 20\% \\ \hline
+    41 & 3 & 10\% \\ \hline
+    \textbf{Total} & \textbf{N = 30} & \textbf{100\%} \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{enumerate}[label=\alph*)]
+    \item Quin percentatge exacte de la classe calça un 39?
+    \vspace{0.8cm}
+    \item Quin \textbf{percentatge} d'alumnes calça un \textbf{38 o menys}? (Suma els percentatges pertinents).
+    \vspace{1cm}
+    \item Si volguessis afegir una columna de "Freqüència Acumulada Absoluta ($F_i$)", quin nombre hi hauria a l'última fila (a la del peu 41)? Per què?
+    \vspace{1.2cm}
+\end{enumerate}
+
+\end{document}
