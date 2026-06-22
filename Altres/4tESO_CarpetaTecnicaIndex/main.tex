@@ -1,0 +1,99 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{tcolorbox}
+
+% MARGES I CAPÇALERA
+\geometry{top=4cm, bottom=3cm, left=2cm, right=2cm, headheight=2.5cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+% Si no tens els logos a la carpeta, comenta aquestes dues línies següents posant un % al davant
+\fancyhead[L]{\includegraphics[height=1.8cm]{Logo_Departament.png}}
+\fancyhead[R]{\includegraphics[height=1.8cm]{Logo_Institut.png}}
+
+\fancyfoot[C]{Pàgina \thepage\ de \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Comanda per a la introducció comuna
+\newcommand{\introcomuna}{
+    \begin{tcolorbox}[colback=gray!5,colframe=gray!50!black,title=\textbf{La Carpeta Tècnica de Matemàtiques}]
+    La teva aportació formarà part de la \textbf{Carpeta Tècnica} de final de curs. Aquest serà un dossier creat entre tots que us servirà de guia d'estudi per a Batxillerat.
+    
+    \begin{itemize}[label=\textbullet, leftmargin=*]
+        \item Has de fer la teva explicació en \textbf{un full DIN A4 en blanc a part} (no escriguis en aquest full d'instruccions).
+        \item Posa el títol del teu tema ben gran al principi de la teva pàgina.
+        \item Organitza la informació amb \textbf{subapartats} (\textit{1.1 De què serveix? 1.2 Com calcular?)}
+        \item Explica-ho tot de forma clara, detallada i endreçada, pensant que un company llegirà el teu full per estudiar.
+    \end{itemize}
+    \end{tcolorbox}
+    \vspace{0.1cm}
+}
+
+% Comanda per a la taula d'identificació de cada pàgina
+\newcommand{\capcaleraalumne}[1]{
+    \begingroup
+    \renewcommand{\arraystretch}{2.2}
+    \begin{tabularx}{\textwidth}{|X|p{4cm}|}
+    \hline
+    \textbf{Nom i cognoms:} & \textbf{Grup:} \\ \hline
+    \textbf{Activitat:} Carpeta Tècnica & \textbf{Data:} \\ \hline
+    \end{tabularx}
+    \endgroup
+    \vspace{0.4cm}
+}
+
+\begin{document}
+\newpage
+% Configurem la capçalera només per aquesta pàgina inicial
+\thispagestyle{fancy}
+\fancyhf{} 
+\fancyhead[L]{\includegraphics[height=1.8cm]{Logo_Departament.png}}
+\fancyhead[R]{\includegraphics[height=1.8cm]{Logo_Institut.png}}
+\fancyhead[C]{\textbf{4t d'ESO \\ Curs 2025-2026}}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{center}
+    {\LARGE \textbf{Carpeta tècnica batxillerat}}\\[1cm]
+\end{center}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4} % Dona una mica més d'espai a les files
+\begin{tabularx}{\textwidth}{|c|X|l|c|}
+\hline
+\textbf{Núm.} & \textbf{Nom del tema} & \textbf{Alumne/s} & \textbf{FET} \\ \hline
+1 & Procediment per resoldre una equació de 1r grau & Ayomide & X \\ \hline
+2 & Procediment per resoldre una equació de 2n grau completa & & \\ \hline
+3 & Procediment per resoldre una equació de 2n grau incompleta &  Sophie & X \\ \hline
+4 & Mètode d'igualació per a sistemes d'equacions & Abel & X \\ \hline
+5 & Mètode de substitució per a sistemes d'equacions & Meritxell & X \\ \hline
+6 & Mètode de reducció per a sistemes d'equacions & Walid & X \\ \hline
+7 & Equacions biquadrades & Princes Serwaa & X \\ \hline
+8 & Productes notables &  Chaimaa & X \\ \hline
+9 & Extracció de factors d'un radical ("fer paquets") & Margaret & X \\ \hline
+10 & Racionalització & Nil & X \\ \hline
+11 & Mètode de Ruffini & Valentina & X \\ \hline
+12 & Descomposició / Factorització d'un polinomi & Ogheneyoma & X \\ \hline
+13 & Simplificació de fraccions algebraiques & & \\ \hline
+14 & Suma i resta de fraccions algebraiques & & \\ \hline
+15 & Multiplicació i divisió de fraccions algebraiques & & \\ \hline
+16 & Teorema de Pitàgores & Adam  & X \\ \hline
+17 & Resolució d'un triangle rectangle (CASOS) & Carla & X \\ \hline
+18 & Raons Trigonomètriques Fonamentals (RTF) i conseqüència & & \\ \hline
+19 & Determinació de l'equació d'una recta que passa per 2 punts & Irene & X \\ \hline
+20 & Punts de tall d'una recta amb els eixos de coordenades & Bernat & X \\ \hline
+21 & Representació d'una recta & Marwa & X \\ \hline
+22 & Representació d'una paràbola & Wiam & X \\ \hline
+23 & Punts de tall d'una paràbola amb els eixos & Manvir & X \\ \hline
+24 & Estadística bàsica i paràmetres & Elna & X \\ \hline
+\end{tabularx}
+\end{center}
+
+\end{document}

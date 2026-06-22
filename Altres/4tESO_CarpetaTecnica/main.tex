@@ -1,0 +1,512 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{tcolorbox}
+
+% MARGES I CAPÇALERA
+\geometry{top=4cm, bottom=3cm, left=2cm, right=2cm, headheight=2.5cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+% Si no tens els logos a la carpeta, comenta aquestes dues línies següents posant un % al davant
+\fancyhead[L]{\includegraphics[height=1.8cm]{Logo_Departament.png}}
+\fancyhead[R]{\includegraphics[height=1.8cm]{Logo_Institut.png}}
+
+\fancyfoot[C]{Pàgina \thepage\ de \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Comanda per a la introducció comuna
+\newcommand{\introcomuna}{
+    \begin{tcolorbox}[colback=gray!5,colframe=gray!50!black,title=\textbf{La Carpeta Tècnica de Matemàtiques}]
+    La teva aportació formarà part de la \textbf{Carpeta Tècnica} de final de curs. Aquest serà un dossier creat entre tots que us servirà de guia d'estudi per a Batxillerat.
+    
+    \begin{itemize}[label=\textbullet, leftmargin=*]
+        \item Has de fer la teva explicació en \textbf{un full DIN A4 en blanc a part} (no escriguis en aquest full d'instruccions).
+        \item Posa el títol del teu tema ben gran al principi de la teva pàgina.
+        \item Organitza la informació amb \textbf{subapartats} (\textit{1.1 De què serveix? 1.2 Com calcular?)}
+        \item Explica-ho tot de forma clara, detallada i endreçada, pensant que un company llegirà el teu full per estudiar.
+    \end{itemize}
+    \end{tcolorbox}
+    \vspace{0.1cm}
+}
+
+% Comanda per a la taula d'identificació de cada pàgina
+\newcommand{\capcaleraalumne}[1]{
+    \begingroup
+    \renewcommand{\arraystretch}{2.2}
+    \begin{tabularx}{\textwidth}{|X|p{4cm}|}
+    \hline
+    \textbf{Nom i cognoms:} & \textbf{Grup:} \\ \hline
+    \textbf{Activitat:} Carpeta Tècnica & \textbf{Data:} \\ \hline
+    \end{tabularx}
+    \endgroup
+    \vspace{0.4cm}
+}
+
+\begin{document}
+
+% ================= PÀGINA 1 =================
+\capcaleraalumne{1}
+\introcomuna
+\subsection*{Tema 1: Procediment per resoldre una equació de 1r grau}
+\begin{itemize}[label=\textbullet]
+    \item \textbf{Objectiu:} Trobar el valor de la incògnita $x$ que compleix la igualtat.
+    \item \textbf{Teoria:} Defineix què és una equació de primer grau (exponent de la $x$ és 1) i el concepte de transposició de termes.
+    \item \textbf{Passos:} Treure parèntesis (distributiva), treure denominadors (mcm), agrupar les $x$ a un costat, reduir termes i aïllar la incògnita.
+    \item \textbf{Exemples:} Resol i explica pas a pas:
+    \begin{enumerate}[label=\alph*)]
+        \item $3x - 5 = x + 7$
+        \item $2(x - 3) = 4 - (x + 1)$
+        \item $\displaystyle \frac{x}{2} + \frac{x-1}{3} = 5$
+    \end{enumerate}
+\end{itemize}
+\vfill
+\noindent\textbf{Consell:} A l'exemple de fraccions, recorda explicar com el mcm afecta al numerador!
+
+\newpage
+% ================= PÀGINA 2 =================
+\capcaleraalumne{2}
+\introcomuna
+\subsection*{Tema 2: Procediment per resoldre una equació de 2n grau completa}
+\begin{itemize}[label=\textbullet]
+    \item \textbf{Objectiu:} Trobar les solucions (fins a dues) d'una equació on la $x$ està elevada al quadrat.
+    \item \textbf{Teoria:} Escriu la forma general $ax^2 + bx + c = 0$ i la fórmula general. Explica com identificar $a$, $b$ i $c$.
+    \item \textbf{Passos:} Ordenar a zero, identificar $a, b, c$, substituir a la fórmula i calcular els dos camins ($\pm$).
+    \item \textbf{Exemples:} Resol i explica:
+    \begin{enumerate}[label=\alph*)]
+        \item $x^2 - 5x + 6 = 0$
+        \item $2x^2 + 3x - 2 = 0$
+    \end{enumerate}
+\end{itemize}
+\vfill
+\noindent\textbf{Consell:} Destaca la fórmula dins d'un requadre perquè quedi molt visual.
+
+\newpage
+% ================= PÀGINA 3 =================
+\capcaleraalumne{3}
+\introcomuna
+\subsection*{Tema 3: Procediment per resoldre una equació de 2n grau incompleta}
+\begin{itemize}[label=\textbullet]
+    \item \textbf{Objectiu:} Resoldre equacions de 2n grau més ràpidament sense usar la fórmula general quan falta $b$ o $c$.
+    \item \textbf{Teoria:} Explica el Cas 1 (falta $c$: $ax^2+bx=0$) i el Cas 2 (falta $b$: $ax^2+c=0$).
+    \item \textbf{Passos:} Pel Cas 1, treure factor comú $x$. Pel Cas 2, aïllar la $x^2$ i fer l'arrel quadrada.
+    \item \textbf{Exemples:} Resol i explica:
+    \begin{enumerate}[label=\alph*)]
+        \item $x^2 - 4x = 0$ \quad (Cas 1)
+        \item $3x^2 + 6x = 0$ \quad (Cas 1)
+        \item $x^2 - 16 = 0$ \quad (Cas 2)
+        \item $2x^2 - 18 = 0$ \quad (Cas 2)
+    \end{enumerate}
+\end{itemize}
+\vfill
+\noindent\textbf{Consell:} Recorda als companys que l'arrel quadrada d'un número positiu té sempre DUES solucions ($\pm$).
+
+\newpage
+% ================= PÀGINA 4 =================
+\capcaleraalumne{4}
+\introcomuna
+\subsection*{Tema 4: Mètode d'igualació per a sistemes}
+\begin{itemize}[label=\textbullet]
+    \item \textbf{Objectiu:} Resoldre un sistema d'equacions trobant el valor de $x$ i $y$.
+    \item \textbf{Teoria:} En què consisteix el mètode? "Si A és igual a B, i A és igual a C, llavors B és igual a C".
+    \item \textbf{Passos:} Aïllar la MATEIXA incògnita a les dues equacions, igualar les expressions, resoldre i substituir per trobar l'altra.
+    \item \textbf{Exemples:} Resol pas a pas:
+    \begin{enumerate}[label=\alph*)]
+        \item \textbf{Canònic:} $\begin{cases} x + y = 5 \\ x - 2y = -1 \end{cases}$
+        \item \textbf{No canònic:} $\begin{cases} 2(x - 1) + y = 3 \\ \displaystyle \frac{x}{2} - y = 0 \end{cases}$
+    \end{enumerate}
+\end{itemize}
+\vfill
+\noindent\textbf{Consell:} A l'exemple no canònic, explica que abans d'aplicar el mètode cal "arreglar" el sistema (treure parèntesis/denominadors).
+
+\newpage
+% ================= PÀGINA 5 =================
+\capcaleraalumne{5}
+\introcomuna
+\subsection*{Tema 5: Mètode de substitució per a sistemes}
+\begin{itemize}[label=\textbullet]
+    \item \textbf{Objectiu:} Resoldre un sistema d'equacions trobant el valor de $x$ i $y$.
+    \item \textbf{Teoria:} Explica en què consisteix la substitució: "Posar el valor d'una cosa a l'interior d'una altra".
+    \item \textbf{Passos:} Aïllar UNA incògnita d'una equació, substituir-la dins l'altra equació, resoldre-la i trobar la segona incògnita.
+    \item \textbf{Exemples:} Resol pas a pas:
+    \begin{enumerate}[label=\alph*)]
+        \item \textbf{Canònic:} $\begin{cases} x + 2y = 8 \\ 3x - y = 3 \end{cases}$
+        \item \textbf{No canònic:} $\begin{cases} x + y = 5 \\ \displaystyle \frac{x+1}{2} - y = 1 \end{cases}$
+    \end{enumerate}
+\end{itemize}
+\vfill
+\noindent\textbf{Consell:} Explica als companys com triar quina lletra aïllar per fer-ho més fàcil (aquella que no té número davant!).
+
+\newpage
+% ================= PÀGINA 6 =================
+\capcaleraalumne{6}
+\introcomuna
+\subsection*{Tema 6: Mètode de reducció per a sistemes}
+\begin{itemize}[label=\textbullet]
+    \item \textbf{Objectiu:} Resoldre un sistema d'equacions lineals eliminant una variable.
+    \item \textbf{Teoria:} Com es poden sumar equacions matemàticament per anul·lar incògnites.
+    \item \textbf{Passos:} Multiplicar una o les dues equacions per nombres per tal que una incògnita tingui coeficients oposats, sumar-les (es redueix), resoldre i substituir.
+    \item \textbf{Exemples:} Resol pas a pas:
+    \begin{enumerate}[label=\alph*)]
+        \item \textbf{Canònic:} $\begin{cases} 2x + y = 7 \\ 3x - y = 8 \end{cases}$
+        \item \textbf{No canònic:} $\begin{cases} 2x + 3y = 12 \\ 3(x-1) - 2y = 2 \end{cases}$
+    \end{enumerate}
+\end{itemize}
+\vfill
+\noindent\textbf{Consell:} Al primer exemple sumar ja funciona directe, remarca-ho! Al segon, explica per quins nombres multipliques cada equació.
+
+\newpage
+% ================= PÀGINA 7 =================
+\capcaleraalumne{7}
+\introcomuna
+\subsection*{Tema 7: Equacions biquadrades}
+\begin{itemize}[label=\textbullet]
+    \item \textbf{Objectiu:} Resoldre equacions de grau 4 que només tenen potències parelles ($x^4$ i $x^2$).
+    \item \textbf{Teoria:} Què és una equació biquadrada i què és un "canvi de variable".
+    \item \textbf{Passos:} Fer el canvi $t = x^2$ (i per tant $t^2 = x^4$), resoldre l'equació de segon grau resultant amb $t$, i finalment desfer el canvi fent $x = \pm\sqrt{t}$ per trobar les fins a 4 solucions.
+    \item \textbf{Exemples:} Resol pas a pas:
+    \begin{enumerate}[label=\alph*)]
+        \item $x^4 - 5x^2 + 4 = 0$
+        \item $x^4 - 10x^2 + 9 = 0$
+    \end{enumerate}
+\end{itemize}
+\vfill
+\noindent\textbf{Consell:} Remarca molt bé el pas final! Molta gent oblida desfer el canvi de variable.
+
+\newpage
+% ================= PÀGINA 8 =================
+\capcaleraalumne{8}
+\introcomuna
+\subsection*{Tema 8: Productes notables}
+\begin{itemize}[label=\textbullet]
+    \item \textbf{Objectiu:} Desenvolupar multiplicacions de polinomis freqüents de manera automàtica.
+    \item \textbf{Teoria:} Has d'escriure clarament les tres fórmules claus (Quadrat de la suma, Quadrat de la resta, i Suma per diferència).
+    \item \textbf{Passos:} Identificar quina identitat és, qui és '$a$' i qui és '$b$', i aplicar la fórmula vigilar els signes i els quadrats dels nombres.
+    \item \textbf{Exemples:} Resol els 9 exemples:
+    \begin{itemize}
+        \item \textbf{Quadrat suma:} $(x+3)^2$, $(2x+5)^2$, $(x^2+1)^2$
+        \item \textbf{Quadrat resta:} $(x-4)^2$, $(3x-2)^2$, $(2x^2-3)^2$
+        \item \textbf{Suma $\times$ dif.:} $(x+6)(x-6)$, $(3x+2)(3x-2)$, $(x^2+5)(x^2-5)$
+    \end{itemize}
+\end{itemize}
+\vfill
+\noindent\textbf{Consell:} Adverteix de l'error típic de dir que $(a+b)^2$ és $a^2 + b^2$. Falta el doble del primer pel segon!
+
+\newpage
+% ================= PÀGINA 9 =================
+\capcaleraalumne{9}
+\introcomuna
+\subsection*{Tema 9: Extracció de factors d'un radical ("fer paquets")}
+\begin{itemize}[label=\textbullet]
+    \item \textbf{Objectiu:} Simplificar l'escriptura d'una arrel traient a fora els números i lletres possibles.
+    \item \textbf{Teoria:} Explica que l'índex de l'arrel indica la mida del "paquet". Ex: en una arrel quadrada ($\sqrt{\ }$), necessites 2 de la mateixa mena a dins per treure'n 1 a fora.
+    \item \textbf{Passos:} Factoritzar els nombres en nombres primers. Dividir l'exponent de dins entre l'índex: el quocient surt fora, el residu es queda a dins.
+    \item \textbf{Exemples:} Explica i resol pas a pas:
+    \begin{enumerate}[label=\alph*)]
+        \item $\sqrt{12}$
+        \item $\sqrt{x^5 \cdot y^2 \cdot z}$
+        \item $\sqrt[3]{16 \cdot a^7}$
+    \end{enumerate}
+\end{itemize}
+\vfill
+\noindent\textbf{Consell:} Usa colors per relacionar què surt fora i què es queda dins del radical.
+
+\newpage
+% ================= PÀGINA 10 =================
+\capcaleraalumne{10}
+\introcomuna
+\subsection*{Tema 10: Racionalització}
+\begin{itemize}[label=\textbullet]
+    \item \textbf{Objectiu:} Eliminar les arrels que apareixen al denominador d'una fracció per poder operar millor.
+    \item \textbf{Teoria:} Explica que per fer-ho hem de multiplicar dalt i baix per una mateixa expressió de forma que no canviem el valor de la fracció.
+    \item \textbf{Passos i Exemples:} Cal explicar els 3 casos amb el seu respectiu exemple:
+    \begin{enumerate}
+        \item \textbf{Cas 1 (Arrel quadrada al denominador):} Multipliques dalt i baix per la mateixa arrel. Exemple: $\displaystyle \frac{5}{\sqrt{3}}$
+        \item \textbf{Cas 2 (Arrel d'índex major a 2):} Multipliques per l'arrel que li "falta" per completar el paquet. Exemple: $\displaystyle \frac{2}{\sqrt[3]{x}}$
+        \item \textbf{Cas 3 (Suma/resta d'arrels):} Multipliques pel conjugat. Exemple: $\displaystyle \frac{4}{\sqrt{5}-1}$
+    \end{enumerate}
+\end{itemize}
+\vfill
+\noindent\textbf{Consell:} Explica què significa el "conjugat" en el tercer cas (canviar el signe central).
+
+\newpage
+% ================= PÀGINA 11 =================
+\capcaleraalumne{11}
+\introcomuna
+\subsection*{Tema 11: Mètode de Ruffini}
+\begin{itemize}[label=\textbullet]
+    \item \textbf{Objectiu:} Dividir un polinomi entre un binomi del tipus $(x-a)$ i trobar-ne el quocient i el residu de forma molt ràpida.
+    \item \textbf{Teoria:} Explica la "creueta" i com es col·loquen els coeficients a la part superior.
+    \item \textbf{Passos:} Ordenar i completar el polinomi, posar els coeficients a dalt, baixar el primer, multiplicar pel número del costat esquerre, sumar la columna i repetir fins al final (l'últim número és el residu).
+    \item \textbf{Exemples:} Resol pas a pas:
+    \begin{enumerate}[label=\alph*)]
+        \item $(x^3 - 2x^2 + 5x - 3) : (x - 2)$
+        \item $(2x^4 - 3x^2 + 1) : (x + 1)$
+        \item Troba només el residu de dividir $(x^3 + 2x - 1) : (x - 1)$
+    \end{enumerate}
+\end{itemize}
+\vfill
+\noindent\textbf{Consell:} Remarca a l'exemple 'b' que si falta un terme (com $x^3$) hem de posar un zero!
+
+\newpage
+% ================= PÀGINA 12 =================
+\capcaleraalumne{12}
+\introcomuna
+\subsection*{Tema 12: Descomposició / Factorització d'un polinomi}
+\begin{itemize}[label=\textbullet]
+    \item \textbf{Objectiu:} Expressar un polinomi llarg com una multiplicació de parèntesis més petits (els seus "factors primers").
+    \item \textbf{Teoria:} Explica quines eines tenim per factoritzar: treure factor comú, identitats notables, resoldre equacions de 2n grau i Ruffini.
+    \item \textbf{Passos:} 1r) Sempre mirar si es pot treure factor comú. 2n) Mirar si és de grau 2 i aplicar fórmula o notables. 3r) Si és grau $>2$, provar divisors del terme independent per Ruffini.
+    \item \textbf{Exemples:} Resol factoritzant al màxim:
+    \begin{enumerate}[label=\alph*)]
+        \item $x^3 - 4x$ \quad (Pista: factor comú i Notable/2n grau)
+        \item $x^3 - 4x^2 + x + 6$ \quad (Pista: Ruffini)
+    \end{enumerate}
+\end{itemize}
+\vfill
+\noindent\textbf{Consell:} És com factoritzar nombres ($12 = 2 \cdot 2 \cdot 3$), però amb lletres!
+
+\newpage
+% ================= PÀGINA 13 =================
+\capcaleraalumne{13}
+\introcomuna
+\subsection*{Tema 13: Simplificació de fraccions algebraiques}
+\begin{itemize}[label=\textbullet]
+    \item \textbf{Objectiu:} Reduir una fracció amb polinomis a la seva expressió més senzilla (com si simplifiquéssim $\frac{4}{8}$ a $\frac{1}{2}$).
+    \item \textbf{Teoria:} Explica que només podem tatxar elements de dalt i baix si estan multiplicant. Mai podem tatxar part d'una suma!
+    \item \textbf{Passos:} 1) Factoritzar el polinomi del numerador al màxim. 2) Factoritzar el polinomi del denominador al màxim. 3) Tatxar els parèntesis que siguin idèntics.
+    \item \textbf{Exemples:} Resol:
+    \begin{enumerate}[label=\alph*)]
+        \item $\displaystyle \frac{2x^3 - 4x^2}{2x^2}$
+        \item $\displaystyle \frac{x^2 - 9}{x^2 + 3x}$
+        \item $\displaystyle \frac{x^2 - 2x + 1}{x^2 - 1}$
+    \end{enumerate}
+\end{itemize}
+\vfill
+\noindent\textbf{Consell:} Alerta molt sobre l'error clàssic de tatxar una $x^2$ de dalt amb una de baix quan estan sumant. Només factors (multiplicacions)!
+
+\newpage
+% ================= PÀGINA 14 =================
+\capcaleraalumne{14}
+\introcomuna
+\subsection*{Tema 14: Suma i resta de fraccions algebraiques}
+\begin{itemize}[label=\textbullet]
+    \item \textbf{Objectiu:} Agrupar diverses fraccions de polinomis en una de sola.
+    \item \textbf{Teoria:} Què necessitem per poder sumar o restar fraccions? Que tinguin el mateix denominador.
+    \item \textbf{Passos:} 1) Factoritzar denominadors, 2) Fer el mínim comú múltiple (mcm) agafant factors comuns i no comuns al major exponent, 3) Ajustar els numeradors, 4) Sumar/restar i agrupar.
+    \item \textbf{Exemples:} Resol pas a pas:
+    \begin{enumerate}[label=\alph*)]
+        \item $\displaystyle \frac{3}{x} + \frac{2}{x^2}$
+        \item $\displaystyle \frac{x}{x-1} - \frac{2}{x+1}$
+    \end{enumerate}
+\end{itemize}
+\vfill
+\noindent\textbf{Consell:} Recorda que quan poses un "-" davant d'una fracció, canvia el signe de TOTS els termes del numerador d'aquella fracció!
+
+\newpage
+% ================= PÀGINA 15 =================
+\capcaleraalumne{15}
+\introcomuna
+\subsection*{Tema 15: Multiplicació i divisió de fraccions algebraiques}
+\begin{itemize}[label=\textbullet]
+    \item \textbf{Objectiu:} Operar productes i quocients de fraccions amb polinomis de forma ràpida.
+    \item \textbf{Teoria:} Explica que per multiplicar es fa "en línia" i per dividir "en creu". Però amb polinomis és millor factoritzar abans de multiplicar-ho tot junt!
+    \item \textbf{Passos:} 1) Factoritzar tots els polinomis. 2) Ajuntar-ho tot en una sola fracció (segons si era mult. o div.). 3) Simplificar tatxant els parèntesis iguals de dalt i baix.
+    \item \textbf{Exemples:} Resol:
+    \begin{enumerate}[label=\alph*)]
+        \item $\displaystyle \frac{x+1}{x} \cdot \frac{x^2}{x^2-1}$
+        \item $\displaystyle \frac{2x}{x-3} : \frac{4x^2}{x^2-9}$
+    \end{enumerate}
+\end{itemize}
+\vfill
+\noindent\textbf{Consell:} Si no factoritzen i només multipliquen generant polinomis de grau 3 i 4, no acabaran mai. La clau és factoritzar abans!
+
+\newpage
+% ================= PÀGINA 16 =================
+\capcaleraalumne{16}
+\introcomuna
+\subsection*{Tema 16: Teorema de Pitàgores}
+\begin{itemize}[label=\textbullet]
+    \item \textbf{Objectiu:} Relacionar els costats d'un triangle rectangle per trobar-ne un que desconeixem.
+    \item \textbf{Teoria:} Defineix què és la hipotenusa, què són els catets i escriu la famosa fórmula: $h^2 = c_1^2 + c_2^2$. Fes un dibuix explicatiu.
+    \item \textbf{Passos:} Identificar bé quina lletra falta, substituir les dades, aïllar i fer l'arrel quadrada.
+    \item \textbf{Exemples:} Explica'ls detalladament:
+    \begin{enumerate}[label=\alph*)]
+        \item Donats dos catets de 3 cm i 4 cm, troba la hipotenusa.
+        \item Donada una hipotenusa de 13 cm i un catet de 5 cm, troba l'altre catet.
+        \item Problema pràctic: Una escala de 5m recolzada en una paret a 3m de distància de la base. A quina alçada arriba?
+    \end{enumerate}
+\end{itemize}
+\vfill
+\noindent\textbf{Consell:} Insisteix que la hipotenusa sempre és el costat més llarg i és el que està davant de l'angle recte.
+
+\newpage
+% ================= PÀGINA 17 =================
+\capcaleraalumne{17}
+\introcomuna
+\subsection*{Tema 17: Resolució d'un triangle rectangle (CASOS)}
+\begin{itemize}[label=\textbullet]
+    \item \textbf{Objectiu:} Calcular TOTS els costats i TOTS els angles que falten en un triangle rectangle.
+    \item \textbf{Teoria:} Explica que els angles aguts sumen $90^{\circ}$, que tenim Pitàgores i les Raons Trigonomètriques (Sin, Cos, Tan).
+    \item \textbf{Passos i Exemples (CASOS):} Fes els dibuixos i resol:
+    \begin{enumerate}
+        \item \textbf{Cas 1 (Coneixem 2 costats):} Ex: Un triangle té catets de 3 cm i 4 cm. Calcula la hipotenusa i els dos angles aguts.
+        \item \textbf{Cas 2 (Coneixem 1 costat i 1 angle agut):} Ex: Hipotenusa de 10 cm i un angle de $30^{\circ}$. Calcula els altres costats i l'angle restant.
+        \item \textbf{Cas 3 (Exemple alternatiu):} Coneixem un catet de 5 cm contigu a un angle de $45^{\circ}$. Resoldre'l tot.
+    \end{enumerate}
+\end{itemize}
+\vfill
+\noindent\textbf{Consell:} Fes dibuixos clars en cada pas. Posa sempre l'esquema de les "eines" (Pitàgores, RTF, Angles=180).
+
+\newpage
+% ================= PÀGINA 18 =================
+\capcaleraalumne{18}
+\introcomuna
+\subsection*{Tema 18: Raons Trigonomètriques Fonamentals (RTF) i conseqüència}
+\begin{itemize}[label=\textbullet]
+    \item \textbf{Objectiu:} Relacionar el sinus, el cosinus i la tangent entre ells gràcies a les fórmules fonamentals, sense haver de dibuixar triangles.
+    \item \textbf{Teoria:} Escriu bé i emmarca les dues fórmules: 
+    $\sin^2\alpha + \cos^2\alpha = 1$ \quad i \quad $\displaystyle \tan\alpha = \frac{\sin\alpha}{\cos\alpha}$
+    \item \textbf{Passos:} A partir d'una raó, usar la 1a fórmula per trobar l'altra i, finalment, usar la 2a fórmula per trobar la tangent.
+    \item \textbf{Exemples:} Resol pas a pas:
+    \begin{enumerate}[label=\alph*)]
+        \item Si $\sin\alpha = 0,6$ i és un angle del 1r quadrant. Troba $\cos\alpha$ i $\tan\alpha$.
+        \item Si $\cos\alpha = 1/2$. Troba les altres dues.
+        \item Si $\tan\alpha = 2$ (Aquesta és la "conseqüència" més difícil on cal muntar un sistema, intenta guiar com fer-ho).
+    \end{enumerate}
+\end{itemize}
+\vfill
+\noindent\textbf{Consell:} Remarca que a vegades la incògnita queda a sota, no s'han d'espantar a l'hora d'aïllar!
+
+\newpage
+% ================= PÀGINA 19 =================
+\capcaleraalumne{19}
+\introcomuna
+\subsection*{Tema 19: Determinació de l'equació d'una recta que passa per 2 punts}
+\begin{itemize}[label=\textbullet]
+    \item \textbf{Objectiu:} Trobar l'equació algebraica de la recta (tipus $y = mx + n$) coneixent dos punts per on passa.
+    \item \textbf{Teoria:} Defineix què és el pendent ($m$) i què és l'ordenada a l'origen ($n$). Explica la fórmula del pendent $m = \frac{y_2 - y_1}{x_2 - x_1}$.
+    \item \textbf{Passos:} 1) Calcular la pendent $m$ usant la fórmula. 2) Escollir un dels dos punts i substituir la $x$, la $y$ i la $m$ a l'equació general $y = mx + n$. 3) Aïllar i calcular $n$. 4) Escriure l'equació final.
+    \item \textbf{Exemple:} Fes l'exemple de manera molt explicada.
+    \begin{itemize}
+        \item Troba l'equació de la recta que passa pels punts $A(1, 2)$ i $B(3, 8)$.
+    \end{itemize}
+\end{itemize}
+\vfill
+\noindent\textbf{Consell:} Si coneixes l'equació punt-pendent ($y - y_1 = m(x - x_1)$), pots ensenyar als companys aquest altre mètode també!
+
+\newpage
+% ================= PÀGINA 20 =================
+\capcaleraalumne{20}
+\introcomuna
+\subsection*{Tema 20: Punts de tall d'una recta amb els eixos de coordenades}
+\begin{itemize}[label=\textbullet]
+    \item \textbf{Objectiu:} Trobar analíticament on xoca la recta amb els dos eixos de referència del pla cartesià.
+    \item \textbf{Teoria:} Raona que a l'Eix X l'altura és zero ($y=0$), i a l'Eix Y el pas horitzontal és zero ($x=0$).
+    \item \textbf{Passos:} 
+        \begin{itemize}
+            \item Tall Eix X: Canviem la $y$ per $0$ i resolem. Responem punt: $(x, 0)$.
+            \item Tall Eix Y: Canviem la $x$ per $0$ i resolem. Responem punt: $(0, y)$.
+        \end{itemize}
+    \item \textbf{Exemples:} Resol trobant els dos talls per aquestes rectes:
+    \begin{enumerate}[label=\alph*)]
+        \item $y = 2x - 6$
+        \item $y = -3x + 9$
+    \end{enumerate}
+\end{itemize}
+\vfill
+\noindent\textbf{Consell:} És imprescindible que les solucions les donin en format de coordenades de punt, com ara $(3, 0)$ o $(0, -6)$.
+
+\newpage
+% ================= PÀGINA 21 =================
+\capcaleraalumne{21}
+\introcomuna
+\subsection*{Tema 21: Representació d'una recta}
+\begin{itemize}[label=\textbullet]
+    \item \textbf{Objectiu:} Dibuixar sobre els eixos cartesians la línia recta que representa una equació lineal.
+    \item \textbf{Teoria:} Explica que només calen 2 o 3 punts per poder dibuixar una recta. Relaciona breument si puja o baixa depenent del pendent ($m$).
+    \item \textbf{Passos:} 1) Fer una taula de valors ($x$ i $y$). Donar valors a la $x$ (ex: $0, 1, 2$) i calcular la $y$. 2) Dibuixar els eixos marcant l'escala. 3) Situar els punts i unir-los.
+    \item \textbf{Exemples:} Dibuixa grans i ben fetes aquestes tres rectes (si pot ser, al mateix gràfic en diferents colors):
+    \begin{enumerate}[label=\alph*)]
+        \item $y = 2x - 1$ \quad (Creixent)
+        \item $y = -x + 4$ \quad (Decreixent)
+        \item $y = 3$ \quad (Constant)
+    \end{enumerate}
+\end{itemize}
+\vfill
+\noindent\textbf{Consell:} Usa paper quadriculat per al teu original i remarca que la regla és obligatòria.
+
+\newpage
+% ================= PÀGINA 22 =================
+\capcaleraalumne{22}
+\introcomuna
+\subsection*{Tema 22: Representació d'una paràbola}
+\begin{itemize}[label=\textbullet]
+    \item \textbf{Objectiu:} Dibuixar sobre un pla de coordenades la gràfica d'una funció de segon grau ($y=ax^2+bx+c$).
+    \item \textbf{Teoria:} Què és una paràbola? Quan té forma de "U" (còncava) i quan té forma de campana (convexa)? 
+    \item \textbf{Passos:} 
+        1) Trobar el vèrtex, amb $x_v = \frac{-b}{2a}$, i després calcular $y_v$. 2) Fer una taula de valors escollint 2 punts abans del vèrtex i 2 després. 3) Situar i unir de forma arrodonida.
+    \item \textbf{Exemples:} Fes la representació pas a pas:
+    \begin{enumerate}[label=\alph*)]
+        \item $y = x^2 - 4x + 3$
+        \item $y = -x^2 + 4$
+    \end{enumerate}
+\end{itemize}
+\vfill
+\noindent\textbf{Consell:} Remarca als teus companys que el fons d'una paràbola mai s'acaba en punxa com una "V", sinó que és corbat.
+
+\newpage
+% ================= PÀGINA 23 =================
+\capcaleraalumne{23}
+\introcomuna
+\subsection*{Tema 23: Punts de tall d'una paràbola amb els eixos}
+\begin{itemize}[label=\textbullet]
+    \item \textbf{Objectiu:} Trobar analíticament (amb càlcul) on xoca la paràbola amb els eixos, que és clau per dibuixar-la perfecte.
+    \item \textbf{Teoria:} Com igual que a les rectes, els talls surten de fer $x=0$ o $y=0$.
+    \item \textbf{Passos:} 
+        \begin{itemize}
+            \item Tall Eix Y: Fer $x=0$ (només hi haurà 1 punt).
+            \item Talls Eix X: Fer $y=0$. S'ha de resoldre l'equació de segon grau sencera (hi poden haver 2, 1 o 0 punts de tall).
+        \end{itemize}
+    \item \textbf{Exemples:} Calcula els punts de tall (no cal dibuixar, només el càlcul numèric):
+    \begin{enumerate}[label=\alph*)]
+        \item $y = x^2 - 9$
+        \item $y = x^2 - 5x + 6$
+    \end{enumerate}
+\end{itemize}
+\vfill
+\noindent\textbf{Consell:} Quan resolguin $y=0$, recorda'ls els temes d'equacions que han fet altres companys i la fórmula que cal utilitzar.
+
+\newpage
+% ================= PÀGINA 24 =================
+\capcaleraalumne{24}
+\introcomuna
+\subsection*{Tema 24: Estadística bàsica i paràmetres}
+\begin{itemize}[label=\textbullet]
+    \item \textbf{Objectiu:} Entendre com resumir i representar un conjunt de dades.
+    \item \textbf{Teoria i conceptes a explicar:}
+        \begin{itemize}
+            \item Freqüència absoluta i relativa (conceptes de taula).
+            \item Mesures de centralització (mitjana, mediana i moda), mesures de posició no centrals (quartils i percentils), mesures de dispersió (desviació mitjana, desviació absoluta, desviació típica)
+        \end{itemize}
+    \item \textbf{Cas pràctic (El teu Exemple):} 
+        Ens han donat les notes de 16 alumnes en un examen de matemàtiques: 3, 4, 5, 8, 7, 10, 5, 2, 5, 6, 5, 7, 8, 5, 6, 9. 
+        \begin{enumerate}
+            \item Fes una petita taula de freqüències.
+            \item Calcula'n la mitjana, la moda i la mediana.
+            \item Dibuixa a sota un gràfic de barres on l'eix horitzontal siguin les notes i el vertical el nombre de persones.
+            \item Calcula les mesures de posició no central (1r, 2n i 3r quartil i percentil 10 i 90)
+            \item Calcula les mesures de dispersió (desviació mitjana, absoluta, variància i desviació típica). Sabries explicar per què les diferents mesures de dispersió (desviació mitjana, absoluta i típica) tenen valors diferents i quin és el benefici?
+        \end{enumerate}
+\end{itemize}
+\vfill
+\noindent\textbf{Consell:} Explica molt bé el truc de la "Mediana" posant èmfasi en què cal ORDENAR les dades de més petita a més gran abans de buscar la del mig!
+
+\end{document}
