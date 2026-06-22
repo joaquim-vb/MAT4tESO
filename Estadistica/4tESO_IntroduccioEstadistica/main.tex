@@ -1,0 +1,135 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{tikz}
+
+% 1. MARGES I CAPÇALERA
+\geometry{top=4cm, bottom=2cm, left=2cm, right=2cm, headheight=2.5cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+% Assegura't que tens els fitxers d'imatge o comenta aquestes línies si no els tens
+\fancyhead[L]{\includegraphics[height=1.8cm]{Logo_Departament.png}} 
+\fancyhead[R]{\includegraphics[height=1.8cm]{Logo_Institut.png}}
+
+\fancyfoot[L]{}
+\fancyfoot[C]{Pàgina \thepage\ de \pageref{LastPage}}
+\fancyfoot[R]{}
+
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+
+% --- CAPÇALERA D'IDENTIFICACIÓ ---
+\begingroup
+\renewcommand{\arraystretch}{2.2}
+\begin{tabularx}{\textwidth}{|X|p{4cm}|}
+    \hline
+    \textbf{Nom i cognoms:} & \textbf{Grup:} \\ \hline
+    \textbf{Activitat:} Introducció a l'estadística & \textbf{Data:} \\ \hline
+\end{tabularx}
+\endgroup
+
+\vspace{0.4cm}
+
+% --- RECORDATORI ---
+\noindent\fbox{
+\begin{minipage}{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
+\textbf{Recordatori:}
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item \textbf{Mitjana ($\bar{x}$):} Suma de totes les dades dividida pel nombre total de dades ($N$).
+    \item \textbf{Mediana ($Me$):} El valor central un cop ordenades les dades de menor a major.
+    \item \textbf{Moda ($Mo$):} El valor o dada que més es repeteix.
+    \item \textbf{Freqüència absoluta ($f_i$):} Nombre de vegades que apareix una dada.
+    \item \textbf{Freqüència relativa ($h_i$ o $f_r$):} Quocient entre la freqüència absoluta i el total ($f_i / N$).
+\end{itemize}
+\end{minipage}}
+
+\vspace{0.4cm}
+
+% --- ACTIVITAT 1 ---
+\noindent\textbf{Activitat 1:} Hem preguntat a 20 alumnes quantes hores han dormit aquesta nit. Les respostes han estat: \\
+\textbf{6, 7, 8, 7, 6, 9, 7, 8, 6, 7, 8, 7, 9, 6, 7, 8, 7, 6, 8, 7}
+
+\begin{enumerate}[label=\alph*)]
+    \item \textbf{Completa la taula de freqüències:}
+    
+    \vspace{0.1cm}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{table}[h]
+    \begin{tabular}{|l|c|c|c|c|c|}
+        \hline
+        \textbf{Hores de son ($x_i$)} & 6 & 7 & 8 & 9 & \textbf{Total ($N$)} \\ \hline
+        \textbf{Freq. absoluta ($f_i$)} & \hspace{1cm} & \hspace{1cm} & \hspace{1cm} & \hspace{1cm} & \\ \hline
+        \textbf{Freq. relativa ($h_i$)} & & & & & \\ \hline
+    \end{tabular}
+    \end{table}
+
+    \item \textbf{Calcula els paràmetres estadístics:}
+    
+    \vspace{0.2cm}
+    $\bar{x} =$ \hspace{3cm} $Me =$ \hspace{3cm} $Mo =$
+    
+    \vspace{0.4cm}
+    \item \textbf{Dibuixa el gràfic de barres:}
+    
+    \vspace{0.1cm}
+    \begin{tikzpicture}[scale=0.6]
+        % Eixos
+        \draw[thick, ->] (0,0) -- (6,0) node[right] {$x_i$ (hores)};
+        \draw[thick, ->] (0,0) -- (0,8.5) node[above] {$f_i$};
+        
+        % Quadricula suau
+        \draw[very thin, gray!50, step=1] (0,0) grid (5.8,8.2);
+        
+        % Marques eix Y
+        \foreach \y in {1,2,3,4,5,6,7,8} {
+            \draw (-0.1,\y) -- (0.1,\y) node[left=0.2cm] {\y};
+        }
+        % Marques eix X
+        \foreach \x/\label in {1/6, 2.5/7, 4/8, 5.5/9} {
+            \draw (\x,-0.1) -- (\x,0.1) node[below=0.2cm] {\label};
+        }
+    \end{tikzpicture}
+\end{enumerate}
+
+\vspace{0.1cm}
+
+\newpage
+% --- ACTIVITAT 2 ---
+\noindent\textbf{Activitat 2:} En una classe s'ha fet una enquesta ràpida sobre el nombre de llibres llegits el darrer mes. Les 20 respostes són:\\
+\textbf{1, 2, 1, 3, 0, 2, 1, 4, 2, 1, 2, 0, 3, 1, 2, 2, 1, 0, 3, 2}
+
+\vspace{0.2cm}
+\begin{enumerate}[label=\alph*)]
+    \item \textbf{Construeix la taula de freqüències:}
+    
+    \vspace{0.1cm}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{table}[h]
+    \begin{tabular}{|l|c|c|c|c|c|c|}
+        \hline
+        \textbf{Llibres ($x_i$)} & \hspace{0.8cm} & \hspace{0.8cm} & \hspace{0.8cm} & \hspace{0.8cm} & \hspace{0.8cm} & \textbf{Total ($N$)} \\ \hline
+        \textbf{Freq. absoluta ($f_i$)} & & & & & & \\ \hline
+        \textbf{Freq. relativa ($h_i$)} & & & & & & \\ \hline
+    \end{tabular}
+    \end{table}
+    
+    \item \textbf{Calcula la mitjana, la mediana i la moda:}
+    
+    \vspace{0.6cm}
+    $\bar{x} =$ \hspace{3cm} $Me =$ \hspace{3cm} $Mo =$
+    \vspace{0.6cm}
+    
+    \item \textbf{Dibuixa el corresponent gràfic de barres} (recorda posar nom als eixos):
+    \vspace{4.5cm} % Espai en blanc per fer el gràfic a mà
+\end{enumerate}
+
+\end{document}
