@@ -1,0 +1,29 @@
+# LaTeX auxiliars
+*.aux
+*.log
+*.toc
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+*.blg
+*.bbl
+*.run.xml
+*.bcf
+*.lof
+*.lot
+*.nav
+*.snm
+
+# Carpetes de build
+build/
+out/
+
+# Temporals d'editor
+.vscode/*.tmp
+*.swp
+*.swo
+
+# Si mai generes fitxers al costat però no vols aquests
+*.latexmk
