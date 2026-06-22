@@ -1,0 +1,790 @@
+\documentclass[11pt,a4paper]{article}
+
+% Idioma i codificació
+\usepackage[catalan]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{eurosym}
+\sloppy
+
+% Matemàtiques i format
+\usepackage{amsmath, amssymb, mathtools}
+\usepackage{enumitem}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{lmodern}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{parskip}
+
+% Entorns amb color per blocs
+\newtcolorbox{blocgroc}{
+  colback=Yellow!15, colframe=Yellow!50!black, boxrule=0.8pt, arc=2pt
+}
+\newtcolorbox{blocverd}{
+  colback=ForestGreen!12, colframe=ForestGreen!50!black, boxrule=0.8pt, arc=2pt
+}
+\newtcolorbox{blocblau}{
+  colback=RoyalBlue!12, colframe=RoyalBlue!50!black, boxrule=0.8pt, arc=2pt
+}
+
+% Estil enumeracions
+\setlist[enumerate]{itemsep=4pt, topsep=4pt}
+
+\title{\textbf{Solucionari d'Equacions de Primer Grau}}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Enunciats}
+\subsection*{Exercici 1: Equacions de 1r grau}
+
+\begin{blocgroc}
+\textbf{Bloc groc}
+\begin{enumerate}[label=\alph*), start=1]
+\item $8x + 5 - 2x + 6 = x + 4$
+\item $3x - 12x - 9 = 2 - x + 5$
+\item $4 - 2x + 6 = 10 - 9x + 7x$
+\item $3(2 - 3x) = 2x - 27$
+\item $6x + 2 = 4(-3x + 5)$
+\item $3(5x + 7) = 4x + 43$
+\end{enumerate}
+\end{blocgroc}
+
+\begin{blocverd}
+\textbf{Bloc verd}
+\begin{enumerate}[label=\alph*), start=7]
+\item $3(3x - 2) = 2(3x + 9)$
+\item $x - \dfrac{x}{6} = 30$
+\item $\dfrac{5x}{6} + \dfrac{2x}{3} = 9$
+\item $\dfrac{2x + 5}{12} = -\dfrac{x}{4} + \dfrac{5}{3}$
+\item $\dfrac{2x + 4}{3} = \dfra{x}{3} + \dfrac{5}{2}$
+\item $\dfrac{5x + 2}{3} = \dfrac{12x + 4}{7}$
+\end{enumerate}
+\end{blocverd}
+
+\begin{blocblau}
+\textbf{Bloc blau}
+\begin{enumerate}[label=\alph*), start=13]
+\item $\dfrac{x}{4} + \dfrac{3x}{8} = 2(x + 3)$
+\item $\dfrac{4x + 2}{5} - \dfrac{4x}{3} = \dfrac{2(x + 13)}{15}$
+\item $\dfrac{4(3x + 6)}{5} + 12 = \dfrac{3(2x + 6)}{2} + 2x$
+\item $\dfrac{3(2x + 6)}{5} - \dfrac{4(2x + 8)}{6} = x + 4$
+\end{enumerate}
+\end{blocblau}
+
+\bigskip\hrule\bigskip
+
+\subsection*{Exercici 2: Equacions de 2n grau}
+\textbf{En el cas que siguin incompletes, utilitza el procediment més ràpid i adequat!}
+
+\begin{blocgroc}
+\textbf{Bloc groc}
+\begin{enumerate}[label=\alph*), start=1]
+\item $x^2 + 5x + 6 = 0$
+\item $x^2 + 12x + 35 = 0$
+\item $x^2 + 2x - 15 = 0$
+\item $3x^2 - 48 = 0$
+\item $x^2 - x = 0$
+\item $x^2 + 5x + 6 = 0$
+\end{enumerate}
+\end{blocgroc}
+
+\begin{blocverd}
+\textbf{Bloc verd}
+\begin{enumerate}[label=\alph*), start=7]
+\item $4x^2 + x - 3 = 0$
+\item $5x^2 - 25x = 0$
+\item $9x^2 - 1 = 0$
+\item $4x^2 + x = 0$
+\item $x^2 + 8x + 12 = 0$
+\item $12x^2 - x - 1 = 0$
+\end{enumerate}
+\end{blocverd}
+
+\begin{blocblau}
+\textbf{Bloc blau}
+\begin{enumerate}[label=\alph*), start=13]
+\item $4x^2 + 16 = 0$
+\item $8x^2 = 0$
+\item $x^2 - 4x + 1 = 0$
+\item $2x^2 - 4x + 10 = 0$
+\end{enumerate}
+\end{blocblau}
+
+\bigskip\hrule\bigskip
+
+\subsection*{Exercici 3: Simplifica i resol l'equació de segon grau}
+
+\begin{blocgroc}
+\textbf{Bloc groc}
+\begin{enumerate}[label=\alph*), start=1]
+\item $2x^2 + x - 1 = 1 - x^2$
+\item $2x^2 - 6x = 6x^2 - 8x$
+\item $5x(x - 1) + 8 = 2(2x^2 - 7x)$
+\item $(x + 6)(x - 6) = 13$
+\end{enumerate}
+\end{blocgroc}
+
+\begin{blocverd}
+\textbf{Bloc verd}
+\begin{enumerate}[label=\alph*), start=5]
+\item $2x^2 = 162$
+\item $x^2 = 7x$
+\item $(2x - 5)(2x + 5) - 119 = 0$
+\end{enumerate}
+\end{blocverd}
+
+\begin{blocblau}
+\textbf{Bloc blau}
+\begin{enumerate}[label=\alph*), start=8]
+\item $(4x - 1)(2x + 3) = (x + 3)(x - 1)$
+\item $(x - 4)^2 - 22 = 2x^2 - 15$
+\item $(x + 2)^2 = 1 - x(x + 3)$
+\item $(x - 3)^2 - (2x + 5)^2 = -16$
+\item $\dfrac{2(x - 2)}{5} + 2x = \dfrac{3x^2 + 4}{4}$
+\end{enumerate}
+\end{blocblau}
+
+\bigskip\hrule\bigskip
+
+\subsection*{Exercici 4: Problemes de primer grau}
+
+\begin{blocgroc}
+\textbf{Bloc groc}
+\begin{enumerate}[label=\alph*), start=1]
+\item Quin és el nombre que multiplicat per $\dfrac{4}{3}$ dóna 48?
+\item Entre dues persones tenen en total 542 € i una d’elles té 300 € més que l’altra. Quant diners té cadascuna?
+\end{enumerate}
+\end{blocgroc}
+
+\begin{blocverd}
+\textbf{Bloc verd}
+\begin{enumerate}[label=\alph*), start=3]
+\item Les edats de dos germans sumen 41 anys. Quants anys té cada un si el petit va néixer 9 anys més tard que el gran?
+\item Troba tres nombres consecutius que sumin 108.
+\item Un pare té 3 vegades l’edat del fill. Si entre els dos sumen 48 anys, quina edat té cadascú?
+\end{enumerate}
+\end{blocverd}
+
+\begin{blocblau}
+\textbf{Bloc blau}
+\begin{enumerate}[label=\alph*), start=6]
+\item El terreny de joc del camp del Barça té una superfície de 8446 m². Quina és la seva amplada si sabem que la llargada és aproximadament 103 m?
+\item Els angles d’un triangle estan relacionats de la següent forma: l’angle $\hat{A}$ mesura 40° més que l’angle $\hat{B}$ i l’angle $\hat{C}$ mesura 10° més que l’angle $\hat{A}$. Quant mesuren els angles $\hat{A}, \hat{B}, \hat{C}$?
+\end{enumerate}
+\end{blocblau}
+
+\bigskip\hrule\bigskip
+\section*{Solucions pas a pas amb explicació}
+
+\subsection*{Exercici 1}
+
+\textbf{Bloc groc}
+
+\paragraph{a)} $8x + 5 - 2x + 6 = x + 4$
+\[
+\begin{aligned}
+\text{(1) Agrupem termes semblants a l'esquerra: } & (8x - 2x) + (5+6) = x + 4 \\
+& 6x + 11 = x + 4 \\
+\text{(2) Aïllem la incògnita passant $x$ a l'esquerra: } & 6x - x = 4 - 11 \\
+& 5x = -7 \\
+\text{(3) Dividim pel coeficient de $x$: } & \boxed{x = -\dfrac{7}{5}}
+\end{aligned}
+\]
+
+\paragraph{b)} $3x - 12x - 9 = 2 - x + 5$
+\[
+\begin{aligned}
+\text{(1) Simplifiquem amb sumes: } & -9x - 9 = 7 - x \\
+\text{(2) Passem els termes amb $x$ a un costat: } & -9x + x = 7 + 9 \\
+& -8x = 16 \\
+\text{(3) Dividim per $-8$: } & \boxed{x = -2}
+\end{aligned}
+\]
+
+\paragraph{c)} $4 - 2x + 6 = 10 - 9x + 7x$
+\[
+\begin{aligned}
+\text{(1) Reduïm cada costat: } & 10 - 2x = 10 - 2x \\
+\text{(2) Igualtat certa per a tot $x$: } & \boxed{\text{Infinites solucions (identitat)}}
+\end{aligned}
+\]
+
+\paragraph{d)} $3(2 - 3x) = 2x - 27$
+\[
+\begin{aligned}
+\text{(1) Desenvolupem el parèntesi: } & 6 - 9x = 2x - 27 \\
+\text{(2) Agrupem els $x$: } & -9x - 2x = -27 - 6 \\
+& -11x = -33 \\
+\text{(3) Dividim per $-11$: } & \boxed{x = 3}
+\end{aligned}
+\]
+
+\paragraph{e)} $6x + 2 = 4(-3x + 5)$
+\[
+\begin{aligned}
+\text{(1) Multipliquem: } & 6x + 2 = -12x + 20 \\
+\text{(2) Passem $-12x$ a l'esquerra i el 2 a la dreta: } & 6x + 12x = 20 - 2 \\
+& 18x = 18 \\
+\text{(3) Dividim per 18: } & \boxed{x = 1}
+\end{aligned}
+\]
+
+\paragraph{f)} $3(5x + 7) = 4x + 43$
+\[
+\begin{aligned}
+\text{(1) Desenvolupem: } & 15x + 21 = 4x + 43 \\
+\text{(2) Aïllem $x$: } & 15x - 4x = 43 - 21 \\
+& 11x = 22 \\
+\text{(3) Dividim per 11: } & \boxed{x = 2}
+\end{aligned}
+\]
+
+\textbf{Bloc verd}
+
+\paragraph{g)} $3(3x - 2) = 2(3x + 9)$
+\[
+\begin{aligned}
+\text{(1) Desenvolupem amb la distributiva: } & 9x - 6 = 6x + 18 \\
+\text{(2) Portem termes amb $x$ al mateix costat: } & 9x - 6x = 18 + 6 \\
+& 3x = 24 \\
+\text{(3) Dividim per 3: } & \boxed{x = 8}
+\end{aligned}
+\]
+
+\paragraph{h)} $x - \dfrac{x}{6} = 30$
+\[
+\begin{aligned}
+\text{(1) Posem sobre el mateix denominador: } & \dfrac{6x - x}{6} = 30 \\
+\text{(2) Simplifiquem la fracció: } & \dfrac{5x}{6} = 30 \\
+\text{(3) Multipliquem per 6 i dividim per 5: } & 5x = 180 \;\Rightarrow\; \boxed{x = 36}
+\end{aligned}
+\]
+
+\paragraph{i)} $\dfrac{5x}{6} + \dfrac{2x}{3} = 9$
+\[
+\begin{aligned}
+\text{(1) MCM de }(6,3)=6 \text{ i passem a sisens: } & \dfrac{5x}{6} + \dfrac{4x}{6} = 9 \\
+\text{(2) Sumem numeradors: } & \dfrac{9x}{6} = 9 \\
+\text{(3) Simplifiquem } \dfrac{9x}{6}=\dfrac{3x}{2}\text{ i aïllem: } & 3x = 18 \;\Rightarrow\; \boxed{x = 6}
+\end{aligned}
+\]
+
+\paragraph{j)} $\dfrac{2x + 5}{12} = -\dfrac{x}{4} + \dfrac{5}{3}$
+\[
+\begin{aligned}
+\text{(1) MCM de }(12,4,3)=12 \text{ (passem a dotzens): } &
+\dfrac{2x + 5}{12} = \dfrac{-3x}{12} + \dfrac{20}{12} \\
+\text{(2) Igualem numeradors: } & 2x + 5 = -3x + 20 \\
+\text{(3) Aïllem } x: & 5x = 15 \;\Rightarrow\; \boxed{x = 3}
+\end{aligned}
+\]
+
+\paragraph{k)} $\dfrac{2x + 4}{3} = \dfrac{x}{3} + \dfrac{5}{2}$
+\[
+\begin{aligned}
+\text{(1) Denominador comú 6 } & \dfrac{4x + 8}{6} = \dfrac{2x}{6} + \dfrac{15}{6} \\
+\text{(2) Eliminem denominadors: } & 4x + 8 = 2x + 15 \\
+& 4x + 8 = 33 \\
+\text{(3) Aïllem } x: & 4x - 2x= 15 - 8 \;\Rightarrow\; \boxed{x = \dfrac{7}{2}}
+\end{aligned}
+\]
+
+\paragraph{l)} $\dfrac{5x + 2}{3} = \dfrac{12x + 4}{7}$
+\[
+\begin{aligned}
+\text{(1) Multipliquem en creu (evitem denominadors): } & 7(5x + 2) = 3(12x + 4) \\
+& 35x + 14 = 36x + 12 \\
+\text{(2) Aïllem } x \text{ restant } 35x: & -x = -2 \\
+\text{(3) Multipliquem per $-1$: } & \boxed{x = 2}
+\end{aligned}
+\]
+
+\textbf{Bloc blau}
+
+\paragraph{m)} $\dfrac{x}{4} + \dfrac{3x}{8} = 2(x + 3)$
+\[
+\begin{aligned}
+\text{(1) MCM de }(4,8)=8 \text{ i convertim: } & \dfrac{2x}{8} + \dfrac{3x}{8} = 2(x + 3) \\
+\text{(2) Sumem fraccions: } & \dfrac{5x}{8} = 2x + 6 \\
+\text{(3) Eliminem el denominador multiplicant per 8: } & 5x = 16x + 48 \\
+\text{(4) Aïllem } x: & -11x = 48 \;\Rightarrow\; \boxed{x = -\dfrac{48}{11}}
+\end{aligned}
+\]
+
+\paragraph{n)} $\dfrac{4x + 2}{5} - \dfrac{4x}{3} = \dfrac{2(x + 13)}{15}$
+\[
+\begin{aligned}
+\text{(1) MCM de }(5,3,15)=15 \text{ i multipliquem tota l'equació: } &
+3(4x + 2) - 5(4x) = 2(x + 13) \\
+\text{(2) Desenvolupem i agrupem: } & 12x + 6 - 20x = 2x + 26 \\
+& -8x + 6 = 2x + 26 \\
+\text{(3) Aïllem } x: & -10x = 20 \;\Rightarrow\; \boxed{x = -2}
+\end{aligned}
+\]
+
+\paragraph{o)} $\dfrac{4(3x + 6)}{5} + 12 = \dfrac{3(2x + 6)}{2} + 2x$
+\[
+\begin{aligned}
+\text{(1) Desenvolupem numeradors: } & \dfrac{12x + 24}{5} + 12 = \dfrac{6x + 18}{2} + 2x \\
+\text{(2) Simplifiquem a la dreta: } & \dfrac{12x + 24}{5} + 12 = 3x + 9 + 2x = 5x + 9 \\
+\text{(3) Eliminem fraccions multiplicant per 5: } & 12x + 24 + 60 = 25x + 45 \\
+& 12x + 84 = 25x + 45 \\
+\text{(4) Aïllem } x: & -13x = -39 \;\Rightarrow\; \boxed{x = 3}
+\end{aligned}
+\]
+
+\paragraph{p)} $\dfrac{3(2x + 6)}{5} - \dfrac{4(2x + 8)}{6} = x + 4$
+\[
+\begin{aligned}
+\text{(1) Desenvolupem numeradors: } & \dfrac{6x + 18}{5} - \dfrac{8x + 32}{6} = x + 4 \\
+\text{(2) MCM de }(5,6)=30 \text{; multipliquem tota l'equació: } &
+6(6x + 18) - 5(8x + 32) = 30(x + 4) \\
+\text{(3) Desenvolupem i agrupem: } & 36x + 108 - 40x - 160 = 30x + 120 \\
+& -4x - 52 = 30x + 120 \\
+\text{(4) Aïllem } x: & -34x = 172 \;\Rightarrow\; \boxed{x = -\dfrac{86}{17}}
+\end{aligned}
+\]
+
+\bigskip\hrule\bigskip
+
+\textbf{Resum de solucions (Exercici 1)}
+\[
+\begin{aligned}
+\text{a)}&\ x = -\dfrac{7}{5}, &
+\text{b)}&\ x = -2, &
+\text{c)}&\ \text{infinites}, &
+\text{d)}&\ x = 3, &
+\text{e)}&\ x = 1, &
+\text{f)}&\ x = 2, \\
+\text{g)}&\ x = 8, &
+\text{h)}&\ x = 36, &
+\text{i)}&\ x = 6, &
+\text{j)}&\ x = 3, &
+\text{k)}&\ x = \dfrac{7}{2}, &
+\text{l)}&\ x = 2, \\
+\text{m)}&\ x = -\dfrac{48}{11}, &
+\text{n)}&\ x = -2, &
+\text{o)}&\ x = 3, & 
+\text{p)}&\ x = -\dfrac{86}{17}.
+\end{aligned}
+\]
+
+\subsection*{Exercici 2}
+\textbf{Bloc groc}
+
+\paragraph{a)} $x^2 + 5x + 6 = 0$
+\[
+\begin{aligned}
+\text{(1) Identifiquem } a=1,\ b=5,\ c=6. \\
+\text{(2) Fórmula general: } x=\dfrac{-b\pm\sqrt{b^2-4ac}}{2a}. \\
+x=\dfrac{-5\pm\sqrt{25-24}}{2}=\dfrac{-5\pm\sqrt{1}}{2}. \\
+\text{(3) Solucions: } x_1=\dfrac{-5+1}{2}=-2,\ x_2=\dfrac{-5-1}{2}=-3. \\
+\boxed{x_1=-2,\ x_2=-3}
+\end{aligned}
+\]
+
+\paragraph{b)} $x^2 + 12x + 35 = 0$
+\[
+\begin{aligned}
+a=1,\ b=12,\ c=35. \\
+x=\dfrac{-12\pm\sqrt{144-140}}{2}=\dfrac{-12\pm\sqrt{4}}{2}. \\
+x_1=\dfrac{-12+2}{2}=-5,\ x_2=\dfrac{-12-2}{2}=-7. \\
+\boxed{x_1=-5,\ x_2=-7}
+\end{aligned}
+\]
+
+\paragraph{c)} $x^2 + 2x - 15 = 0$
+\[
+\begin{aligned}
+a=1,\ b=2,\ c=-15. \\
+x=\dfrac{-2\pm\sqrt{4+60}}{2}=\dfrac{-2\pm\sqrt{64}}{2}. \\
+x_1=\dfrac{-2+8}{2}=3,\ x_2=\dfrac{-2-8}{2}=-5. \\
+\boxed{x_1=3,\ x_2=-5}
+\end{aligned}
+\]
+
+\paragraph{d)} $3x^2 - 48 = 0$
+\[
+\begin{aligned}
+\text{(1) Equació incompleta: } 3x^2=48. \\
+x^2=16,\ x=\pm4. \\
+\boxed{x=\pm4}
+\end{aligned}
+\]
+
+\paragraph{e)} $x^2 - x = 0$
+\[
+\begin{aligned}
+\text{(1) Factoritzem: } x(x-1)=0. \\
+\text{(2) Solucions: } x=0,\ x=1. \\
+\boxed{x=0,\ x=1}
+\end{aligned}
+\]
+
+\paragraph{f)} $x^2 + 5x + 6 = 0$ (igual que a))
+\[
+\boxed{x=-2,\ x=-3}
+\]
+
+\textbf{Bloc verd}
+
+\paragraph{g)} $4x^2 + x - 3 = 0$
+\[
+\begin{aligned}
+a=4,\ b=1,\ c=-3. \\
+x=\dfrac{-1\pm\sqrt{1+48}}{8}=\dfrac{-1\pm\sqrt{49}}{8}. \\
+x_1=\dfrac{-1+7}{8}=0.75,\ x_2=\dfrac{-1-7}{8}=-1. \\
+\boxed{x_1=\dfrac{3}{4},\ x_2=-1}
+\end{aligned}
+\]
+
+\paragraph{h)} $5x^2 - 25x = 0$
+\[
+\begin{aligned}
+\text{(1) Factoritzem: } 5x(x-5)=0. \\
+\text{(2) Solucions: } x=0,\ x=5. \\
+\boxed{x=0,\ x=5}
+\end{aligned}
+\]
+
+\paragraph{i)} $9x^2 - 1 = 0$
+\[
+\begin{aligned}
+9x^2=1,\ x^2=\dfrac{1}{9},\ x=\pm\dfrac{1}{3}. \\
+\boxed{x=\pm\dfrac{1}{3}}
+\end{aligned}
+\]
+
+\paragraph{j)} $4x^2 + x = 0$
+\[
+\begin{aligned}
+\text{(1) Factoritzem: } x(4x+1)=0. \\
+\text{(2) Solucions: } x=0,\ x=-\dfrac{1}{4}. \\
+\boxed{x=0,\ x=-\dfrac{1}{4}}
+\end{aligned}
+\]
+
+\paragraph{k)} $x^2 + 8x + 12 = 0$
+\[
+\begin{aligned}
+a=1,\ b=8,\ c=12. \\
+x=\dfrac{-8\pm\sqrt{64-48}}{2}=\dfrac{-8\pm\sqrt{16}}{2}. \\
+x_1=\dfrac{-8+4}{2}=-2,\ x_2=\dfrac{-8-4}{2}=-6. \\
+\boxed{x=-2,\ x=-6}
+\end{aligned}
+\]
+
+\paragraph{l)} $12x^2 - x - 1 = 0$
+\[
+\begin{aligned}
+a=12,\ b=-1,\ c=-1. \\
+x=\dfrac{1\pm\sqrt{1+48}}{24}=\dfrac{1\pm\sqrt{49}}{24}. \\
+x_1=\dfrac{1+7}{24}=\dfrac{8}{24}=\dfrac{1}{3},\ x_2=\dfrac{1-7}{24}=-\dfrac{6}{24}=-\dfrac{1}{4}. \\
+\boxed{x=\dfrac{1}{3},\ x=-\dfrac{1}{4}}
+\end{aligned}
+\]
+
+\textbf{Bloc blau}
+
+\paragraph{m)} $4x^2 + 16 = 0$
+\[
+\begin{aligned}
+4x^2=-16,\ x^2=-4,\ \text{no té solució real}. \\
+\boxed{\text{Sense solució real}}
+\end{aligned}
+\]
+
+\paragraph{n)} $8x^2 = 0$
+\[
+\begin{aligned}
+x^2=0,\ x=0. \\
+\boxed{x=0}
+\end{aligned}
+\]
+
+\paragraph{o)} $x^2 - 4x + 1 = 0$
+\[
+\begin{aligned}
+a=1,\ b=-4,\ c=1. \\
+x=\dfrac{4\pm\sqrt{16-4}}{2}=\dfrac{4\pm\sqrt{12}}{2}. \\
+x=\dfrac{4\pm2\sqrt{3}}{2}=2\pm\sqrt{3}. \\
+\boxed{x=2+\sqrt{3},\ x=2-\sqrt{3}}
+\end{aligned}
+\]
+
+\paragraph{p)} $2x^2 - 4x + 10 = 0$
+\[
+\begin{aligned}
+a=2,\ b=-4,\ c=10. \\
+x=\dfrac{4\pm\sqrt{16-80}}{4}=\dfrac{4\pm\sqrt{-64}}{4}. \\
+\text{Discriminant negatiu: no té solucions reals}. \\
+\end{aligned}
+\]
+
+\textbf{Resum de solucions (Exercici 2)}
+\[
+\begin{aligned}
+\text{a)}&\ x = -2,\ -3; &
+\text{b)}&\ x = -5,\ -7; &
+\text{c)}&\ x = 3,\ -5; &
+\text{d)}&\ x = \pm 4; \\
+\text{e)}&\ x = 0,\ 1; &
+\text{f)}&\ x = -2,\ -3; &
+\text{g)}&\ x = \dfrac{3}{4},\ -1; &
+\text{h)}&\ x = 0,\ 5; \\
+\text{i)}&\ x = \pm \dfrac{1}{3}; &
+\text{j)}&\ x = 0,\ -\dfrac{1}{4}; &
+\text{k)}&\ x = -2,\ -6; &
+\text{l)}&\ x = \dfrac{1}{3},\ -\dfrac{1}{4}; \\
+\text{m)}&\ \text{Sense solució real}; &
+\text{n)}&\ x = 0; &
+\text{o)}&\ x = 2 \pm \sqrt{3}; &
+\text{p)}&\ \text{Sense solució real}; &
+\end{aligned}
+\]
+
+\subsection*{Exercici 3}
+\textbf{Bloc groc}
+
+\paragraph{a)} $2x^2 + x - 1 = 1 - x^2$
+\[
+\begin{aligned}
+\text{(1) Passem tot a un costat: } & 2x^2 + x - 1 - 1 + x^2 = 0 \\
+& 3x^2 + x - 2 = 0 \\
+\text{(2) Fórmula general: } x=\dfrac{-1\pm\sqrt{1+24}}{6}=\dfrac{-1\pm5}{6}. \\
+x_1=\dfrac{-1+5}{6}=\dfrac{4}{6}=\dfrac{2}{3},\ x_2=\dfrac{-1-5}{6}=-1. \\
+\boxed{x=\dfrac{2}{3},\ x=-1}
+\end{aligned}
+\]
+
+\paragraph{b)} $2x^2 - 6x = 6x^2 - 8x$
+\[
+\begin{aligned}
+\text{(1) Passem termes: } & 2x^2 - 6x - 6x^2 + 8x = 0 \\
+& -4x^2 + 2x = 0 \\
+\text{(2) Factoritzem: } & -2x(2x - 1)=0 \\
+\text{(3) Solucions: } x=0,\ x=\dfrac{1}{2}. \\
+\boxed{x=0,\ x=\dfrac{1}{2}}
+\end{aligned}
+\]
+
+\paragraph{c)} $5x(x - 1) + 8 = 2(2x^2 - 7x)$
+\[
+\begin{aligned}
+\text{(1) Desenvolupem: } & 5x^2 - 5x + 8 = 4x^2 - 14x \\
+\text{(2) Passem termes: } & x^2 + 9x + 8 = 0 \\
+\text{(3) Fórmula: } x=\dfrac{-9\pm\sqrt{81-32}}{2}=\dfrac{-9\pm\sqrt{49}}{2}. \\
+x_1=\dfrac{-9+7}{2}=-1,\ x_2=\dfrac{-9-7}{2}=-8. \\
+\boxed{x=-1,\ x=-8}
+\end{aligned}
+\]
+
+\paragraph{d)} $(x + 6)(x - 6) = 13$
+\[
+\begin{aligned}
+\text{(1) Desenvolupem: } & x^2 - 36 = 13 \\
+\text{(2) Aïllem: } & x^2 = 49,\ x=\pm7. \\
+\boxed{x=\pm7}
+\end{aligned}
+\]
+
+\textbf{Bloc verd}
+
+\paragraph{e)} $2x^2 = 162$
+\[
+x^2=81,\ x=\pm9. \\
+\boxed{x=\pm9}
+\]
+
+\paragraph{f)} $x^2 = 7x$
+\[
+x^2 - 7x = 0,\ x(x-7)=0,\ x=0,\ x=7. \\
+\boxed{x=0,\ x=7}
+\]
+
+\paragraph{g)} $(2x - 5)(2x + 5) - 119 = 0$
+\[
+\text{(1) Desenvolupem: } (2x)^2 - 25 - 119 = 0 \\
+4x^2 - 144 = 0,\ x^2=36,\ x=\pm6. \\
+\boxed{x=\pm6}
+\]
+
+\textbf{Bloc blau}
+
+\paragraph{h)} $(4x - 1)(2x + 3) = (x + 3)(x - 1)$
+\[
+\begin{aligned}
+\text{(1) Desenvolupem: } 8x^2 + 12x - 2x - 3 = x^2 + 2x - 3 \\
+\text{(2) Continuem desvenvolupant: } 8x^2 + 10x - 3 = x^2 + 2x - 3 \\
+\text{(3) Continuem desenvolupant: } 7x^2 + 8x = 0,\ x(7x+8)=0,\ x=0,\ x=-\dfrac{8}{7}. \\
+\boxed{x=0,\ x=-\dfrac{8}{7}}
+\end{aligned}
+\]
+
+\paragraph{i)} $(x - 4)^2 - 22 = 2x^2 - 15$
+\[
+\begin{aligned}
+\text{(1) Desenvolupem: } x^2 - 8x + 16 - 22 = 2x^2 - 15 \\
+\text{(2) Continuem: }  x^2 - 8x - 6 = 2x^2 - 15 \\
+\text{(3): Continuem: } -x^2 - 8x + 9 = 0,\ x^2 + 8x - 9 = 0 \\
+\text{(4): Continuem: } x=\dfrac{-8\pm\sqrt{64+36}}{2}=\dfrac{-8\pm10}{2}. \\
+x_1=1,\ x_2=-9. \\
+\boxed{x=1,\ x=-9}
+\end{aligned}
+\]
+
+\paragraph{j)} $(x + 2)^2 = 1 - x(x + 3)$
+\[
+\begin{aligned}
+\text{(1): } x^2 + 4x + 4 = 1 - x^2 - 3x \\
+\text{(2): } 2x^2 + 7x + 3 = 0 \\
+\text{(3): } x=\dfrac{-7\pm\sqrt{49-24}}{4}=\dfrac{-7\pm5}{4}. \\
+\text{(4): } x_1=-\dfrac{1}{2},\ x_2=-3. \\
+\boxed{x=-\dfrac{1}{2},\ x=-3}
+\end{aligned}
+\]
+
+\paragraph{k)} $(x - 3)^2 - (2x + 5)^2 = -16$
+\[
+\begin{aligned}
+(x^2 -6x+9)-(4x^2 +20x+25)=-16\\
+-3x^2 -26x-16 = - 16\\
+-3x^2 -26x = 0 \\
+-3x\left(x+\dfrac{26}{3}\right)=0 \\
+\boxed{x_1 = 0; x_2 = \dfrac{-26}{3}} \\
+\end{aligned}
+\]
+
+\paragraph{l)} $\dfrac{2(x - 2)}{5} + 2x = \dfrac{3x^2 + 4}{4}$
+\[
+\begin{aligned}
+\text{(1) Multipliquem per 20: } 8(x-2)+40x=5(3x^2+4) \\
+\text{(2): } 8x-16+40x=15x^2+20 \\
+\text{(3): } 15x^2 - 48x + 36 = 0 \\
+\text{(4): } 5x^2 - 16x +  12 = 0 \\
+\text{(5): } x=\dfrac{16\pm\sqrt{256^2 - 4\cdot 5 \cdot 12}}{10}=\dfrac{16  \pm 4}{10} \\
+\text{(5): }x_1=2,\ x_2=\dfrac{6}{5} \\
+\boxed{x=2,\ x=\dfrac{6}{5}}
+\end{aligned}
+\]
+
+\bigskip\hrule\bigskip
+
+\textbf{Resum de solucions}
+\[
+\begin{aligned}
+\text{a)}&\ x=\dfrac{2}{3},-1; &
+\text{b)}&\ x=0,\dfrac{1}{2}; &
+\text{c)}&\ x=-1,-8; &
+\text{d)}&\ x=\pm7; \\
+\text{e)}&\ x=\pm9; &
+\text{f)}&\ x=0,7; &
+\text{g)}&\ x=\pm6; &
+\text{h)}&\ x=0,-\dfrac{8}{7}; \\
+\text{i)}&\ x=1,-9; &
+\text{j)}&\ x=-\dfrac{1}{2},-3; &
+\text{k)}&\ x = 0, x = \dfrac{-26}{3}; &
+\text{l)}&\ x=2,\dfrac{6}{5}.
+\end{aligned}
+\]
+
+\subsection*{Exercici 4}
+
+\textbf{Bloc groc}
+
+\paragraph{a)} Quin és el nombre que multiplicat per $\dfrac{4}{3}$ dóna 48?
+\[
+\begin{aligned}
+\text{(1) Plantegem: } & x \cdot \dfrac{4}{3} = 48 \\
+\text{(2) Multipliquem per 3: } & 4x = 144 \\
+\text{(3) Dividim per 4: } & x = 36 \\
+\boxed{x = 36}
+\end{aligned}
+\]
+
+\paragraph{b)} Entre dues persones tenen 542 € i una té 300 € més que l’altra.
+\[
+\begin{aligned}
+\text{(1) Sigui } x \text{ la quantitat de la persona amb menys diners.} \\
+\text{(2) L’altra té } x + 300. \\
+\text{(3) Plantegem: } x + (x + 300) = 542 \\
+2x + 300 = 542,\ 2x = 242,\ x = 121. \\
+\text{(4) L’altra té: } 121 + 300 = 421. \\
+\boxed{\text{Tenen } 121 € \text{ i } 421 €}
+\end{aligned}
+\]
+
+\textbf{Bloc verd}
+
+\paragraph{c)} Les edats sumen 41 anys i el petit és 9 anys més jove.
+\[
+\begin{aligned}
+\text{(1) Sigui } x \text{ l’edat del gran, } x - 9 \text{ la del petit.} \\
+\text{(2) Plantegem: } x + (x - 9) = 41 \\
+2x - 9 = 41,\ 2x = 50,\ x = 25. \\
+\text{(3) Petit: } 25 - 9 = 16. \\
+\boxed{\text{Gran: 25 anys, Petit: 16 anys}}
+\end{aligned}
+\]
+
+\paragraph{d)} Tres nombres consecutius que sumen 108.
+\[
+\begin{aligned}
+\text{(1) Sigui } x \text{ el primer, els altres són } x+1,\ x+2. \\
+\text{(2) Plantegem: } x + (x+1) + (x+2) = 108 \\
+3x + 3 = 108,\ 3x = 105,\ x = 35. \\
+\text{(3) Nombres: } 35,\ 36,\ 37. \\
+\boxed{35,\ 36,\ 37}
+\end{aligned}
+\]
+
+\paragraph{e)} Un pare té 3 vegades l’edat del fill. Sumem 48 anys.
+\[
+\begin{aligned}
+\text{(1) Sigui } x \text{ l’edat del fill, pare: } 3x. \\
+\text{(2) Plantegem: } x + 3x = 48 \\
+4x = 48,\ x = 12,\ \text{pare: } 36. \\
+\boxed{\text{Fill: 12 anys, Pare: 36 anys}}
+\end{aligned}
+\]
+
+\textbf{Bloc blau}
+
+\paragraph{f)} Superfície = 8446 m², llargada = 103 m.
+\[
+\begin{aligned}
+\text{(1) Amplada } = \dfrac{\text{superfície}}{\text{llargada}} = \dfrac{8446}{103} \approx 82. \\
+\boxed{\text{Amplada: 82 m (aprox.)}}
+\end{aligned}
+\]
+
+\paragraph{g)} Angles d’un triangle: $\hat{A}$ és 40° més que $\hat{B}$, $\hat{C}$ és 10° més que $\hat{A}$.
+\[
+\begin{aligned}
+\text{(1) Sigui } x = \hat{B},\ \hat{A} = x + 40,\ \hat{C} = x + 50. \\
+\text{(2) Suma angles: } x + (x+40) + (x+50) = 180 \\
+3x + 90 = 180,\ 3x = 90,\ x = 30. \\
+\text{(3) Angles: } \hat{B}=30^\circ,\ \hat{A}=70^\circ,\ \hat{C}=80^\circ. \\
+\boxed{\hat{A}=70^\circ,\ \hat{B}=30^\circ,\ \hat{C}=80^\circ}
+\end{aligned}
+\]
+
+\bigskip\hrule\bigskip
+
+\textbf{Resum de solucions}
+\[
+\begin{aligned}
+\text{a)}&\ x = 36; &
+\text{b)}&\ 121 \euro \text{ i } 421 \euro; &
+\text{c)}&\ \text{Gran: 25, Petit: 16}; \\
+\text{d)}&\ 35,\ 36,\ 37; &
+\text{e)}&\ \text{Fill: 12, Pare: 36}; &
+\text{f)}&\ \text{Amplada: 82 m}; \\
+\text{g)}&\ \hat{A}=70^\circ,\ \hat{B}=30^\circ,\ \hat{C}=80^\circ.
+\end{aligned}
+\]
+\end{document}
