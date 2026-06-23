@@ -1,0 +1,111 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{amsmath}
+
+% 1. MARGES I CAPÇALERA
+\geometry{top=4cm, bottom=3cm, left=2cm, right=2cm, headheight=2.5cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+% Assegura't que tens els fitxers d'imatge o comenta aquestes línies si no els tens
+\fancyhead[L]{\includegraphics[height=1.8cm]{Logo_Departament.png}} 
+\fancyhead[R]{\includegraphics[height=1.8cm]{Logo_Institut.png}}
+
+\fancyfoot[L]{}
+\fancyfoot[C]{Pàgina \thepage\ de \pageref{LastPage}}
+\fancyfoot[R]{}
+
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+
+% --- CAPÇALERA D'IDENTIFICACIÓ ---
+\begingroup
+\renewcommand{\arraystretch}{2.2}
+\begin{tabularx}{\textwidth}{|X|p{4cm}|}
+    \hline
+    \textbf{Nom i cognoms:} & \textbf{Grup:} \\ \hline
+    \textbf{Activitat:} Problemes d'Equacions i Sistemes & \textbf{Data:} \\ \hline
+\end{tabularx}
+\endgroup
+
+\vspace{0.8cm}
+
+\begin{center}
+    {\Large \textbf{RESOLUCIÓ DE PROBLEMES ALGEBRAICS}}
+\end{center}
+
+\vspace{0.5cm}
+
+% --- EXERCICI 1: EQUACIONS DE PRIMER GRAU ---
+\section*{Exercici 1: Plantejament d'equacions de primer grau}
+Planteja una equació per a cada enunciat i troba el nombre secret.
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+    % Introducció senzilla (abstractes)
+    \item Penso un nombre. Si li sumo 5, el resultat és 12. Quin nombre és?
+    \item Penso un nombre. Si li resto 4, el resultat és 20. Quin nombre és?
+    \item El doble d'un nombre és igual a 18. De quin nombre es tracta?
+    \item La tercera part d'un nombre és 5. Quin és aquest nombre?
+    
+    % Contextos senzills AMB PISTES
+    \item Si al doble dels diners que tinc li sumo 2 euros, en tinc 12. Quants diners tinc? \\
+    {\small \textit{(Pista: Defineix els diners que tens com a $x$. El doble serà $2x$.)}}
+    
+    \item La suma de dos nombres consecutius és 21. Quins són aquests nombres? \\
+    {\small \textit{(Pista: Si el primer nombre és $x$, el consecutiu és $x+1$.)}}
+    
+    \item El perímetre d'un quadrat fa 32 cm. Quant mesura el costat? \\
+    {\small \textit{(Recorda: El perímetre és la suma dels 4 costats, és a dir, la mida d'un costat multiplicada per 4.)}}
+    
+    % Una mica més complexos
+    \item He comprat 3 llibretes iguals i un bolígraf de 2 euros. En total he pagat 11 euros. Quant val cada llibreta?
+    \item El triple d'un nombre menys 5 és igual al doble del mateix nombre més 2.
+    \item La meitat d'un nombre més la seva quarta part sumen 15. Quin nombre és?
+\end{enumerate}
+
+% --- EXERCICI 2: SISTEMES D'EQUACIONS ---
+\section*{Exercici 2: Problemes de sistemes d'equacions}
+Planteja un sistema de dues equacions amb dues incògnites per a cada problema i resol-lo.
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+    % Iniciació amb PISTES
+    \item En Joan compra un croissant i un suc i paga 3 €. La Maria compra dos croissants i un suc i paga 4 €. Quant val el croissant i quant el suc? \\
+    {\small \textit{(Guia: Defineix $x$ = preu del croissant, $y$ = preu del suc.)}}
+    
+    \item La suma de dos nombres és 20 i la seva diferència és 6. Quins nombres són? \\
+    {\small \textit{(Guia: Defineix $x$ com el primer nombre i $y$ com el segon.)}}
+    
+    \item En un pàrquing hi ha cotxes i motos. En total hi ha 10 vehicles i sumen 32 rodes. Quants cotxes i quantes motos hi ha? \\
+    {\small \textit{(Guia: Defineix $x$ = nombre de cotxes, $y$ = nombre de motos. Recorda que els cotxes tenen 4 rodes i les motos 2.)}}
+    
+    % Problemes estàndard
+    \item 3 kg de pomes i 2 kg de peres costen 8 €. 2 kg de pomes i 2 kg de peres costen 6 €. Quin és el preu del kg de cada fruita?
+    \item Una entrada de cinema per adult i dues per infant costen 20 €. Dues entrades d'adult i una d'infant costen 22 €. Quin és el preu de cada tipus d'entrada?
+    
+    \item En un rectangle, el costat llarg fa el doble que el costat curt. Si el perímetre és 30 cm, quant mesura cada costat? \\
+    {\small \textit{(Pista: Si $x$ és el costat curt i $y$ el llarg, sabem que $y=2x$. El perímetre suma tots els costats: $2x + 2y = 30$.)}}
+    
+    \item He comprat 4 llapis i 3 gomes per 5,50 €. Ahir vaig comprar 2 llapis i 1 goma per 2,50 €. Quant val cada cosa?
+    
+    \item L'edat d'un pare és el triple que la del seu fill. La suma de les seves edats és 48 anys. Quants anys té cadascú? \\
+    {\small \textit{(Pista: Defineix $x$ com l'edat del fill i $y$ com la del pare. Una equació serà $y=3x$.)}}
+    
+    % Altres problemes sense pistes addicionals
+    \item En una guardiola tinc monedes de 2 € i de 1 €. En total tinc 15 monedes que sumen 24 €. Quantes monedes tinc de cada valor?
+    \item En un examen contestes 20 preguntes. Per cada encert sumes 2 punts i per cada error en restes 1. Si has tret 34 punts, quantes n'has encertat?
+    \item La diferència entre dos nombres és 5. Si dividim el gran entre el petit, el resultat és 2 exacte (sense residu). Quins nombres són?
+    \item En una granja hi ha conills i gallines. Si comptem els caps n'hi ha 25, i si comptem les potes n'hi ha 80. Quants animals hi ha de cada tipus?
+    \item Fa 5 anys, l'edat de la mare era quatre vegades la del fill. D'aquí a 5 anys, només serà el doble. Quines edats tenen ara?
+    \item Volem barrejar cafè de 10 €/kg amb cafè de 15 €/kg per obtenir 50 kg de mescla a 12 €/kg. Quants kg hem de posar de cada tipus?
+    \item La suma de les dues xifres d'un nombre és 9. Si intercanviem l'ordre de les xifres, el nombre resultant és 27 unitats més gran que l'original. Quin nombre és?
+\end{enumerate}
+
+\end{document}
