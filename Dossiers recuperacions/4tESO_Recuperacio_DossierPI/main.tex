@@ -1,0 +1,669 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage[most]{tcolorbox}
+\usepackage[table]{xcolor}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{angles, quotes, calc}
+
+\geometry{top=4cm, bottom=3cm, left=2cm, right=2cm, headheight=2.5cm}
+
+\newtcolorbox{capsula}{
+    colback=blue!5!white,
+    colframe=blue!75!black,
+    title=�� Recorda per a aquest exercici:,
+    fonttitle=\bfseries,
+    arc=2mm,
+    boxrule=1pt,
+    left=5pt, right=5pt, top=5pt, bottom=5pt
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\includegraphics[height=1.8cm]{Logo_Departament.png}}
+\fancyhead[R]{\includegraphics[height=1.8cm]{Logo_Institut.png}}
+\fancyfoot[C]{Pàgina \thepage\ de \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+
+\begingroup
+\renewcommand{\arraystretch}{2.2}
+\begin{tabularx}{\textwidth}{|X|p{4cm}|}
+\hline
+\textbf{Nom i cognoms:} & \textbf{Grup:} \\ \hline
+\textbf{Activitat:} Dossier d’adaptació & \textbf{Data:} \\ \hline
+\end{tabularx}
+\endgroup
+
+\vspace{0.5cm}
+
+\begin{tcolorbox}[colback=red!5!white, colframe=red!75!black, title=Condició d'Examen, fonttitle=\bfseries\large, arc=2mm]
+L'entrega d'aquest dossier completament resolt és una \textbf{condició indispensable} per poder presentar-se a la prova corresponent.
+\end{tcolorbox}
+
+\section*{Activitats d'adaptació}
+
+\begin{capsula}
+Aquest dossier simplificat recupera els procediments bàsics de càlcul, algebra i representació gràfica. Pots fer servir el full d'ajuda o la calculadora quan estigui permès.
+\end{capsula}
+
+\section*{SdA1. Potències i radicals. Operacions amb fraccions}
+
+\begin{capsula}
+Abans de començar, recorda la descomposició en factors primers: divideix sempre per nombres primers fins arribar a 1. Després, usa aquests factors per simplificar fraccions i escriure potències amb base primera.
+\end{capsula}
+
+\textbf{1. Descompon els següents nombres en factors primers:}
+\begin{enumerate}[label=\alph*)]
+    \item $588 =$ \vspace{0.7cm}
+    \item $72 =$ \vspace{0.7cm}
+    \item $196 =$ \vspace{0.7cm}
+\end{enumerate}
+\newpage
+\begin{capsula}
+Per simplificar fraccions amb descomposició en factors primers, factoritza numerador i denominador i després cancel·la els factors comuns.
+\end{capsula}
+
+\textbf{2. Simplifica al màxim aquestes fraccions utilitzant la descomposició en factors primers de l’exercici anterior quan sigui possible:}
+
+\begin{enumerate}[label=\alph*)]
+    \item $\dfrac{588}{72} =$ \vspace{1cm}
+    \item $\dfrac{72}{196} =$ \vspace{1cm}
+    \item $\dfrac{301}{50} =$ \vspace{1cm}
+\end{enumerate}
+
+\begin{capsula}
+Quan multipliques o divides potències amb la mateixa base, suma o resta exponents. Si la base és negativa o hi ha potències dins d'altres potències, revisa bé l'ordre d'aplicació.
+\end{capsula}
+
+\textbf{3. Aplica les propietats de les potències i calcula:}
+\begin{enumerate}[label=\alph*)]
+    \item $(-2)^{-1}\cdot(-2)^{-3}\cdot(-2)^4 =$ \vspace{0.8cm}
+    \item $4^0 =$ \vspace{0.8cm}
+    \item $\dfrac{5^5}{5^2} =$ \vspace{0.8cm}
+    \item $(7^{-3})^2 =$ \vspace{0.8cm}
+\end{enumerate}
+
+\newpage
+\begin{capsula}
+Per escriure una potència amb exponent positiu, fes servir que $a^{-n}=\dfrac{1}{a^n}$. També pots reescriure expressions com $\left(\dfrac{a}{b}\right)^{-n}=\left(\dfrac{b}{a}\right)^n$.
+\end{capsula}
+
+\textbf{4. Expressa les següents potències amb l’exponent positiu:}
+\begin{enumerate}[label=\alph*)]
+    \item $3^{-3} =$ \vspace{0.8cm}
+    \item $5^{-2} =$ \vspace{0.8cm}
+    \item $2^3\cdot 3^{-2} =$ \vspace{0.8cm}
+    \item $5^6\cdot 7^{-3} =$ \vspace{0.8cm}
+\end{enumerate}
+
+\begin{capsula}
+Per passar un nombre a producte de potències de base primera, primer factoritza cada nombre i després eleva cada factor al seu exponent.
+\end{capsula}
+
+\textbf{5. Expressa el resultat en forma de producte de potències de base primera.}
+\begin{enumerate}[label=\alph*)]
+    \item $50^3 =$ \vspace{0.8cm}
+    \item $12^2\cdot 30^3 =$ \vspace{1cm}
+\end{enumerate}
+
+\begin{capsula}
+En notació científica, escriu el nombre com $a\cdot 10^n$ amb $1\le a<10$.
+\end{capsula}
+
+\textbf{6. Expressa els següents nombres en notació científica:}
+\begin{enumerate}[label=\alph*)]
+    \item $5.000.000.000 =$ \vspace{0.8cm}
+    \item $82.400.000.000.000.000 =$ \vspace{0.8cm}
+\end{enumerate}
+
+\begin{capsula}
+Quan extreguis factors d'una arrel, busca quadrats o cubs perfectes dins del radicand. Si no pots simplificar més, deixa l'arrel com està.
+\end{capsula}
+
+\textbf{7. Extreu factors de l’arrel quan sigui possible:}
+\begin{enumerate}[label=\alph*)]
+    \item $\sqrt{81} =$ \vspace{0.8cm}
+    \item $\sqrt{18} =$ \vspace{0.8cm}
+\end{enumerate}
+
+\begin{capsula}
+Per unir factors sota una sola arrel, pensa que $a\sqrt{b}=\sqrt{a^2\cdot b}$ i que les arrels amb el mateix índex es poden combinar.
+\end{capsula}
+
+\textbf{8. Expressa com una sola arrel:}
+\begin{enumerate}[label=\alph*)]
+    \item $2\cdot \sqrt{5} =$ \vspace{0.8cm}
+    \item $6\cdot \sqrt{x} =$ \vspace{0.8cm}
+    \item $13\cdot \sqrt{54} =$ \vspace{0.8cm}
+\end{enumerate}
+
+\begin{capsula}
+Per fer operacions amb fraccions, recorda: si sumes o restes, busca denominador comú; si multipliques, multiplica numeradors i denominadors; si divides, multiplica per la inversa.
+\end{capsula}
+
+\textbf{9. Fes les operacions amb fraccions següents:}
+\begin{enumerate}[label=\alph*)]
+    \item $\dfrac{1}{3}\cdot \dfrac{1}{3}+\dfrac{3}{4} =$ \vspace{1cm}
+    \item $\left(\dfrac{2}{6}-3\right)\div \left(\dfrac{2}{3}-\dfrac{1}{5}\right) =$ \vspace{1.2cm}
+\end{enumerate}
+
+\section*{SdA2. Polinomis}
+
+\begin{capsula}
+Recorda que un polinomi s'escriu com a suma de termes de la forma $a_n x^n$. El grau és el màxim exponent amb coeficient diferent de zero i el terme independent és el que no té $x$.
+\end{capsula}
+
+\textbf{1. Donat el polinomi } $P(x)=3x^4-2x^2-6x+1$ \textbf{, indica:}
+\begin{enumerate}[label=\alph*)]
+    \item El grau del polinomi: \dotfill\vspace{0.4cm}
+    \item El terme de grau 2: \dotfill\vspace{0.4cm}
+    \item El coeficient del terme de grau 1: \dotfill\vspace{0.4cm}
+    \item El coeficient del terme de grau 3: \dotfill\vspace{0.4cm}
+    \item El valor numèric de $P(2):$ \dotfill\vspace{0.6cm}
+    \item El valor numèric de $P(-2):$ \dotfill\vspace{0.6cm}
+    \item El terme independent: \dotfill\vspace{0.4cm}
+\end{enumerate}
+
+\begin{capsula}
+Per avaluar un polinomi a un valor concret, substitueix $x$ pel nombre i calcula pas a pas respectant la jerarquia d'operacions.
+
+Per agrupar termes, suma els coeficients de cada potència de $x$. Ordena el resultat amb el terme de major grau al principi.
+\end{capsula}
+
+\textbf{2. Escriu els següents polinomis agrupant els termes del mateix grau i ordenant-los segons els seus exponents:}
+\begin{enumerate}[label=\alph*)]
+    \item $x^3 - 2x^2 - x^4 + 3x^3 + 4x^4 - 3x + 15 - x - 5 =$ \vspace{1cm}
+    \item $x^5 - 6x^5 - 4x^2 + 2 + 4x^3 - 10 + 10x^5 =$ \vspace{1cm}
+\end{enumerate}
+
+\newpage
+
+
+
+\textbf{3. Realitza les següents sumes i restes de polinomis. Agrupa termes semblants i ordena segons l'exponent:}
+\begin{enumerate}[label=\alph*)]
+    \item $(3x^3 + 5x^2 + 1) + (8x^3 + 4x^2 + 5) =$ \vspace{1.2cm}
+    \item $(-2x^3 - 4x^2 + 2x + 1) + (x^3 - 6x^2 - 5x + 2) =$ \vspace{1.2cm}
+    \item $(-2x^8 - 3x^7 + 5x^3 - 1) - (5x^8 + 6x^7 + x^3 - x^2 + 6x) =$ \vspace{1.2cm}
+    \item $(6x^4 + 5x^3 - 2x^2 - 3) - (x^4 + 5x^3 + 2x^2 - 1) =$ \vspace{1.2cm}
+\end{enumerate}
+
+\begin{capsula}
+Quan restis polinomis, canvia signe a cada terme del segon polinomi i després suma terme a terme.
+\end{capsula}
+
+\textbf{4. Realitza els següents productes. Agrupa el resultat:}
+\begin{enumerate}[label=\alph*)]
+    \item $2x^2\cdot(3x-2) =$ \vspace{0.8cm}
+    \item $(x+1)\cdot(x+2) =$ \vspace{0.8cm}
+    \item $(2x+3)\cdot(2x-3) =$ \vspace{0.8cm}
+    \item $(5x^2+1)\cdot(3x^3-5x) =$ \vspace{1cm}
+\end{enumerate}
+
+\begin{capsula}
+Aplica la propietat distributiva ($a(b+c)=ab+ac$) i identifica termes semblants per agrupar-los.
+\end{capsula}
+
+\textbf{5. Transforma les següents equacions de segon grau fins obtenir la forma simplificada $ax^2+bx+c=0$:}
+\begin{enumerate}[label=\alph*)]
+    \item $3x^2+6x-45 = 2x - 30$ \vspace{1cm}
+    \item $3x - 2x^2 = 8x - 5x^2 + 10$ \vspace{1cm}
+\end{enumerate}
+
+\begin{capsula}
+Passos útils: passa tots els termes al costat esquerre, ordena per graus i simplifica coeficients.
+\end{capsula}
+
+\textbf{6. Resol les següents equacions de segon grau:}
+\begin{enumerate}[label=\alph*)]
+    \item $x^2 - 5x + 6 = 0$ \vspace{1cm}
+    \item $3x^2 + 6x - 45 = 0$ \vspace{1cm}
+\end{enumerate}
+
+\begin{capsula}
+Recorda la fórmula general $x=\dfrac{-b\pm\sqrt{b^2-4ac}}{2a}$ i comprova el discriminant $\Delta=b^2-4ac$ abans de resoldre.
+\end{capsula}
+
+\newpage
+
+\section*{SdA3. Equacions}
+
+\begin{capsula}
+En una equació, l'objectiu és deixar la incògnita sola. Si hi ha parèntesis, primer desenvolupa. Si hi ha fraccions, intenta eliminar-les multiplicant per un denominador comú.
+\end{capsula}
+
+\textbf{1. Donat el polinomi $P(x)=3x^4-2x^2-6x+1$, indica:}
+\begin{enumerate}[label=\alph*)]
+    \item El grau del polinomi: \dotfill\vspace{0.4cm}
+    \item El terme de grau 2: \dotfill\vspace{0.4cm}
+    \item El coeficient del terme de grau 1: \dotfill\vspace{0.4cm}
+    \item El coeficient del terme de grau 3: \dotfill\vspace{0.4cm}
+    \item El valor numèric de $P(2)$: \dotfill\vspace{0.6cm}
+    \item El valor numèric de $P(-2)$: \dotfill\vspace{0.6cm}
+    \item El terme independent: \dotfill\vspace{0.4cm}
+\end{enumerate}
+
+\begin{capsula}
+Abans de combinar polinomis, agrupa els termes del mateix grau. Recorda que el signe menys davant d'un parèntesi afecta tots els termes de dins.
+\end{capsula}
+
+\textbf{2. Escriu els següents polinomis agrupant els termes del mateix grau i ordenant-los segons els seus exponents:}
+\begin{enumerate}[label=\alph*)]
+    \item $x^3-2x^2-x^4+3x^3+4x^4-3x+15-x-5 =$ \vspace{1cm}
+    \item $x^5-6x^5-4x^2+2+4x^3-10+10x^5 =$ \vspace{1cm}
+\end{enumerate}
+
+\begin{capsula}
+Quan sumes o restes polinomis, suma o resta els coeficients dels termes semblants.
+\end{capsula}
+
+\textbf{3. Realitza les següents sumes i restes. El resultat l’has de donar agrupant els termes semblants i ordenant els termes segons els seus exponents:}
+\begin{enumerate}[label=\alph*)]
+    \item $(3x^3+5x^2+1)+(8x^3+4x^2+5) =$ \vspace{1cm}
+    \item $(-2x^3-4x^2+2x+1)+(x^3-6x^2-5x+2) =$ \vspace{1cm}
+    \item $(-2x^8-3x^7+5x^3-1)-(5x^8+6x^7+x^3-x^2+6x) =$ \vspace{1cm}
+    \item $(6x^4+5x^3-2x^2-3)-(x^4+5x^3+2x^2-1) =$ \vspace{1cm}
+\end{enumerate}
+
+\begin{capsula}
+En un producte de polinomis, aplica la distributiva. Si veus una identitat notable, fes-la servir directament.
+\end{capsula}
+
+\textbf{4. Realitza els següents productes. El resultat l’has de donar agrupant els termes semblants i ordenant els termes segons els seus exponents:}
+\begin{enumerate}[label=\alph*)]
+    \item $2x^2\cdot(3x-2) =$ \vspace{0.8cm}
+    \item $(x+1)\cdot(x+2) =$ \vspace{0.8cm}
+    \item $(2x+3)\cdot(2x-3) =$ \vspace{0.8cm}
+    \item $(5x^2+1)\cdot(3x^3-5x) =$ \vspace{1cm}
+\end{enumerate}
+
+\begin{capsula}
+Per transformar una equació a la forma $ax^2+bx+c=0$, passa tots els termes a un mateix costat i simplifica.
+\end{capsula}
+
+\textbf{5. Transforma les següents equacions de segon grau fins obtenir la forma simplificada $ax^2+bx+c=0$:}
+\begin{enumerate}[label=\alph*)]
+    \item $3x^2+6x-45=2x-30$ \vspace{1cm}
+    \item $3x-2x^2=8x-5x^2+10$ \vspace{1cm}
+\end{enumerate}
+
+\begin{capsula}
+Per resoldre una equació de segon grau, pots factoritzar si és possible o utilitzar la fórmula general. Comprova sempre el discriminant.
+\end{capsula}
+
+\textbf{6. Resol les següents equacions de 2n grau:}
+\begin{enumerate}[label=\alph*)]
+    \item $x^2-5x+6=0$ \vspace{1cm}
+    \item $3x^2+6x-45=0$ \vspace{1cm}
+\end{enumerate}
+
+\newpage
+
+\section*{SdA4. Funcions, representació gràfica i percentatges}
+
+\begin{capsula}
+Recorda les tres funcions bàsiques: la funció lineal passa per l'origen, la funció afí talla l'eix Y en un punt diferent de zero i la funció quadràtica té forma de paràbola.
+\end{capsula}
+
+\textbf{1. Forma la taula de valors dels següents punts i representa’ls en un sistema de coordenades cartesianes:}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+$x$ & -2 & -1 & 0 & 1 & 2 & 3 \\ \hline
+$y$ &  &  &  &  &  &  \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    width=11cm,
+    height=7.5cm,
+    axis lines=middle,
+    xmin=-3.5, xmax=4.5,
+    ymin=-4.5, ymax=4.5,
+    grid=both,
+    major grid style={line width=.2pt,draw=gray!50},
+    minor grid style={line width=.1pt,draw=gray!20},
+    minor tick num=1,
+    xtick={-3,-2,-1,0,1,2,3,4},
+    ytick={-4,-3,-2,-1,0,1,2,3,4},
+    xlabel={$x$},
+    ylabel={$y$},
+    ticklabel style={font=\small},
+]
+% Graella buida per representar punts
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\begin{capsula}
+Per calcular percentatges, parteix sempre de la quantitat total. Si vols trobar el percentatge que representa una part, fes \(\frac{\text{part}}{\text{total}}\cdot 100\).
+\end{capsula}
+
+\textbf{2. A la classe de 4rt ESO A, hi ha 20 alumnes, dels quals 11 són noies i 9 són nois. Quin és el percentatge de noies? Quin és el percentatge de nois?}
+
+\vspace{2.5cm}
+
+\textbf{3. Un jersei que abans valia 30€, ara val 24€. Quin és el descompte que han fet en percentatge? En les segones rebaixes, el jersei està rebaixat un 40\%. Quants euros està rebaixat? Quant val ara?}
+
+\vspace{3cm}
+
+\begin{capsula}
+En problemes de percentatges amb quantitats de peces, calcula primer cada part sobre el total. La resta et donarà l'altra categoria.
+\end{capsula}
+
+\textbf{4. En un mosaic de 1.500 peces, el 5\% de les peces són grogues, el 15\% de les peces són verdes, el 30\% de les peces són vermelles, i la resta són blanques. Quantes peces hi ha de cada color?}
+
+\vspace{2.8cm}
+
+\begin{capsula}
+Una disminució percentual es calcula comparant la diferència amb el valor inicial.
+\end{capsula}
+
+\textbf{5. Hem posat un difusor a l’aixeta del lavabo per estalviar aigua. Abans de posar-lo l’aixeta gastava 10 litres cada minut, i després d’instal·lar-la en gasta 7 litres per minut. Quant val aquesta disminució en percentatge?}
+
+\vspace{2.8cm}
+
+\newpage
+
+\section*{SdA5. Estadística}
+
+\begin{capsula}
+Abans de començar, recorda distingir entre variable qualitativa i quantitativa. En estadística, també és important saber si una variable és discreta o contínua.
+\end{capsula}
+
+\textbf{1. De les variables següents, digues de quin tipus són cadascuna d’elles.}
+\begin{enumerate}[label=\alph*)]
+    \item L’estat civil. \vspace{0.2cm}
+    \item L’alçada en centímetres. \vspace{0.2cm}
+    \item Nombre de turistes que van visitar el llac de Banyoles l’últim any. \vspace{0.2cm}
+    \item Grup de música preferit. \vspace{0.2cm}
+    \item La intenció de vot en unes eleccions sindicals. \vspace{0.2cm}
+\end{enumerate}
+
+\begin{capsula}
+En una taula de freqüències, la freqüència absoluta és el recompte, la relativa és la proporció respecte del total i la percentual és aquesta proporció multiplicada per 100.
+\end{capsula}
+
+\textbf{2. S’ha preguntat a 300 persones sobre si els ha agradat un determinat programa de ràdio i les respostes han estat:}
+\begin{itemize}
+    \item M’ha agradat molt: 36
+    \item M’ha agradat: 120
+    \item No m’ha agradat: 90
+    \item No m’ha agradat gens: 54
+\end{itemize}
+
+\begin{enumerate}[label=\alph*)]
+    \item Omple la taula de freqüències de la distribució. \vspace{0.3cm}
+
+    \begin{center}
+    \begin{tabular}{|p{6cm}|c|c|c|}
+    \hline
+    \rowcolor{cyan!20}
+    \textbf{Resposta} & \textbf{Freq. absoluta} & \textbf{Freq. relativa} & \textbf{Percentatge} \\ \hline
+    M’ha agradat molt & 36 & & \\ \hline
+    M’ha agradat & 120 & & \\ \hline
+    No m’ha agradat & 90 & & \\ \hline
+    No m’ha agradat gens & 54 & & \\ \hline
+    \textbf{Total} & 300 & 1 & 100\% \\ \hline
+    \end{tabular}
+    \end{center}
+
+    \item Quina és la variable estudiada? De quin tipus i subtipus és? \vspace{0.8cm}
+    \item A quin percentatge de persones els ha agradat molt? \vspace{0.8cm}
+    \item Fes un diagrama de barres de la distribució. \vspace{0.3cm}
+\end{enumerate}
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    ybar,
+    width=12cm,
+    height=7cm,
+    ymin=0, ymax=140,
+    bar width=20pt,
+    symbolic x coords={Molt, Agrada, No agrada, Gens},
+    xtick=data,
+    xlabel={Resposta},
+    ylabel={Freqüència absoluta},
+    nodes near coords,
+    nodes near coords align={vertical},
+    grid=major,
+    major grid style={draw=gray!30},
+]
+\addplot[fill=blue!60] coordinates {(Molt,36) (Agrada,120) (No agrada,90) (Gens,54)};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\begin{capsula}
+Per calcular un percentatge sobre una població, multiplica la proporció pel total. Si et demanen quin percentatge representa una part, divideix part entre total i multiplica per 100.
+\end{capsula}
+
+\textbf{3. Es vol fer un sondeig d’opinió per conèixer la intenció de vot dels habitants d’una ciutat. El cens electoral està format per 245.000 homes i 255.000 dones. Quin percentatge de dones hi ha?}
+
+\vspace{2.2cm}
+
+\begin{capsula}
+Per obtenir una mitjana, suma totes les dades i divideix entre el nombre total de valors.
+\end{capsula}
+
+\textbf{4. S’ha demanat a un grup de 15 alumnes quants diners porten a la butxaca, i la resposta (en €) ha estat la següent:}
+
+\begin{center}
+\begin{tabular}{|*{15}{c|}}
+\hline
+1 & 2 & 1,5 & 2,5 & 3 & 1 & 1 & 2,5 & 3 & 2 & 2 & 4 & 2 & 1,5 & 2 \\ \hline
+\end{tabular}
+\end{center}
+
+\textbf{Quants diners porten els alumnes de mitjana a la butxaca?}
+
+\vspace{2.5cm}
+
+\textbf{5. Dades de professors.} L’edat dels professors d’un centre escolar són:
+\begin{center}
+35, 40, 37, 50, 54, 38, 39, 48, 37, 44, 42, 44, 30, 47, 42, 37, 37, 46, 42, 52, 43, 36, 35, 53, 54, 54, 36, 42, 46, 47, 42, 50, 45, 33, 36, 52, 49, 47, 38, 50
+\end{center}
+
+\begin{enumerate}[label=\alph*)]
+    \item Elabora una taula de freqüències de la variable “edat dels professors” agrupant les edats en intervals de 5 unitats d’amplitud, tancats per l’esquerra i oberts per la dreta. \vspace{0.3cm}
+
+    \begin{center}
+    \renewcommand{\arraystretch}{1.4}
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+    \hline
+    \textbf{Classe (intervals)} & \textbf{Marca de classe} & \textbf{$f_i$} & \textbf{$F_i$} & \textbf{$h_i$} & \textbf{$H_i$} & \textbf{\%} \\ \hline
+     &  &  &  &  &  &  \\ \hline
+     &  &  &  &  &  &  \\ \hline
+     &  &  &  &  &  &  \\ \hline
+     &  &  &  &  &  &  \\ \hline
+     &  &  &  &  &  &  \\ \hline
+     &  &  &  &  &  &  \\ \hline
+    \end{tabular}
+    \end{center}
+
+    \item Calcula les 3 mesures de centralització de les dades. \vspace{0.8cm}
+    \item Calcula els tres quartils i el rang interquartílic de les dades. \vspace{0.8cm}
+    \item Representa les dades en un histograma. \vspace{0.3cm}
+\end{enumerate}
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    ybar interval,
+    width=12cm,
+    height=7cm,
+    xmin=30, xmax=55,
+    ymin=0, ymax=12,
+    xlabel={Edat},
+    ylabel={Freqüència},
+    grid=major,
+    major grid style={draw=gray!30},
+]
+\addplot+[ybar interval,mark=no,fill=blue!50] coordinates {(30,0) (35,0) (40,0) (45,0) (50,0) (55,0)};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\begin{capsula}
+En un mostreig estratificat, cal respectar les proporcions. Pots utilitzar una regla de tres simple: si de N total n’agafem n, de la població parcial $N_1$ n’haurem d’agafar x.
+\end{capsula}
+
+\textbf{6. Es vol fer un sondeig d’opinió per conèixer la intenció de vot dels habitants d’una ciutat. El cens electoral està format per 245.000 homes i 255.000 dones. Quants homes i dones convé incloure en una mostra de 4.000 persones?}
+
+\vspace{2.5cm}
+
+\section*{SdA6. Geometria}
+
+\begin{capsula}
+Abans de començar, recorda que en geometria és molt important dibuixar bé la figura. Identifica sempre les dades conegudes, les incògnites i si cal aplicar Pitàgores, perímetres, àrees o proporcionalitat.
+\end{capsula}
+
+\textbf{1. Completa la taula amb el nom de cada tipus de polígon i el nombre de costats:}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{cyan!20}
+\textbf{Figura} & \textbf{Nom} & \textbf{Costats} \\ \hline
+Triangle &  & 3 \\ \hline
+Quadrilàter &  & 4 \\ \hline
+Pentàgon &  & 5 \\ \hline
+Hexàgon &  & 6 \\ \hline
+Heptàgon &  & 7 \\ \hline
+Octàgon &  & 8 \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{capsula}
+En un triangle rectangle, el quadrat de la hipotenusa és igual a la suma dels quadrats dels catets: $h^2=c_1^2+c_2^2$.
+\end{capsula}
+
+\textbf{2. Calcula la longitud que falta en cada triangle rectangle:}
+
+\begin{enumerate}[label=\alph*)]
+    \item En un triangle rectangle, els catets mesuren 6 cm i 8 cm. Quant mesura la hipotenusa? \vspace{1.5cm}
+    \item En un triangle rectangle, la hipotenusa mesura 13 cm i un catet mesura 5 cm. Quant mesura l'altre catet? \vspace{1.5cm}
+\end{enumerate}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.9]
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (6,0);
+    \coordinate (C) at (0,4);
+    \draw[thick] (A) -- (B) -- (C) -- cycle;
+    \draw (0.35,0) -- (0.35,0.35) -- (0,0.35);
+    \node[below] at (A) {$A$};
+    \node[below] at (B) {$B$};
+    \node[left] at (C) {$C$};
+    \node[below] at (3,0) {6 cm};
+    \node[left] at (0,2) {4 cm};
+    \node[above right] at (3,2) {$h$};
+\end{tikzpicture}
+\hspace{1.5cm}
+\begin{tikzpicture}[scale=0.9]
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (5,0);
+    \coordinate (C) at (0,12);
+    \draw[thick] (A) -- (B) -- (C) -- cycle;
+    \draw (0.35,0) -- (0.35,0.35) -- (0,0.35);
+    \node[below] at (A) {$A$};
+    \node[below] at (B) {$B$};
+    \node[left] at (C) {$C$};
+    \node[below] at (2.5,0) {5 cm};
+    \node[left] at (0,6) {12 cm};
+    \node[above right] at (2.5,6) {13 cm};
+\end{tikzpicture}
+\end{center}
+
+\begin{capsula}
+Quan hi ha una escala o una situació amb un angle i una distància horitzontal, cal pensar en un triangle rectangle i usar la funció trigonomètrica adequada.
+\end{capsula}
+
+\textbf{3. Una escala forma un angle de 60º amb el terra, i el seu peu es troba a una distància de 2,4 m de la paret. Quina és la longitud de l’escala?}
+
+\begin{center}
+\begin{tikzpicture}[scale=1]
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (6,0);
+    \coordinate (C) at (0,5.2);
+    \draw[thick] (A) -- (B) -- (C) -- cycle;
+    \draw (0.4,0) -- (0.4,0.4) -- (0,0.4);
+    \draw[thick] (A) -- (C);
+    \node[below] at (A) {A};
+    \node[below] at (B) {B};
+    \node[left] at (C) {C};
+    \node[below] at (3,0) {2,4 m};
+    \node[left] at (0,2.6) {$h$};
+    \node[above right] at (3,2.6) {escala};
+    \draw pic["$60^\circ$", draw=black, angle radius=0.9cm, angle eccentricity=1.2] {angle = B--A--C};
+\end{tikzpicture}
+\end{center}
+
+\begin{capsula}
+En un cercle, recorda que el radi és la meitat del diàmetre. Si et demanen un element d'una circumferència, mira sempre què et dona l'enunciat: centre, radi, diàmetre o corda.
+\end{capsula}
+
+\textbf{4. Completa les frases següents:}
+\begin{enumerate}[label=\alph*)]
+    \item El radi és la meitat del \dotfill \vspace{0.4cm}
+    \item La longitud total d’una circumferència s’anomena \dotfill \vspace{0.4cm}
+    \item El segment que uneix dos punts de la circumferència i passa pel centre s’anomena \dotfill \vspace{0.4cm}
+\end{enumerate}
+
+\begin{capsula}
+Per representar una circumferència amb TikZ, només cal fixar el centre i el radi.
+\end{capsula}
+
+\textbf{5. Representa una circumferència de radi 3 cm i centre en el punt $(0,0)$.}
+
+\begin{center}
+\begin{tikzpicture}
+    \draw[thick] (0,0) circle (3cm);
+    \draw[->] (-4,0) -- (4,0);
+    \draw[->] (0,-4) -- (0,4);
+    \filldraw (0,0) circle (1.5pt) node[below left] {$O$};
+    \draw[dashed] (0,0) -- (3,0);
+    \node[below] at (1.5,0) {3 cm};
+\end{tikzpicture}
+\end{center}
+
+\begin{capsula}
+Quan facis un esquema, procura que les dades numèriques estiguin ben visibles i que la figura sigui clara. Això ajuda molt a resoldre problemes geomètrics.
+\end{capsula}
+
+\textbf{6. Fes un esquema gràfic d’un polígon qualsevol i assenyala’n els vèrtexs, els costats i els angles interiors.}
+
+\begin{center}
+\begin{tikzpicture}[scale=1]
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (2,2.5);
+    \coordinate (C) at (5,2);
+    \coordinate (D) at (4,-1);
+    \coordinate (E) at (1.5,-1.5);
+    \draw[thick, fill=blue!5] (A) -- (B) -- (C) -- (D) -- (E) -- cycle;
+    \filldraw (A) circle (1.5pt) node[below left] {$A$};
+    \filldraw (B) circle (1.5pt) node[above] {$B$};
+    \filldraw (C) circle (1.5pt) node[above right] {$C$};
+    \filldraw (D) circle (1.5pt) node[right] {$D$};
+    \filldraw (E) circle (1.5pt) node[below] {$E$};
+\end{tikzpicture}
+\end{center}
+\end{document}
