@@ -1,0 +1,312 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage[most]{tcolorbox} 
+\pgfplotsset{compat=1.18}
+
+% 1. MARGES I CAPÇALERA
+\geometry{top=3cm, bottom=2.5cm, left=2cm, right=2cm, headheight=2cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\includegraphics[height=1.8cm]{Logo_Departament.png}} 
+\fancyhead[R]{\includegraphics[height=1.8cm]{Logo_Institut.png}}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\fancyfoot[C]{Pàgina \thepage\ de \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+
+% --- CAPÇALERA D'IDENTIFICACIÓ ---
+\begingroup
+\renewcommand{\arraystretch}{2.2}
+\begin{tabularx}{\textwidth}{|X|p{4cm}|}
+    \hline
+    \textbf{Nom i cognoms:} & \textbf{Grup:} \\ \hline
+    \textbf{Activitat:} Introducció a les funcions & \textbf{Data:} \\ \hline
+\end{tabularx}
+\endgroup
+
+\vspace{0.5cm}
+
+\begin{center}
+    {\Large \textbf{ACTIVITAT 1: CONCEPTE DE FUNCIÓ}}
+\end{center}
+
+\section*{Què és una funció?}
+Una \textbf{funció} és una relació entre dues magnituds variables (anomenades $x$ i $y$), de manera que a cada valor de la primera magnitud ($x$) li correspon \textbf{un i només un} valor de la segona ($y$ o $f(x)$).
+
+Un exemple clàssic és la compra al mercat: si sabem que el preu dels préssecs és de \textbf{4 €/kg}, el cost final dependrà directament dels quilos que comprem.
+\begin{itemize}
+    \item \textbf{Variable independent ($x$):} El pes en kg.
+    \item \textbf{Variable dependent ($f(x)$):} El cost total en €.
+    \item \textbf{Expressió algebraica:} $f(x) = 4x$
+\end{itemize}
+
+% --- EXERCICIS ---
+\begin{enumerate}[leftmargin=*, label=\textbf{\arabic*.}]
+
+    % EXERCICI 1
+    \item \textbf{Completa la taula següent utilitzant la relació dels préssecs ($4$ €/kg):}
+    
+    \vspace{0.2cm}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabularx}{\textwidth}{|l|*{11}{X|}}
+        \hline
+        \textbf{Pes (kg)} & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 9,5 & 10 \\ \hline
+        \textbf{Cost (€)} & 4 & 8 & 12 & & & & & & & & \\ \hline
+    \end{tabularx}
+
+    % EXERCICI 2
+    \item \textbf{Representació gràfica:} Utilitza les dades de la taula anterior per dibuixar la funció. Uneix els punts amb una línia recta.
+    
+    \begin{center}
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines = middle,
+            xlabel = {Pes (kg)},
+            ylabel = {Cost (€)},
+            xmin=0, xmax=11,
+            ymin=0, ymax=45,
+            xtick={0,1,2,3,4,5,6,7,8,9,10,11},
+            ytick={0,4,8,12,16,20,24,28,32,36,40,44},
+            grid=both,
+            grid style={line width=.1pt, draw=gray!20},
+            major grid style={line width=.2pt,draw=gray!50},
+            width=14cm, height=8cm,
+        ]
+        \addplot[only marks, mark=*] coordinates {(1,4)};
+        \node[above right] at (axis cs:1,4) {$P_1(1,4)$};
+        \end{axis}
+    \end{tikzpicture}
+    \end{center}
+
+    % EXERCICI 3
+    \item \textbf{Càlcul d'imatges:} Completa la taula de valors per a la funció $f(x) = 2x + 3$.
+    
+    \textbf{Fes els càlculs aquí de forma ordenada:}
+    
+    % Exemple fora de la llista per no afectar l'alineació
+    \vspace{0.1cm}
+    \textit{Exemple:} $f(-3) = 2 \cdot (-3) + 3 = -6 + 3 = \mathbf{-3}$
+    \vspace{0.1cm}
+
+    \begin{itemize}
+        \item $f(-2) = 2 \cdot (\dots\dots) + 3 = \dots\dots + 3 = \dots\dots$
+        \item $f(-1) = 2 \cdot (\dots\dots) + 3 = \dots\dots + 3 = \dots\dots$
+        \item $f(0) = 2 \cdot (\dots\dots) + 3 = \dots\dots + 3 = \dots\dots$
+        \item $f(1) = \dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots$
+        \item $f(2) = \dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots$
+    \end{itemize}
+
+    \vspace{0.2cm}
+    \begin{tabularx}{\textwidth}{|l|*{7}{X|}}
+        \hline
+        \textbf{x} & -3 & -2 & -1 & 0 & 1 & 2 & 3 \\ \hline
+        \textbf{f(x)} & -3 & & & & & & \\ \hline
+    \end{tabularx}
+
+    % EXERCICI 4
+    \item \textbf{Representa la funció anterior $f(x) = 2x + 3$ en aquesta quadrícula:}
+    
+    \begin{center}
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines = middle,
+            xlabel = {$x$},
+            ylabel = {$f(x)$},
+            xmin=-4, xmax=4,
+            ymin=-4, ymax=10,
+            ytick={-4,-3,...,10}, 
+            xtick={-4,-3,...,4},
+            grid=both,
+            width=12cm, height=10cm, 
+        ]
+        \end{axis}
+    \end{tikzpicture}
+    \end{center}
+    a) Segons la gràfica, quin és el valor de $f(4)$? \hrulefill \\
+    b) Segons la gràfica, quin és el valor de $f(-2)$? \hrulefill
+
+    \newpage
+
+% EXERCICI 5
+    \item \textbf{Funció lliure:} Tria 5 valors de $x$ qualsevol (positius i negatius), calcula la seva imatge per a la funció $f(x) = 2x - 2$ i representa-la.
+    
+    \vspace{0.2cm}
+    
+    \noindent
+    % COLUMNA ESQUERRA: TAULA + GRÀFIC
+    \begin{minipage}[t]{0.62\textwidth} 
+        \textbf{1. Taula de valors:}
+        \vspace{0.1cm}
+        
+        \renewcommand{\arraystretch}{1.5}
+        \begin{tabular}{|l|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|}
+            \hline
+            \textbf{x} & & & & & \\ \hline
+            \textbf{f(x)} & & & & & \\ \hline
+        \end{tabular}
+
+        \vspace{0.5cm}
+        
+        \textbf{2. Gràfic:}\\
+        \begin{tikzpicture}
+            \begin{axis}[
+                axis lines = middle, 
+                xlabel = {$x$},
+                ylabel = {$f(x)$},
+                xmin=-6, xmax=6,
+                ymin=-12, ymax=10,
+                ytick={-12,-10,...,10}, % Eix Y de 2 en 2
+                xtick={-6,-5,...,6},
+                grid=both,
+                width=10cm,  % Amplada continguda
+                height=9cm,  % 10% més alt (abans 8cm)
+            ]
+            \end{axis}
+        \end{tikzpicture}
+    \end{minipage}%
+    \hfill
+    % COLUMNA DRETA: CÀLCULS
+    \begin{minipage}[t]{0.35\textwidth} 
+        \vspace{0pt} % Truc per alinear la part superior
+        \textbf{Càlculs:}
+        \vspace{0.2cm}
+        \begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5cm]
+            \item $f(\dots) = 2(\dots) - 2 = \dots$
+            \item $f(\dots) = \dots\dots\dots\dots\dots\dots$
+            \item $f(\dots) = \dots\dots\dots\dots\dots\dots$
+            \item $f(\dots) = \dots\dots\dots\dots\dots\dots$
+            \item $f(\dots) = \dots\dots\dots\dots\dots\dots$
+        \end{itemize}
+    \end{minipage}
+
+    % EXERCICI 6
+    \item \textbf{(Opcional: AN) Funcions quadràtiques:} Completa la taula per a $f(x) = x^2 - 2x + 1$.
+    
+    \begin{minipage}{0.65\textwidth}
+        \textit{Exemple:} $f(-3) = (-3)^2 - 2(-3) + 1 = 9 + 6 + 1 = \mathbf{16}$.
+        \vspace{0.2cm}
+        
+        \textbf{Calcula les imatges:}
+        \begin{itemize}
+            \item $f(-2) = (\dots)^2 - 2(\dots) + 1 = \dots\dots\dots$
+            \item $f(-1) = (\dots)^2 - 2(\dots) + 1 = \dots\dots\dots$
+            \item $f(0) = \dots\dots\dots\dots\dots\dots\dots\dots\dots\dots$
+            \item $f(1) = \dots\dots\dots\dots\dots\dots\dots\dots\dots\dots$
+            \item $f(2) = \dots\dots\dots\dots\dots\dots\dots\dots\dots\dots$
+            \item $f(3) = \dots\dots\dots\dots\dots\dots\dots\dots\dots\dots$
+        \end{itemize}
+
+        \begin{tabularx}{\textwidth}{|l|*{7}{X|}}
+            \hline
+            \textbf{x} & -2 & -1 & 0 & 1 & 2 & 3 & 4 \\ \hline
+            \textbf{f(x)} & & & & & & & \\ \hline
+        \end{tabularx}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.3\textwidth}
+        \begin{tcolorbox}[colback=white,colframe=black,title=\small Nota Teòrica, fonttitle=\bfseries\small\color{black}]
+            \scriptsize
+            Quan la $x$ està elevada al quadrat ($x^2$), la funció és \textbf{quadràtica}. La seva gràfica no és una recta, sinó una corba anomenada \textbf{paràbola}.
+        \end{tcolorbox}
+    \end{minipage}
+
+    \vspace{0.3cm}
+    \textbf{Quin és el valor de $f(5)$?} \hrulefill
+
+    \newpage
+    
+    % EXERCICI 7
+    \item \textbf{(Opcional: AN) Relaciona:} Indica quina funció està relacionada amb quina taula.
+    \textit{Consell: Substitueix $x$ per un dels valors de la taula i comprova quin és el valor de $f(x)$ i amb quina taula correspon.}
+    
+    \begin{enumerate}[label=\alph*)]
+        \item $f(x) = 2x + 2$: Taula $\dots$
+        \item $f(x) = 3x - 4$: Taula $\dots$
+        \item $f(x) = 2x^2 - 4x + 1$: Taula $\dots$
+    \end{enumerate}
+
+    \vspace{0.2cm}
+    % Taules en horitzontal amb tabular per tenir el mateix estil de quadrícula
+% TAULES ALINEADES HORITZONTALMENT
+    \begin{center}
+    \renewcommand{\arraystretch}{1.3}
+    \small % Reduïm lleugerament la lletra només aquí per assegurar que hi caben bé
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \textbf{x} & -1 & 0 & 1 & 2 \\ \hline
+        \textbf{f(x)} & 0 & 2 & 4 & 6 \\ \hline
+        \multicolumn{5}{c}{\textbf{Taula A}}
+    \end{tabular}
+    \hfill % Això empeny les taules cap als costats
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \textbf{x} & -1 & 0 & 1 & 2 \\ \hline
+        \textbf{f(x)} & -7 & -4 & -1 & 2 \\ \hline
+        \multicolumn{5}{c}{\textbf{Taula B}}
+    \end{tabular}
+    \hfill
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \textbf{x} & -1 & 0 & 1 & 2 \\ \hline
+        \textbf{f(x)} & 7 & 1 & -1 & 1 \\ \hline
+        \multicolumn{5}{c}{\textbf{Taula C}}
+    \end{tabular}
+    \end{center}
+
+    % EXERCICI 8
+% EXERCICI 8
+    \item \textbf{(Opcional: AE) Ús de la calculadora:} La majoria de calculadores científiques permeten generar taules automàticament. Busca el teu model:
+    
+    \begin{itemize}
+        \item \textbf{Models nous (estil ClassWiz):} Prem \fbox{HOME} i selecciona la icona \textbf{Table}. Introdueix la funció. Després, prem \fbox{TOOLS} $\to$ \textit{Rango tabla} per definir l'inici i el final.
+        \item \textbf{Models clàssics:} Prem \fbox{MODE} $\to$ \textbf{TABLE}. Escriu la funció i quan et demani els paràmetres posa: \textit{Start} (inici), \textit{End} (final) i \textit{Step} (pas).
+    \end{itemize}
+    
+    \textbf{Configuració: Inici: -3, Final: 2, Pas: 1.}
+
+    
+    \textbf{a) Omple per a $f(x) = 2x + 2$:}\\
+    % Ús de \linewidth en lloc de \textwidth per evitar overflow dins de la llista
+    \begin{tabularx}{\linewidth}{|l|*{6}{X|}}
+        \hline \textbf{x} & -3 & -2 & -1 & 0 & 1 & 2 \\ \hline \textbf{f(x)} & & & & & & \\ \hline
+    \end{tabularx}
+    
+    \vspace{0.3cm}
+    \textbf{b) Omple per a $f(x) = 3x - 4$:} \\
+    \begin{tabularx}{\linewidth}{|l|*{6}{X|}}
+        \hline \textbf{x} & -3 & -2 & -1 & 0 & 1 & 2 \\ \hline \textbf{f(x)} & & & & & & \\ \hline
+    \end{tabularx}
+
+    \vspace{0.3cm}
+    \textbf{b) Omple per a $f(x) = 2x^2 -4x +1$:} \\
+    \begin{tabularx}{\linewidth}{|l|*{6}{X|}}
+        \hline \textbf{x} & -3 & -2 & -1 & 0 & 1 & 2 \\ \hline \textbf{f(x)} & & & & & & \\ \hline
+    \end{tabularx}
+    % EXERCICI 9
+    \item \textbf{Autoavaluació:} Marca quins objectius creus que has assolit:
+    \begin{itemize}[label=$\square$]
+        \item Entendre què és una funció (relació entre dues variables).
+        \item Representar una funció a partir d'una taula de valors.
+        \item Fer una taula de valors a partir d'una expressió i valors proposats.
+        \item Representar una funció a partir de l'expressió (sense valors donats).
+        \item Relacionar expressions algebraiques amb les seves taules.
+        \item Utilitzar la calculadora per generar taules de valors.
+    \end{itemize}
+
+\end{enumerate}
+
+\end{document}
