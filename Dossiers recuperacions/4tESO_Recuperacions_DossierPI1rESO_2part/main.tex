@@ -1,0 +1,521 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage[most]{tcolorbox}
+\usepackage[table]{xcolor}
+\newcommand{\squarebox}{\ensuremath{\squarebox}}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{angles,quotes,calc}
+
+\geometry{top=3.5cm, bottom=2.5cm, left=2cm, right=2cm, headheight=2.5cm}
+
+\newtcolorbox{capsula}{
+    colback=blue!5!white,
+    colframe=blue!75!black,
+    title=Recorda,
+    fonttitle=\bfseries,
+    arc=2mm,
+    boxrule=1pt,
+    left=5pt, right=5pt, top=5pt, bottom=5pt
+}
+
+\newtcolorbox{exemple}{
+    colback=yellow!10!white,
+    colframe=yellow!60!black,
+    title=Exemple,
+    fonttitle=\bfseries,
+    arc=2mm,
+    boxrule=1pt,
+    left=5pt, right=5pt, top=5pt, bottom=5pt
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\includegraphics[height=1.6cm]{Logo_Departament.png}}
+\fancyhead[R]{\includegraphics[height=1.6cm]{Logo_Institut.png}}
+\fancyfoot[C]{Pàgina \thepage\ de \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+
+\begingroup
+\renewcommand{\arraystretch}{2}
+\begin{tabularx}{\textwidth}{|X|p{4cm}|}
+\hline
+\textbf{Nom i cognoms:} & \textbf{Grup:} \\ \hline
+\textbf{Activitat:} Dossier de reforç & \textbf{Data:} \\ \hline
+\end{tabularx}
+\endgroup
+
+\vspace{0.5cm}
+
+\section*{4. Coordenades i funcions}
+
+\begin{capsula}
+Un punt al pla s'escriu sempre com $(x,y)$. Primer mirem quants passos anem cap a la dreta o esquerra, i després quants passos amunt o avall.
+\end{capsula}
+
+\begin{exemple}
+El punt $(3,2)$ vol dir 3 passos cap a la dreta i 2 passos cap amunt.
+\end{exemple}
+
+\textbf{1. Escriu les coordenades d'aquests punts imaginant que comences al centre $(0,0)$:}
+\begin{enumerate}[label=\alph*)]
+    \item 2 a la dreta i 3 amunt. \vspace{0.6cm}
+    \item 4 a l'esquerra i 1 amunt. \vspace{0.6cm}
+    \item 3 a la dreta i 2 avall. \vspace{0.6cm}
+    \item 5 a l'esquerra i 4 avall. \vspace{0.6cm}
+\end{enumerate}
+
+\begin{capsula}
+Quan una coordenada és 0, el punt queda sobre un dels eixos.
+\end{capsula}
+
+\begin{exemple}
+El punt $(0,4)$ està sobre l'eix vertical. El punt $(3,0)$ està sobre l'eix horitzontal.
+\end{exemple}
+
+\textbf{2. Escriu les coordenades correctes:}
+\begin{enumerate}[label=\alph*)]
+    \item Punt sobre l'eix vertical, 3 amunt. \vspace{0.6cm}
+    \item Punt sobre l'eix horitzontal, 4 a la dreta. \vspace{0.6cm}
+    \item 2 a l'esquerra i 0 amunt/avall. \vspace{0.6cm}
+    \item 0 a la dreta/esquerra i 5 avall. \vspace{0.6cm}
+\end{enumerate}
+
+\begin{capsula}
+Ara farem un primer dibuix molt senzill. Situa els punts a la graella i uneix-los amb una línia recta.
+\end{capsula}
+
+\textbf{3. Situa aquests punts i uneix-los:}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\rowcolor{cyan!20}
+A & B & C & D & E \\ \hline
+$(0,0)$ & $(1,1)$ & $(2,2)$ & $(3,3)$ & $(4,4)$ \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    width=10cm,
+    height=8cm,
+    axis lines=middle,
+    xmin=-1, xmax=5,
+    ymin=-1, ymax=5,
+    grid=both,
+    minor tick num=1,
+    xtick={-1,0,1,2,3,4,5},
+    ytick={-1,0,1,2,3,4,5},
+    xlabel={$x$},
+    ylabel={$y$},
+    ticklabel style={font=\small},
+]
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\begin{capsula}
+Una funció dóna una sortida per a cada entrada. Per construir la taula, substituïm $x$ per cada número de la columna d'entrada.
+\end{capsula}
+
+\begin{exemple}
+Si $f(x)=x+2$ i $x=1$, aleshores $f(1)=1+2=3$.
+\end{exemple}
+
+\textbf{4. Completa la taula de valors de $f(x)=x+2$:}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\rowcolor{cyan!20}
+$x$ & -2 & -1 & 0 & 1 & 2 \\ \hline
+$f(x)$ &  &  &  &  &  \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{exemple}
+Si $f(x)=2x-1$ i l'entrada és $0$, fem $2\cdot0-1=-1$.
+\end{exemple}
+
+\textbf{5. Completa la taula de valors de $f(x)=2x-1$:}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\rowcolor{cyan!20}
+$x$ & 0 & 1 & 2 & 3 & 4 \\ \hline
+$f(x)$ &  &  &  &  &  \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{capsula}
+Un cop tens la taula, dibuixa cada parella $(x,y)$ a la graella i uneix els punts amb un regle.
+\end{capsula}
+
+\textbf{6. Representa a la graella la funció $f(x)=x-3$ utilitzant aquesta taula:}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\rowcolor{cyan!20}
+$x$ & 0 & 1 & 2 & 3 & 4 \\ \hline
+$f(x)$ &  &  &  &  &  \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    width=11cm,
+    height=8cm,
+    axis lines=middle,
+    xmin=-1, xmax=5,
+    ymin=-5, ymax=3,
+    grid=both,
+    minor tick num=1,
+    xtick={-1,0,1,2,3,4,5},
+    ytick={-5,-4,-3,-2,-1,0,1,2,3},
+    xlabel={$x$},
+    ylabel={$y$},
+    ticklabel style={font=\small},
+]
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\begin{capsula}
+Si vols, abans de dibuixar la recta pots comprovar si els punts tenen sentit: si $x$ creix i la funció suma, la recta puja; si resta, la recta baixa.
+\end{capsula}
+
+\textbf{7. Completa les taules i dibuixa les rectes corresponents:}
+\begin{enumerate}[label=\alph*)]
+    \item $f(x)=x+1$ amb $x=-1,0,1,2$. \vspace{0.8cm}
+    \item $f(x)=2x$ amb $x=0,1,2,3$. \vspace{0.8cm}
+\end{enumerate}
+\newpage
+\section*{5. Estadística}
+
+\begin{capsula}
+En estadística, primer observem les dades, després les ordenem i finalment les representem amb taules o gràfics. Si et perds, torna a mirar quina informació et dona l'enunciat.
+\end{capsula}
+
+\begin{exemple}
+Si un gràfic mostra quantes persones han triat cada opció, la barra més alta és la resposta més freqüent.
+\end{exemple}
+
+\textbf{1. Llegeix el gràfic i respon:}
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    ybar,
+    width=12cm,
+    height=7cm,
+    ymin=0, ymax=12,
+    bar width=18pt,
+    symbolic x coords={A,B,C,D},
+    xtick=data,
+    xlabel={Opció},
+    ylabel={Nombre de respostes},
+    nodes near coords,
+    grid=major,
+    major grid style={draw=gray!30},
+]
+\addplot[fill=blue!60] coordinates {(A,4) (B,9) (C,6) (D,11)};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}[label=\alph*)]
+    \item Quina opció té més respostes? \vspace{0.6cm}
+    \item Quina opció té menys respostes? \vspace{0.6cm}
+    \item Quantes respostes hi ha en total? \vspace{0.6cm}
+\end{enumerate}
+
+\begin{capsula}
+Una taula de freqüències serveix per resumir les dades. La freqüència absoluta és el nombre de vegades que surt cada valor.
+\end{capsula}
+
+\begin{exemple}
+Si tenim les dades: 2, 2, 3, 1, 2, la freqüència del 2 és 3.
+\end{exemple}
+
+\textbf{2. Omple la taula de freqüències amb aquestes dades:}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\rowcolor{cyan!20}
+Valor & 1 & 2 & 3 & 4 & Total \\ \hline
+Freq. absoluta &  &  &  &  &  \\ \hline
+\end{tabular}
+\end{center}
+
+Dades: 1, 2, 2, 3, 1, 2, 4, 2, 3, 1
+
+\begin{capsula}
+Quan tinguis una taula de freqüències, pots representar les dades amb un diagrama de barres.
+\end{capsula}
+
+\textbf{3. Fes el diagrama de barres de la distribució anterior.}
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    ybar,
+    width=11cm,
+    height=7cm,
+    ymin=0, ymax=5,
+    bar width=20pt,
+    symbolic x coords={1,2,3,4},
+    xtick=data,
+    xlabel={Valor},
+    ylabel={Freqüència},
+    nodes near coords,
+    grid=major,
+    major grid style={draw=gray!30},
+]
+\addplot[fill=green!60] coordinates {(1,0) (2,0) (3,0) (4,0)};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\begin{capsula}
+La mitjana es calcula sumant totes les dades i dividint entre el nombre total de valors.
+\end{capsula}
+
+\begin{exemple}
+Si les dades són 2, 2, 3, 1:
+\[
+\frac{2+2+3+1}{4}=\frac{8}{4}=2
+\]
+\end{exemple}
+
+\textbf{4. Calcula la mitjana d'aquestes dades:}
+
+\begin{enumerate}[label=\alph*)]
+    \item 1, 1, 2, 2 \vspace{0.7cm}
+    \item 2, 3, 3, 2 \vspace{0.7cm}
+    \item 1, 2, 3, 4 \vspace{0.7cm}
+\end{enumerate}
+
+\begin{capsula}
+A vegades les dades es poden ordenar de més petit a més gran per entendre-les millor.
+\end{capsula}
+
+\begin{exemple}
+Si les dades són 4, 1, 3, 2, les ordenem així: 1, 2, 3, 4.
+\end{exemple}
+
+\textbf{5. Ordena aquestes dades de menor a major:}
+
+\begin{enumerate}[label=\alph*)]
+    \item 3, 1, 4, 2 \vspace{0.7cm}
+    \item 5, 2, 1, 3, 4 \vspace{0.7cm}
+\end{enumerate}
+
+\begin{capsula}
+Ara farem una activitat una mica més completa. Primer omple la taula i després fes el gràfic.
+\end{capsula}
+
+\textbf{6. A una classe s'ha preguntat quin és el color preferit de 12 alumnes. Les respostes han estat:}
+
+\begin{center}
+vermell, blau, blau, verd, vermell, blau, groc, verd, blau, vermell, verd, blau
+\end{center}
+
+\begin{enumerate}[label=\alph*)]
+    \item Omple la taula de freqüències. \vspace{0.3cm}
+
+    \begin{center}
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    \rowcolor{cyan!20}
+    Color & vermell & blau & verd & groc \\ \hline
+    Freq. absoluta &  &  &  &  \\ \hline
+    \end{tabular}
+    \end{center}
+
+    \item Fes el diagrama de barres. \vspace{0.3cm}
+\end{enumerate}
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    ybar,
+    width=12cm,
+    height=7cm,
+    ymin=0, ymax=7,
+    bar width=18pt,
+    symbolic x coords={vermell,blau,verd,groc},
+    xtick=data,
+    xlabel={Color},
+    ylabel={Freqüència},
+    nodes near coords,
+    grid=major,
+    major grid style={draw=gray!30},
+]
+\addplot[fill=red!60] coordinates {(vermell,0) (blau,0) (verd,0) (groc,0)};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\newpage
+
+\section*{6. Geometria}
+
+\begin{capsula}
+En geometria és molt important fer un dibuix clar. Si veus un triangle rectangle, pensa en el teorema de Pitàgores. Si veus un angle o una situació amb una inclinació, pensa en trigonometria bàsica.
+\end{capsula}
+
+\begin{exemple}
+En un triangle rectangle, si els catets fan 3 cm i 4 cm, la hipotenusa és 5 cm perquè:
+\[
+3^2+4^2=9+16=25
+\]
+i
+\[
+\sqrt{25}=5
+\]
+\end{exemple}
+
+\textbf{1. Completa la taula de figures geomètriques:}
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{cyan!20}
+\textbf{Figura} & \textbf{Nom} & \textbf{Nombre de costats} \\ \hline
+Triangle &  & 3 \\ \hline
+Quadrilàter &  & 4 \\ \hline
+Pentàgon &  & 5 \\ \hline
+Hexàgon &  & 6 \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{capsula}
+Un triangle rectangle és aquell que té un angle de 90º. El costat més llarg s'anomena hipotenusa.
+\end{capsula}
+
+\begin{exemple}
+Si els catets mesuren 6 cm i 8 cm:
+\[
+6^2+8^2=36+64=100
+\]
+\[
+\sqrt{100}=10
+\]
+Per tant, la hipotenusa mesura 10 cm.
+\end{exemple}
+
+\textbf{2. Calcula la hipotenusa:}
+\begin{enumerate}[label=\alph*)]
+    \item Catets de 3 cm i 4 cm. \vspace{1cm}
+    \item Catets de 5 cm i 12 cm. \vspace{1cm}
+    \item Catets de 6 cm i 8 cm. \vspace{1cm}
+\end{enumerate}
+
+\begin{capsula}
+Si coneixes la hipotenusa i un catet, pots trobar l'altre catet restant el quadrat del catet conegut al quadrat de la hipotenusa.
+\end{capsula}
+
+\begin{exemple}
+Si la hipotenusa és 13 cm i un catet és 5 cm:
+\[
+13^2-5^2=169-25=144
+\]
+\[
+\sqrt{144}=12
+\]
+L'altre catet fa 12 cm.
+\end{exemple}
+
+\textbf{3. Calcula l'altre catet:}
+\begin{enumerate}[label=\alph*)]
+    \item Hipotenusa 10 cm i un catet 6 cm. \vspace{1cm}
+    \item Hipotenusa 13 cm i un catet 5 cm. \vspace{1cm}
+    \item Hipotenusa 25 cm i un catet 7 cm. \vspace{1cm}
+\end{enumerate}
+
+\begin{capsula}
+En alguns problemes, només cal mirar quin costat és l'hipotenusa i quin és el catet oposat o contigu. No cal complicar-se: primer identifica les dades.
+\end{capsula}
+
+\begin{exemple}
+Si un triangle rectangle té un angle de 30º i l'altre angle agut és desconegut, recorda que els angles d'un triangle sumen 180º.
+\end{exemple}
+
+\textbf{4. Calcula l'angle que falta:}
+\begin{enumerate}[label=\alph*)]
+    \item En un triangle hi ha angles de 90º i 30º. Quin és el tercer angle? \vspace{1cm}
+    \item En un triangle hi ha angles de 90º i 45º. Quin és el tercer angle? \vspace{1cm}
+    \item En un triangle hi ha angles de 90º i 60º. Quin és el tercer angle? \vspace{1cm}
+\end{enumerate}
+
+\begin{capsula}
+Ara farem dibuixos senzills amb triangle rectangle i una petita situació real.
+\end{capsula}
+
+\textbf{5. Dibuixa i completa:}
+
+\begin{enumerate}[label=\alph*)]
+    \item Un triangle rectangle amb catets de 4 cm i 3 cm. Calcula la hipotenusa. \vspace{1.2cm}
+    \item Un triangle rectangle amb hipotenusa 10 cm i un catet de 6 cm. Calcula l'altre catet. \vspace{1.2cm}
+\end{enumerate}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.9]
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (5,0);
+    \coordinate (C) at (0,4);
+    \draw[thick] (A) -- (B) -- (C) -- cycle;
+    \draw (0.35,0) -- (0.35,0.35) -- (0,0.35);
+    \node[below] at (A) {$A$};
+    \node[below] at (B) {$B$};
+    \node[left] at (C) {$C$};
+    \node[below] at (2.5,0) {4 cm};
+    \node[left] at (0,2) {3 cm};
+    \node[above right] at (2.5,2) {$h$};
+\end{tikzpicture}
+\end{center}
+
+\begin{capsula}
+Per acabar, recorda que una circumferència és una línia tancada i el radi va del centre fins a la vora.
+\end{capsula}
+
+\begin{exemple}
+Si el radi d'una circumferència és 3 cm, el diàmetre és 6 cm perquè és el doble.
+\end{exemple}
+
+\newpage
+\textbf{6. Completa les frases:}
+\begin{enumerate}[label=\alph*)]
+    \item El segment que va del centre a la circumferència s'anomena \dotfill \vspace{0.6cm}
+    \item El segment que passa pel centre i uneix dos punts de la circumferència s'anomena \dotfill \vspace{0.6cm}
+    \item El diàmetre és el \dotfill del radi. \vspace{0.6cm}
+\end{enumerate}
+
+\begin{center}
+\begin{tikzpicture}
+    \draw[thick] (0,0) circle (2.5cm);
+    \filldraw (0,0) circle (1.5pt) node[below left] {$O$};
+    \draw[dashed] (0,0) -- (2.5,0);
+    \node[below] at (1.25,0) {radi};
+\end{tikzpicture}
+\end{center}
+
+\end{document}
