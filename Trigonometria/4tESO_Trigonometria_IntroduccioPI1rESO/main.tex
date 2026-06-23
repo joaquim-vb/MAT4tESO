@@ -1,0 +1,271 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{xcolor}
+
+% 1. MARGES I CAPÇALERA ORIGINALS
+\geometry{top=4cm, bottom=3cm, left=2cm, right=2cm, headheight=2.5cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\includegraphics[height=1.8cm]{Logo_Departament.png}} 
+\fancyhead[R]{\includegraphics[height=1.8cm]{Logo_Institut.png}}
+
+\fancyfoot[C]{Pàgina \thepage\ de \pageref{LastPage}}
+
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+
+% --- CAPÇALERA D'IDENTIFICACIÓ ---
+\begingroup
+\renewcommand{\arraystretch}{2.2}
+\begin{tabularx}{\textwidth}{|X|p{4cm}|}
+    \hline
+    \textbf{Nom i cognoms:} & \textbf{Grup:} \\ \hline
+    \textbf{Activitat:} Fitxa 1. Angles, Triangles i Pitàgores & \textbf{Data:} \\ \hline
+\end{tabularx}
+\endgroup
+
+\vspace{0.5cm}
+
+\begin{center}
+\fcolorbox{black}{gray!10}{
+\begin{minipage}{0.9\textwidth}
+\textbf{Repàs ràpid!}
+\begin{itemize}[nosep]
+    \item \textbf{Agut:} Mesura menys de $90^\circ$ (és més tancat).
+    \item \textbf{Recte:} Mesura exactament $90^\circ$ (forma una "L" perfecta).
+    \item \textbf{Obtús:} Mesura més de $90^\circ$ i menys de $180^\circ$ (és molt obert).
+    \item \textbf{Pla:} Mesura exactament $180^\circ$ (és una línia totalment plana).
+\end{itemize}
+\end{minipage}
+}
+\end{center}
+
+\textbf{Exercici 1. Classifica aquests angles escrivint-hi el nom a sota.}
+
+\vspace{0.3cm}
+\begin{tabularx}{\textwidth}{@{} c c c c @{}}
+    \begin{tikzpicture}[scale=0.8]
+        \draw[thick] (0,0) -- (1.5,0);
+        \draw[thick] (0,0) -- (1.06,1.06); 
+        \draw (0.4,0) arc (0:45:0.4);
+    \end{tikzpicture} &
+    \begin{tikzpicture}[scale=0.8]
+        \draw[thick] (0,0) -- (1.5,0);
+        \draw[thick] (0,0) -- (0,1.5); 
+        \draw (0.2,0) -- (0.2,0.2) -- (0,0.2);
+    \end{tikzpicture} &
+    \begin{tikzpicture}[scale=0.8]
+        \draw[thick] (0,0) -- (1.5,0);
+        \draw[thick] (0,0) -- (-0.75,1.3); 
+        \draw (0.4,0) arc (0:120:0.4);
+    \end{tikzpicture} &
+    \begin{tikzpicture}[scale=0.8]
+        \draw[thick] (-1.2,0) -- (1.2,0);
+        \filldraw (0,0) circle (1.5pt); 
+        \draw (0.3,0) arc (0:180:0.3);
+    \end{tikzpicture} \\
+    Tipus: \makebox[1.8cm]{\hrulefill} & Tipus: \makebox[1.8cm]{\hrulefill} & Tipus: \makebox[1.8cm]{\hrulefill} & Tipus: \makebox[1.8cm]{\hrulefill} \\
+\end{tabularx}
+
+\vspace{0.5cm}
+
+\begin{center}
+\fcolorbox{black}{gray!10}{
+\begin{minipage}{0.9\textwidth}
+\textbf{Com classifiquem els triangles?} \\
+\textbf{Segons els seus costats:}
+\begin{itemize}[nosep]
+    \item \textbf{Equilàter:} Els 3 costats són iguals.
+    \item \textbf{Isòsceles:} Té 2 costats iguals i 1 de diferent.
+    \item \textbf{Escalè:} Tots els 3 costats són diferents.
+\end{itemize}
+\vspace{0.2cm}
+\textbf{Segons els seus angles:}
+\begin{itemize}[nosep]
+    \item \textbf{Acutangle:} Tots els 3 angles són aguts.
+    \item \textbf{Rectangle:} Té un angle recte (de $90^\circ$).
+    \item \textbf{Obtusangle:} Té un angle obtús.
+\end{itemize}
+\end{minipage}
+}
+\end{center}
+
+\textbf{Exercici 2. Posa els dos noms correctes a cada triangle.}
+
+\vspace{0.3cm}
+\begin{tabularx}{\textwidth}{@{} X X @{}}
+    \begin{center}
+    \begin{tikzpicture}[scale=1]
+        \draw[thick] (0,0) -- (3,0) -- (1.5,2.6) -- cycle;
+        \node at (1.5,-0.3) {Costats iguals};
+    \end{tikzpicture}
+    \end{center} &
+    \begin{center}
+    \begin{tikzpicture}[scale=1]
+        \draw[thick] (0,0) -- (3,0) -- (0,2) -- cycle;
+        \draw (0.3,0) -- (0.3,0.3) -- (0,0.3);
+    \end{tikzpicture}
+    \end{center} \\
+    Segons costats: \makebox[3cm]{\hrulefill} & Segons costats: \makebox[3cm]{\hrulefill} \\
+    Segons angles: \makebox[3cm]{\hrulefill} & Segons angles: \makebox[3cm]{\hrulefill} \\
+\end{tabularx}
+
+\vspace{0.5cm}
+
+\begin{center}
+\fcolorbox{black}{gray!10}{
+\begin{minipage}{0.9\textwidth}
+\textbf{La norma d'or dels triangles:} \\
+Si sumes els tres angles d'un triangle qualsevol, \textbf{SEMPRE donen $180^\circ$}.
+\end{minipage}
+}
+\end{center}
+
+\textbf{Exercici 3. Calcula l'angle que falta per arribar a $180^\circ$.}
+
+\begin{enumerate}
+    \item Aquest triangle té un angle de $60^\circ$ i un altre de $60^\circ$. Quant fa el tercer?
+    \begin{itemize}
+        \item Operació: $180^\circ - 60^\circ - 60^\circ = \makebox[1.5cm]{\hrulefill}$
+        \item L'angle que falta fa: \makebox[1.5cm]{\hrulefill}
+    \end{itemize}
+    \vspace{0.3cm}
+    \item Aquest triangle és rectangle (té un angle de $90^\circ$) i un altre angle fa $30^\circ$. Quant fa el tercer?
+    \begin{itemize}
+        \item Operació: $180^\circ - 90^\circ - 30^\circ = \makebox[1.5cm]{\hrulefill}$
+        \item L'angle que falta fa: \makebox[1.5cm]{\hrulefill}
+    \end{itemize}
+\end{enumerate}
+
+\textbf{Anota els aprenentatges que has adquirit fins ara al diari d'aula}
+
+
+\begin{center}
+\fcolorbox{black}{gray!10}{
+\begin{minipage}{0.9\textwidth}
+Quan tenim un \textbf{Triangle Rectangle} (amb un angle de $90^\circ$):
+\begin{itemize}[nosep]
+    \item El costat més llarg es diu \textbf{HIPOTENUSA}. Sempre està \textbf{just al davant} de l'angle recte.
+    \item Els altres dos costats més curts, que formen la "L", es diuen \textbf{CATETS}.
+\end{itemize}
+\end{minipage}
+}
+\end{center}
+
+\textbf{Exercici 4. Pinta o encercla de color VERMELL la hipotenusa en cadascun d'aquests triangles.}
+
+\vspace{0.5cm}
+\begin{tabularx}{\textwidth}{@{} c c c @{}}
+    \begin{tikzpicture}[scale=0.8]
+        \draw[thick] (0,0) -- (3,0) -- (0,4) -- cycle;
+        \draw (0.3,0) -- (0.3,0.3) -- (0,0.3);
+    \end{tikzpicture} &
+    \begin{tikzpicture}[scale=0.8, rotate=90]
+        \draw[thick] (0,0) -- (3,0) -- (0,4) -- cycle;
+        \draw (0.3,0) -- (0.3,0.3) -- (0,0.3);
+    \end{tikzpicture} &
+    \begin{tikzpicture}[scale=0.8, rotate=-30]
+        \draw[thick] (0,0) -- (3,0) -- (0,4) -- cycle;
+        \draw (0.3,0) -- (0.3,0.3) -- (0,0.3);
+    \end{tikzpicture} \\
+\end{tabularx}
+
+\textbf{Anota els aprenentatges al diari d'aula}
+\vspace{0.8cm}
+\newpage
+
+\begin{center}
+\fcolorbox{black}{gray!10}{
+\begin{minipage}{0.9\textwidth}
+\textbf{La fórmula màgica (Teorema de Pitàgores):} \\
+Ens serveix per calcular la hipotenusa si sabem quant mesuren els dos catets:
+\begin{center}
+    $\text{Hipotenusa}^2 = \text{Catet}^2 + \text{Catet}^2$
+\end{center}
+\end{minipage}
+}
+\end{center}
+
+\textbf{Exemple resolt pas a pas:} \\
+Volem trobar la hipotenusa ($h$) d'un triangle amb catets de $3\text{ cm}$ i $4\text{ cm}$.
+
+\vspace{0.3cm}
+\begin{minipage}{0.4\textwidth}
+    \begin{center}
+    \begin{tikzpicture}[scale=0.7]
+        \draw[thick] (0,0) -- (4,0) node[midway, below]{$4\text{ cm}$} -- (0,3) node[midway, above right]{$h$} -- cycle node[midway, left]{$3\text{ cm}$};
+        \draw (0.3,0) -- (0.3,0.3) -- (0,0.3);
+    \end{tikzpicture}
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.55\textwidth}
+    \begin{itemize}
+        \item \textbf{1) Calcula el quadrat de la hipotenusa ($h^2$)} sumant els catets al quadrat:
+        $$h^2 = 3^2 + 4^2 = 9 + 16 = 25$$
+        \item \textbf{2) Fes l'arrel quadrada} per trobar la hipotenusa ($h$):
+        $$h = \sqrt{25} = 5\text{ cm}$$
+    \end{itemize}
+\end{minipage}
+
+\vspace{0.8cm}
+\textbf{Exercici 5. Ara et toca a tu!} Troba la hipotenusa ($h$) seguint els dos passos i ajudant-te dels dibuixos.
+
+\begin{enumerate}
+    \item Triangle amb catets de $6\text{ cm}$ i $8\text{ cm}$.
+
+    \begin{minipage}{0.4\textwidth}
+        \begin{center}
+        \begin{tikzpicture}[scale=0.5]
+            \draw[thick] (0,0) -- (4,0) node[midway, below]{$8\text{ cm}$} -- (0,3) node[midway, above right]{$h=?$} -- cycle node[midway, left]{$6\text{ cm}$};
+            \draw (0.3,0) -- (0.3,0.3) -- (0,0.3);
+        \end{tikzpicture}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.55\textwidth}
+        \begin{itemize}
+            \item \textbf{1) Calcula el quadrat de la hipotenusa }\\ 
+            \vspace{0.8cm}
+            \item \textbf{2) Fes l'arrel quadrada}: \\
+            \vspace{0.8cm}
+        \end{itemize}
+    \end{minipage}
+    
+    \item Triangle amb catets de $5\text{ cm}$ i $12\text{ cm}$.
+
+    \begin{minipage}{0.4\textwidth}
+        \begin{center}
+        \begin{tikzpicture}[scale=0.4]
+            \draw[thick] (0,0) -- (6,0) node[midway, below]{$12\text{ cm}$} -- (0,2.5) node[midway, above right]{$h=?$} -- cycle node[midway, left]{$5\text{ cm}$};
+            \draw (0.4,0) -- (0.4,0.4) -- (0,0.4);
+        \end{tikzpicture}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.55\textwidth}
+        \begin{itemize}
+            \item \textbf{1) Calcula el quadrat de la hipotenusa ($h^2$)}: \\
+            \vspace{0.8cm}
+            \item \textbf{2) Fes l'arrel quadrada}: \\
+            \vspace{0.8cm}
+        \end{itemize}
+    \end{minipage}
+    \newpage 
+    \item Triangle amb catets de $9\text{ m}$ i $12\text{ m}$. \textbf{Fes tu el dibuix del triangle} i calcula'n la hipotenusa seguint els passos.
+    \vspace{4.5cm}
+
+    \item Triangle amb catets de $8\text{ mm}$ i $15\text{ mm}$. \textbf{Fes tu el dibuix del triangle} i calcula'n la hipotenusa seguint els passos.
+    \vspace{4.5cm}
+
+    \item \textbf{Anota els aprenentatges al diari d'aula}
+\end{enumerate}
+\end{document}
