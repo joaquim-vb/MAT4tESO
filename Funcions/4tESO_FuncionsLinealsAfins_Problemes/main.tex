@@ -1,0 +1,186 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{tikz} % Afegit per dibuixar les graelles dels gràfics
+
+% 1. MARGES I CAPÇALERA
+\geometry{top=4cm, bottom=3cm, left=2cm, right=2cm, headheight=2.5cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+% Assegura't que tens els fitxers d'imatge o comenta aquestes línies si no els tens
+\fancyhead[L]{\includegraphics[height=1.8cm]{Logo_Departament.png}} 
+\fancyhead[R]{\includegraphics[height=1.8cm]{Logo_Institut.png}}
+
+\fancyfoot[L]{}
+\fancyfoot[C]{Pàgina \thepage\ de \pageref{LastPage}}
+\fancyfoot[R]{}
+
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+
+% --- CAPÇALERA D'IDENTIFICACIÓ ---
+\begingroup
+\renewcommand{\arraystretch}{2.2}
+\begin{tabularx}{\textwidth}{|X|p{4cm}|}
+    \hline
+    \textbf{Nom i cognoms:} & \textbf{Grup:} \\ \hline
+    \textbf{Activitat:} Problemes funcions afins & \textbf{Data:} \\ \hline
+\end{tabularx}
+\endgroup
+
+
+
+% --- EXERCICI 1: MOLT GUIAT ---
+\section*{Exercici 1: La ruta en bicicleta}
+Una botiga de lloguer de bicicletes cobra una tarifa fixa de 3 € només per treure la bicicleta de la botiga, més 2 € per cada quilòmetre que fem de ruta. Anomenarem $f(x)$ al preu final que paguem, on $x$ són els quilòmetres recorreguts.
+
+\begin{enumerate}[label=\alph*)]
+    \item Calcula quin serà el preu 2 km, 3 km i 4 km \textbf{especificant el càlcul que fas servir}. 
+    
+    \textit{Exemple:} Si fem 1 km, paguem els 3 € fixos més 2 € per 1 km. Per tant: \\
+    \vspace{0.1cm}
+    $f(1) = 3 + 2 \cdot 1 = 5 $ € \\
+    \vspace{0.2cm}
+    $f(2) = $ \\
+    \vspace{0.2cm}
+    $f(3) = $ \\
+    \vspace{0.1cm}
+    I si fem $x$ quilòmetres? Dedueix l'expressió algebraica: \\
+    \vspace{0.2cm}
+    $f(x) = $ 
+    \item Completa la taula de valors següent:\\
+    \renewcommand{\arraystretch}{1.8}
+    \begin{tabular}{|l|c|c|c|c|c|}
+        \hline
+        \textbf{$x$ (quilòmetres)} & \hspace{0.5cm} 0 \hspace{0.5cm} & \hspace{0.5cm} 1 \hspace{0.5cm} & \hspace{0.5cm} 2 \hspace{0.5cm} & \hspace{0.5cm} 3 \hspace{0.5cm} & \hspace{0.5cm} 4 \hspace{0.5cm} \\ \hline
+        \textbf{$f(x)$ (preu total en \euro)} & & 5 & & & \\ \hline
+    \end{tabular}
+    
+    \item Representa aquestes dades en un gràfic. Posa els quilòmetres ($x$) a l'eix horitzontal i el preu ($y$) a l'eix vertical. Escull bé l'escala de cada eix!
+    
+    \vspace{0.3cm}
+    \begin{center}
+    \begin{tikzpicture}
+        \draw[step=0.5cm,lightgray,very thin] (0,0) grid (12,6);
+        \draw[thick,->] (0,0) -- (12.5,0) node[right] {$x$ (km)};
+        \draw[thick,->] (0,0) -- (0,6.5) node[above] {$f(x)$ (€)};
+    \end{tikzpicture}
+    \end{center}
+    
+    \vspace{0.5cm}
+    \item Quant ens costarà fer una ruta de 10 km?
+    \vspace{1cm}
+    
+    \item Si quan tornem la bicicleta ens cobren 15 €, quants quilòmetres hem fet en total?
+    \vspace{1cm}
+\end{enumerate}
+
+% --- EXERCICI 2: GUIAT ---
+\section*{Exercici 2: Tarda de bitlles}
+Per anar a jugar a la bolera de la ciutat, cal pagar 4 € per llogar el calçat especial obligatori. Després, cada partida de bitlles que juguis costa 3 €. Anomenarem $x$ al nombre de partides i $f(x)$ al preu total.
+
+\begin{enumerate}[label=\alph*)]
+    \item Calcula la despesa total si jugues 1 partida, 2 partides i 3 partides.
+    \vspace{2.5cm}
+    
+    \item Completa la taula de valors de 0 a 8 partides.
+    
+    \vspace{0.3cm}
+    \renewcommand{\arraystretch}{1.8}
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+        \hline
+        \textbf{$x$} & \hspace{0.4cm} 0 \hspace{0.4cm} & \hspace{0.4cm} 1 \hspace{0.4cm} & \hspace{0.4cm} 2 \hspace{0.4cm} & \hspace{0.4cm} 3 \hspace{0.4cm} & \hspace{0.4cm} 4 \hspace{0.4cm} & \hspace{0.4cm} 5 \hspace{0.4cm} & \hspace{0.4cm} 6 \hspace{0.4cm} & \hspace{0.4cm} 7 \hspace{0.4cm} & \hspace{0.4cm} 8 \hspace{0.4cm} \\ \hline
+        \textbf{$f(x)$} & & & & & & & & & \\ \hline
+    \end{tabular}
+    \vspace{0.5cm}
+    
+    \item Dibuixa el gràfic que representa aquesta situació.
+    
+    \vspace{0.3cm}
+    \begin{center}
+    \begin{tikzpicture}
+        \draw[step=0.5cm,lightgray,very thin] (0,0) grid (12,6);
+        \draw[thick,->] (0,0) -- (12.5,0) node[right] {$x$};
+        \draw[thick,->] (0,0) -- (0,6.5) node[above] {$f(x)$};
+    \end{tikzpicture}
+    \end{center}
+    
+    \vspace{0.5cm}
+    \item Escriu l'expressió algebraica de la funció (fixa't en com has calculat la despesa per 1, 2 i 3 partides a l'apartat a):
+    
+    \vspace{0.5cm}
+    $f(x) = $ 
+    \vspace{0.5cm}
+    
+    \item Si una colla d'amics vol jugar 6 partides, quant haurà de pagar cadascú en total?
+    \vspace{1cm}
+    
+    \item Un noi surt de la bolera i veu que s'ha gastat 19 € en total (incloent-hi les sabates). Quantes partides ha jugat?
+    \vspace{1cm}
+\end{enumerate}
+
+% --- EXERCICI 3: MENYS GUIAT ---
+\section*{Exercici 3: La quota del gimnàs}
+Un gimnàs ofereix una tarifa on s'ha de pagar una matrícula inicial de 20 € per apuntar-s'hi, i una mensualitat de 30 € cada mes.
+
+\begin{enumerate}[label=\alph*)]
+    \item Dissenya tu mateix/a una taula de valors per calcular els diners totals acumulats que haurà pagat una persona des que s'apunta (mes 0) fins al cap de 4 mesos. Un cop feta, dibuixa el gràfic corresponent 
+    \vspace{10cm} % Espai en blanc perquè dibuixin la taula a mà
+    \newpage
+    \item Troba l'expressió algebraica de la funció $f(x)$ que relaciona els mesos apuntats ($x$) amb els diners totals gastats ($f(x)$).
+    \vspace{1cm}
+    
+    \item Quants diners totals haurà pagat al cap de 8 mesos? Fes el càlcul a partir de l'expressió algebraica de l'apartat anterior. \textit{(Pensa: a la teva fórmula, hauràs de substituir la $x$ o la $f(x)$?)}
+    \vspace{1cm}
+    
+    \item Si una persona fa números i veu que ja ha pagat 200 € en total al gimnàs, quants mesos porta apuntada? Fes el càlcul a partir de l'expressió algebraica. \textit{(Pensa: a la teva fórmula, hauràs de substituir la $x$ o la $f(x)$?)}
+    \vspace{0.5cm}
+\end{enumerate}
+
+% --- BATERIA FINAL D'EXPRESSIONS ALGEBRAIQUES ---
+\section*{Exercici 4: Entrenament ràpid d'expressions algebraiques}
+Llegeix els següents enunciats i escriu \textbf{només l'expressió algebraica} que els representa. 
+
+\begin{enumerate}[label=\arabic*.]
+    \item Un lampista cobra 40 € per desplaçament a domicili, més 25 € per cada hora de feina.
+    
+    \textit{On $x$ són les hores treballades i $f(x)$ és el preu total.}
+    
+    $f(x) = $ 
+    \vspace{0.3cm}
+    
+    \item Tenim uns estalvis de 100 € a la guardiola i cada setmana en traiem 5 € per a les nostres despeses. 
+    
+    \textit{On $x$ són les setmanes que passen i $f(x)$ són els diners que queden a la guardiola.}
+    
+    $f(x) = $ 
+    \vspace{0.3cm}
+    
+    \item Comprem taronges al mercat a 2 € el quilo (no hi ha cap cost extra).
+    
+    \textit{On $x$ representa: } 
+    
+    \textit{On $f(x)$ representa: } 
+    
+    $f(x) = $ 
+    \vspace{0.3cm}
+    
+    \item Una acadèmia d'anglès cobra 15 € de material a l'inici del curs i 45 € cada mes.
+    
+    \textit{On $x$ representa: } \
+    
+    \textit{On $f(x)$ representa: } 
+    
+    $f(x) = $ 
+\end{enumerate}
+
+\end{document}
