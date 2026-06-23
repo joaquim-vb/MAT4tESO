@@ -1,0 +1,288 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{tikz}
+
+% 1. MARGES I CAPÇALERA
+\geometry{top=3cm, bottom=3cm, left=2cm, right=2cm, headheight=2.5cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+%\fancyhead[L]{\includegraphics[height=1.8cm]{Logo_Departament.png}} 
+%\fancyhead[R]{\includegraphics[height=1.8cm]{Logo_Institut.png}}
+\fancyfoot[C]{Pàgina \thepage\ de \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\newcommand{\splitcell}[2]{\begin{tabular}{@{}c@{}}#1 \\ #2\end{tabular}}
+
+\begin{document}
+
+% --- CAPÇALERA D'IDENTIFICACIÓ ---
+\begingroup
+\renewcommand{\arraystretch}{2.2}
+\begin{tabularx}{\textwidth}{|X|p{4cm}|}
+    \hline
+    \textbf{Nom i cognoms:} & \textbf{Grup:} \\ \hline
+    \textbf{Fitxa 3 estadística:} Freqüències acumulades i anàlisi & \textbf{Data:} \\ \hline
+\end{tabularx}
+\endgroup
+
+\vspace{0.4cm}
+
+% --- EXERCICI 1 ---
+\noindent \textbf{EXERCICI 1: Temps d'ús del mòbil} \\
+Hem preguntat a 20 alumnes quants minuts al dia dediquen a mirar les xarxes socials. Les respostes han estat:
+\begin{center}
+45, 15, 90, 30, 60, 25, 80, 110, 59, 30, 95, 20, 75, 28, 60, 100, 55, 29, 89, 120
+\end{center}
+
+\begin{enumerate}[label=\alph*)]
+    \item Completa la taula de freqüències. (Fixa't bé si els extrems van inclosos '[' o no ')').
+    
+    \begin{center}
+    \renewcommand{\arraystretch}{2.2}
+    \setlength{\tabcolsep}{5pt}
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+        \hline
+        \textbf{Interval} & \splitcell{\textbf{Marca}}{\textbf{($x_i$)}} & \splitcell{\textbf{Freq abs}}{\textbf{($f_i$)}} & \multicolumn{2}{c|}{\splitcell{\textbf{Freq rel}}{\textbf{($h_i$)}}} & \splitcell{\textbf{Freq cum}}{\textbf{($F_i$)}} & \multicolumn{2}{c|}{\splitcell{\textbf{Freq cum rel}}{\textbf{($H_i$)}}} \\ \cline{4-5} \cline{7-8}
+        \textbf{(minuts)} & & & \textbf{decimal} & \textbf{\%} & & \textbf{decimal} & \textbf{\%} \\ \hline
+        $[0, 30)$  & & & & & & & \\ \hline
+        $[30, 60)$ & & & & & & & \\ \hline
+        $[60, 90)$ & & & & & & & \\ \hline
+        $[90, 120]$ & & & & & & & \\ \hline
+        \textbf{Total} & --- & \textbf{N = } & \textbf{1} & \textbf{100\%} & \multicolumn{3}{c|}{} \\ \hline
+    \end{tabular}
+    \end{center}
+    
+    \item Fixa't en la freqüència acumulada relativa en \% ($H_i$). Quin temps d'ús no supera el \textbf{25\%} dels alumnes que menys utilitzen el mòbil? \vspace{1cm}
+    
+    \item Quin temps màxim hi dedica el \textbf{50\%} de l'alumnat? \vspace{1cm}
+    
+    \item Si agafem el \textbf{75\%} dels alumnes amb menys temps d'ús, per sota de quants minuts es troben? \vspace{1cm}
+
+    \newpage
+    
+    \item \textbf{Representació gràfica:} Completa el següent gràfic de barres utilitzant la columna de $H_i$ (\%). Tens les dues primeres barres dibuixades com a exemple.
+    
+    \begin{center}
+    \begin{tikzpicture}[scale=0.9]
+        % Graella
+        \draw[lightgray, thin, dashed] (0,0) grid[xstep=2.5, ystep=1] (10,5);
+        % Eixos
+        \draw[thick, ->] (0,0) -- (10.5,0);
+        \draw[thick, ->] (0,0) -- (0,5.5);
+        
+        % Títol eix Y
+        \node[rotate=90, align=center] at (-2.2, 2.5) {\% d'alumnes que utilitzen \\ el mòbil tants minuts o menys};
+        % Títol eix X
+        \node at (5, -1.2) {Temps (min)};
+        
+        % Marques eix X (Intervals)
+        \node[below] at (0, -0.1) {0};
+        \node[below] at (2.5, -0.1) {30};
+        \node[below] at (5, -0.1) {60};
+        \node[below] at (7.5, -0.1) {90};
+        \node[below] at (10, -0.1) {120};
+        
+        % Marques eix Y (cada 1 = 20%)
+        \foreach \y/\ytext in {0/0, 1.25/25, 2.5/50, 3.75/75, 5/100} {
+            \draw (0.1, \y) -- (-0.1, \y) node[left] {\ytext \%};
+        }
+        
+        % Barres inicials
+        \draw[thick, fill=gray!30] (0,0) rectangle (2.5, 1.25);
+        \draw[thick, fill=gray!30] (2.5,0) rectangle (5, 2.5);
+        
+    \end{tikzpicture}
+    \end{center}
+\end{enumerate}
+
+% --- EXERCICI 2 ---
+\noindent \textbf{EXERCICI 2: Interpretació gràfica d'un examen} \\
+El gràfic de barres següent mostra els resultats d'un examen de matemàtiques d'un altre grup de 4t d'ESO. L'eix vertical indica el \% acumulat d'alumnes ($H_i$ en \%) que han tret una nota igual o inferior al límit de l'interval.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.9]
+    % Graella
+    \draw[lightgray, thin, dashed] (0,0) grid[xstep=2, ystep=1] (10,5);
+    % Eixos
+    \draw[thick, ->] (0,0) -- (10.5,0);
+    \draw[thick, ->] (0,0) -- (0,5.5);
+    % Títol eix Y 
+    \node[rotate=90, align=center] at (-2.2, 2.5) {\% d'alumnes amb aquesta \\ nota o inferior};
+    % Títol eix X
+    \node at (5, -1.2) {Nota};
+    
+    % Marques eix X
+    \foreach \x in {0,2,4,6,8,10} {
+        \draw (\x, 0.1) -- (\x, -0.1) node[below] {\x};
+    }
+    % Marques eix Y (cada 1 unitat = 20%)
+    \foreach \y/\ytext in {0/0, 1.25/25, 2.5/50, 3.75/75, 5/100} {
+        \draw (0.1, \y) -- (-0.1, \y) node[left] {\ytext \%};
+    }
+    
+    % Barres
+    \draw[thick, fill=gray!20] (0,0) rectangle (2, 0.5);   % 10%
+    \draw[thick, fill=gray!20] (2,0) rectangle (4, 1.25);  % 25%
+    \draw[thick, fill=gray!20] (4,0) rectangle (6, 2.5);   % 50%
+    \draw[thick, fill=gray!20] (6,0) rectangle (8, 3.75);  % 75%
+    \draw[thick, fill=gray!20] (8,0) rectangle (10, 5.0);  % 100%
+    
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}[label=\alph*)]
+    \item Segons el gràfic, quina nota delimita el \textbf{25\%} dels exàmens amb pitjor nota? \vspace{0.6cm}
+    \item Quina nota deixa per sota exactament a la meitat de la classe (\textbf{50\%})? \vspace{0.6cm}
+    \item Quina nota marca el límit del \textbf{75\%} de l'alumnat? \vspace{0.6cm}
+\end{enumerate}
+
+\vspace{0.4cm}
+
+% --- EXERCICI 3 ---
+\noindent \textbf{EXERCICI 3 (AN): Comparació de dos grups (Temps d'estudi)} \\
+Hem demanat a 20 alumnes de dues classes diferents (Grup A i Grup B) quants minuts estudien a la setmana. 
+\vspace{0.4cm}
+
+\begin{minipage}{0.48\textwidth}
+    \textbf{Grup A}
+    \begin{center}
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{Interval (min)} & \textbf{$x_i$} & \textbf{$f_i$} & \textbf{$H_i$ (\%)} \\ \hline
+        $[0, 20)$   & 10 & 0 & 0\% \\ \hline
+        $[20, 40)$  & 30 & 5 & 25\% \\ \hline
+        $[40, 60)$  & 50 & 10 & 75\% \\ \hline
+        $[60, 80)$  & 70 & 5 & 100\% \\ \hline
+        $[80, 100]$ & 90 & 0 & 100\% \\ \hline
+        \textbf{Total} & & \textbf{20} & \\ \hline
+    \end{tabular}
+    \end{center}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\textwidth}
+    \textbf{Grup B}
+    \begin{center}
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{Interval (min)} & \textbf{$x_i$} & \textbf{$f_i$} & \textbf{$H_i$ (\%)} \\ \hline
+        $[0, 20)$   & 10 & 5 & 25\% \\ \hline
+        $[20, 40)$  & 30 & 2 & 35\% \\ \hline
+        $[40, 60)$  & 50 & 6 & 65\% \\ \hline
+        $[60, 80)$  & 70 & 2 & 75\% \\ \hline
+        $[80, 100]$ & 90 & 5 & 100\% \\ \hline
+        \textbf{Total} & & \textbf{20} & \\ \hline
+    \end{tabular}
+    \end{center}
+\end{minipage}
+
+\begin{enumerate}[label=\alph*)]
+    \item \textbf{Càlcul de la mitjana:} Calcula la mitjana aritmètica de temps d'estudi per a cada grup. Què observes? \vspace{2cm}
+    
+    \item Dibuixa el gràfic de barres de \textbf{freqüències acumulades} ($H_i$ \%) per a cada grup.
+    
+    \vspace{0.3cm}
+    
+    \begin{minipage}{0.48\textwidth}
+        \begin{center}
+        \begin{tikzpicture}[scale=0.8]
+            \node at (2.5, 6) {\textbf{Gràfic Grup A}};
+            \draw[lightgray, thin, dashed] (0,0) grid[xstep=1, ystep=1] (5,5);
+            \draw[thick, ->] (0,0) -- (5.5,0);
+            \draw[thick, ->] (0,0) -- (0,5.5);
+            
+            \node[rotate=90] at (-1.8, 2.5) {\% acumulat ($H_i$)};
+            \node at (2.5, -1.2) {Temps (min)};
+            
+            \node[below, font=\small] at (0, -0.1) {0};
+            \node[below, font=\small] at (1, -0.1) {20};
+            \node[below, font=\small] at (2, -0.1) {40};
+            \node[below, font=\small] at (3, -0.1) {60};
+            \node[below, font=\small] at (4, -0.1) {80};
+            \node[below, font=\small] at (5, -0.1) {100};
+            
+            \foreach \y/\ytext in {0/0, 1.25/25, 2.5/50, 3.75/75, 5/100} {
+                \draw (0.1, \y) -- (-0.1, \y) node[left, font=\small] {\ytext \%};
+            }
+        \end{tikzpicture}
+        \end{center}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\textwidth}
+        \begin{center}
+        \begin{tikzpicture}[scale=0.8]
+            \node at (2.5, 6) {\textbf{Gràfic Grup B}};
+            \draw[lightgray, thin, dashed] (0,0) grid[xstep=1, ystep=1] (5,5);
+            \draw[thick, ->] (0,0) -- (5.5,0);
+            \draw[thick, ->] (0,0) -- (0,5.5);
+            
+            \node[rotate=90] at (-1.8, 2.5) {\% acumulat ($H_i$)};
+            \node at (2.5, -1.2) {Temps (min)};
+            
+            \node[below, font=\small] at (0, -0.1) {0};
+            \node[below, font=\small] at (1, -0.1) {20};
+            \node[below, font=\small] at (2, -0.1) {40};
+            \node[below, font=\small] at (3, -0.1) {60};
+            \node[below, font=\small] at (4, -0.1) {80};
+            \node[below, font=\small] at (5, -0.1) {100};
+            
+            \foreach \y/\ytext in {0/0, 1.25/25, 2.5/50, 3.75/75, 5/100} {
+                \draw (0.1, \y) -- (-0.1, \y) node[left, font=\small] {\ytext \%};
+            }
+        \end{tikzpicture}
+        \end{center}
+    \end{minipage}
+    
+    \vspace{0.5cm}
+    
+    \item Fixa't en el Grup A: Quants minuts màxim estudia el \textbf{25\%} de l'alumnat que hi dedica menys temps? I en el Grup B? \vspace{1cm}
+    
+    \item Ara fixa't en el \textbf{75\%} de la població de cada grup que estudia menys. Per sota de quants minuts es troba el Grup A? I el Grup B? \vspace{1cm}
+    
+    \item \textbf{Conclusió sobre la variabilitat (AE):} La meitat (50\%) central de la classe es troba entre el valor del 25\% i el del 75\%. Quin grup té un comportament més similar pel que fa al temps d'estudi (és a dir, dades més concentrades)? Quin grup té comportaments més diferents entre els seus alumnes (dades més disperses)? Raona la resposta.
+    
+    \vspace{0.1cm}
+    Grup amb comportament més similar: 
+    
+    \vspace{0.3cm}
+    Grup amb comportament més diferent:
+    
+    \item \textbf{Reflexió final (AE):} Si els dos grups tenen exactament la mateixa mitjana d'estudi (ho has comprovat a l'apartat a), per què creus que és útil calcular aquests percentatges acumulats (que d'aquí a poc anomenarem \textit{mesures de posició})? Què ens expliquen d'un grup de dades que la mitjana sola no ens pot dir? \textbf{Anota-ho al diari d'aula}
+    
+\end{enumerate}
+
+
+% --- EXERCICI 4 ---
+\noindent \textbf{EXERCICI 4: Despesa en oci} \\
+Imagina que estudiem els diners que gasta a la setmana un grup de joves. Veiem que el valor que acumula el \textbf{75\%} de la freqüència relativa és de \textbf{20€}. 
+
+\begin{enumerate}[label=\alph*)]
+    \item Què significa aquesta dada? Explica-ho amb les teves paraules pensant en quantes persones gasten menys d'aquesta quantitat i quantes gasten més. \vspace{1cm}
+    \item Si tu gastes 25€ a la setmana, estàs dins del grup del 75\% que menys gasta o pertanys al grup del 25\% que més gasta? Raona la resposta. \vspace{1cm}
+\end{enumerate}
+
+
+% --- EXERCICI 5 ---
+\noindent \textbf{EXERCICI 5: Reflexió i diari d'aula} \\
+Anota al teu diari d'aula els aprenentatges que has assolit fent aquesta fitxa. \textbf{ATENCIÓ: És molt important que expliquis aquests aprenentatges amb les teves paraules i acompanyats d'exemples pràctics. }
+
+\begin{itemize}[label={\tikz \draw[thick] (0,0) rectangle (0.2,0.2);}, itemsep=0.3cm]
+    \item Com calcular i completar una taula de freqüències amb dades agrupades, vigilant molt bé quins valors entren a cada interval (ús de claudàtors i parèntesis).
+    \item Què significa a la pràctica la freqüència acumulada relativa ($H_i$ en \%) i com interpretar-la per saber quina part de la població queda per sota d'un valor.
+    \item Com representar gràfics de barres de freqüències acumulades i interpretar-los (saber respondre preguntes sobre quin valor deixa per sota el 25\%, el 50\% o el 75\% de les dades).
+    \item Entendre que la mitjana aritmètica no ens dona tota la informació d'un grup i que necessitem altres mesures per saber com es distribueixen els valors.
+    \item Com utilitzar els valors del 25\% i el 75\% per deduir si un grup de dades és homogeni (dades molt juntes, comportament similar) o heterogeni (dades disperses, comportament molt diferent).
+\end{itemize}
+
+
+\end{document}
