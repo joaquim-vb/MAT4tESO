@@ -1,0 +1,117 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{multicol}
+
+% 1. MARGES I CAPÇALERA ORIGINALS RECUPERATS
+\geometry{top=4cm, bottom=3cm, left=2cm, right=2cm, headheight=2.5cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+% Logos recuperats de la plantilla original
+% (Assegura't de tenir els arxius Logo_Departament.png i Logo_Institut.png a la mateixa carpeta)
+\fancyhead[L]{\includegraphics[height=1.8cm]{Logo_Departament.png}}
+\fancyhead[R]{\includegraphics[height=1.8cm]{Logo_Institut.png}}
+
+\fancyfoot[L]{}
+\fancyfoot[C]{Pàgina \thepage\ de \pageref{LastPage}}
+\fancyfoot[R]{}
+
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+
+% --- CAPÇALERA D'IDENTIFICACIÓ ---
+\begingroup
+\renewcommand{\arraystretch}{2.2}
+\begin{tabularx}{\textwidth}{|X|p{4cm}|}
+\hline
+\textbf{Nom i cognoms:} & \textbf{Grup:} \\ \hline
+\textbf{Activitat: "El joc de la rata"} & \textbf{Data:} \\ \hline
+\end{tabularx}
+\endgroup
+
+\section*{El joc bàsic (1 dau)}
+
+\textbf{ }
+
+\textbf{Objectiu:} Ser el primer jugador a arribar a 100 punts.
+
+\textbf{Material:} 1 dau tradicional de 6 cares i paper i llapis per apuntar.
+
+\textbf{Com s'hi juga?}
+Es juga per torns. En el teu torn, pots tirar el dau tantes vegades com vulguis.
+\begin{itemize}
+\item Si treus un \textbf{2, 3, 4, 5 o 6}: Aquest número s'afegeix a la teva puntuació \textit{temporal} del torn actual. A continuació, decideixes: vols tornar a tirar o et plantes?
+\item Si decideixes \textbf{plantar-te}: Sumes tota la teva puntuació temporal d'aquest torn a la teva puntuació general total, i el torn passa al següent jugador.
+\item Si treus un \textbf{1}: Quina mala sort! Perds \textbf{tota} la puntuació temporal que havies acumulat en aquest torn (no la total) i el teu torn s'acaba immediatament sense sumar res. Passa el torn al següent jugador.
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{Reflexió matemàtica:} Quants punts hauries d'acumular en un torn abans de plantar-te perquè sigui una estratègia guanyadora?
+
+\vspace{0.5cm}
+\hrule
+\vspace{0.5cm}
+
+\section*{Variant 1: Dos daus ràpids}
+
+Aquesta variant fa que el joc sigui més emocionant i permet arribar a 100 punts més de pressa, però també incrementa el risc.
+
+\textbf{Com s'hi juga?}
+Es juguen les mateixes regles que en el joc bàsic, però tirant \textbf{dos daus} a la vegada.
+\begin{itemize}
+\item Si els daus mostren qualsevol combinació de números que \textbf{no contingui cap 1} (per exemple, 3 i 5): sumes tots dos números a la teva puntuació temporal.
+\item Si \textbf{un dels daus és un 1} (per exemple, 1 i 4): perds la puntuació temporal d'aquest torn i passes el torn (igual que al joc bàsic).
+\item Si treus un \textbf{doble 1} (ulls de serp): Ouch! No només perds el torn actual, sinó que la teva \textbf{puntuació general cau a zero}. Has de tornar a començar!
+\end{itemize}
+
+\vspace{0.5cm}
+\hrule
+\vspace{0.5cm}
+
+\section*{Variant 2: L'objectiu exacte}
+
+En lloc d'arribar o superar els 100 punts, has d'arribar \textbf{exactament} a 100.
+
+\textbf{Com s'hi juga?}
+\begin{itemize}
+\item Si al final d'un torn, en sumar els punts temporals al teu total te'n passes de 100, no pots sumar res i perds aquest torn. Et quedes amb la puntuació que tenies abans de començar el torn.
+\item Això t'obliga a fer un càlcul mental ràpid i decidir quan plantar-te per assegurar-te de no passar-te. A prop del final, cada tirada és crítica!
+\end{itemize}
+
+\vspace{0.5cm}
+\hrule
+\vspace{0.5cm}
+
+\section*{Variant 3: Joc per equips}
+
+Ideal per si sou colla i voleu jugar diverses persones alhora.
+
+\textbf{Com s'hi juga?}
+\begin{itemize}
+\item Formeu equips de 2 o 3 persones. L'objectiu és arribar a 150 o 200 punts per fer la partida una mica més llarga.
+\item En cada torn de l'equip, haureu de \textbf{posar-vos d'acord} sobre si tireu un altre cop o us planteu.
+\item Això us obligarà a debatre l'estratègia en veu alta i negociar amb els companys. "Tirem un cop més? Només en portem 12!" - "No, que si surt un 1 ho perdem tot!".
+\end{itemize}
+
+\vspace{0.5cm}
+\hrule
+\vspace{0.5cm}
+
+\section*{Repte matemàtic (Sostre Alt)}
+
+Si el teu grup ja domina el joc ràpidament, intenteu resoldre aquesta pregunta:
+
+\textit{"Quina és l'esperança matemàtica de tirar un dau? Tenint en compte que si surt un 1 perdem els punts acumulats, quantes tirades és òptim fer abans de plantar-se?"}
+
+\end{document}
