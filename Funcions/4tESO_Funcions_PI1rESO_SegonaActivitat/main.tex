@@ -1,0 +1,582 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage[most]{tcolorbox} 
+\pgfplotsset{compat=1.18}
+
+% 1. MARGES I CAPÇALERA
+\geometry{top=3cm, bottom=2.5cm, left=2cm, right=2cm, headheight=2cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+% Pots descomentar i afegir els teus logos
+% \fancyhead[L]{\includegraphics[height=1.8cm]{Logo_Departament.png}} 
+% \fancyhead[R]{\includegraphics[height=1.8cm]{Logo_Institut.png}}
+\fancyfoot[C]{Pàgina \thepage\ de \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+
+% --- CAPÇALERA D'IDENTIFICACIÓ ---
+\begingroup
+\renewcommand{\arraystretch}{2.2}
+\begin{tabularx}{\textwidth}{|X|p{4cm}|}
+    \hline
+    \textbf{Nom i cognoms:} & \textbf{Grup:} \\ \hline
+    \textbf{Activitat:} Coordenades i Funcions (Reforç) & \textbf{Data:} \\ \hline
+\end{tabularx}
+\endgroup
+
+\vspace{0.5cm}
+
+\begin{center}
+    {\Large \textbf{PART 1: SITUAR PUNTS AL PLA}}
+\end{center}
+
+\begin{tcolorbox}[colback=blue!5,colframe=blue!40,title=\textbf{Recorda!}]
+    Les coordenades són com l'adreça d'un punt: $(x, y)$.
+    \begin{itemize}
+        \item El primer número ($\mathbf{x}$): Dreta (+) o Esquerra (-).
+        \item El segon número ($\mathbf{y}$): Dalt (+) o Baix (-).
+    \end{itemize}
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=red!5,colframe=red!40,title=\textbf{Molt Important!}]
+    Sempre que dibuixis un punt a la graella, \textbf{no oblidis escriure la seva lletra al costat}! Si no, després no sabràs quin és cadascun.
+\end{tcolorbox}
+
+% --- EXERCICI 1 ---
+\section*{1. La Casa}
+Situa els punts següents a la graella i uneix-los en aquest ordre amb un regle. \\
+\textit{Hem dibuixat el primer punt $A(-3, -2)$ per ajudar-te a començar!}
+
+$A(-3, -2) \to B(3, -2) \to C(3, 2) \to D(0, 5) \to E(-3, 2) \to A(-3, -2)$
+
+\begin{center}
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines = middle, xmin=-6, xmax=6, ymin=-4, ymax=6,
+            xtick={-5,...,5}, ytick={-3,...,5}, grid=both,
+            width=12cm, height=10cm, xlabel=$x$, ylabel=$y$,
+        ]
+        \node[label={below left:\textbf{A}},circle,fill,inner sep=2pt] at (axis cs:-3,-2) {};
+        \end{axis}
+    \end{tikzpicture}
+\end{center}
+
+\newpage
+% --- EXERCICI 2 ---
+\section*{2. El Vaixell}
+Situa els punts i uneix-los en l'ordre donat. \\
+\textit{El punt $A(-4, 0)$ ja està marcat.}
+
+$A(-4, 0) \to B(4, 0) \to C(2, -3) \to D(-2, -3) \to A(-4, 0)$ \\
+Ara, dibuixa la vela unint aquests altres tres punts: $E(0, 0) \to F(0, 4) \to G(3, 1) \to E(0, 0)$
+
+\begin{center}
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines = middle, xmin=-5, xmax=5, ymin=-5, ymax=5,
+            xtick={-4,...,4}, ytick={-4,...,4}, grid=both,
+            width=14cm, height=12cm, xlabel=$x$, ylabel=$y$,
+        ]
+        \node[label={above left:\textbf{A}},circle,fill,inner sep=2pt] at (axis cs:-4,0) {};
+        \end{axis}
+    \end{tikzpicture}
+\end{center}
+
+\newpage
+% --- EXERCICI 3 (NOU: ZEROS) ---
+\section*{3. Atenció amb els zeros!}
+
+\begin{tcolorbox}[colback=yellow!10, title=\textbf{Truc per quan hi ha un 0}]
+    \begin{itemize}
+        \item Si el zero està al principi $\mathbf{(0, y)}$, el punt \textbf{no es mou cap als costats}. Es queda just sobre la línia vertical (eix Y).
+        \item Si el zero està al final $\mathbf{(x, 0)}$, el punt \textbf{no puja ni baixa}. Es queda just sobre la línia horitzontal (eix X).
+    \end{itemize}
+\end{tcolorbox}
+
+Situa els punts següents. Fixa't que els dos primers ja estan fets:
+\begin{itemize}
+    \item $A(0, 4) \to$ \textit{Comença amb 0. No va als costats, només puja 4.} (Ja fet)
+    \item $B(-3, 0) \to$ \textit{Acaba amb 0. Va 3 a l'esquerra, i no puja ni baixa.} (Ja fet)
+    \item $C(0, -2)$ \quad \item $D(5, 0)$ \quad \item $E(0, 1)$ \quad \item $F(-4, 0)$
+\end{itemize}
+
+\begin{center}
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines = middle, xmin=-6, xmax=6, ymin=-5, ymax=5,
+            xtick={-5,...,5}, ytick={-4,...,4}, grid=both,
+            width=14cm, height=12cm, xlabel=$x$, ylabel=$y$,
+        ]
+        \node[label={above right:\textbf{A}},circle,fill,inner sep=2pt] at (axis cs:0,4) {};
+        \node[label={above left:\textbf{B}},circle,fill,inner sep=2pt] at (axis cs:-3,0) {};
+        \end{axis}
+    \end{tikzpicture}
+\end{center}
+
+\newpage
+% --- EXERCICI 4 ---
+\section*{4. La Fletxa Misteriosa}
+Situa i uneix amb atenció (compte amb els negatius! Recorda posar la lletra a cada punt): \\
+$A(-4, 1) \to B(1, 1) \to C(1, 3) \to D(5, 0) \to E(1, -3) \to F(1, -1) \to G(-4, -1) \to A(-4, 1)$
+
+\begin{center}
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines = middle, xmin=-6, xmax=6, ymin=-5, ymax=5,
+            xtick={-5,...,5}, ytick={-4,...,4}, grid=both,
+            width=12cm, height=10cm, xlabel=$x$, ylabel=$y$,
+        ]
+        \end{axis}
+    \end{tikzpicture}
+\end{center}
+
+
+\begin{center}
+    {\Large \textbf{PART 2: QUINES SÓN LES COORDENADES?}}
+\end{center}
+
+% --- EXERCICI 5 ---
+\section*{5. Llegeix els punts (Nivell 1)}
+Escriu les coordenades dels punts que ja estan marcats a la graella. 
+\textit{T'hem deixat els punts A i C fets perquè et serveixin d'exemple (un amb positius i un amb negatius).}
+
+\noindent
+\begin{minipage}[c]{0.55\textwidth}
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines = middle, xmin=-5, xmax=5, ymin=-5, ymax=5,
+            xtick={-4,...,4}, ytick={-4,...,4}, grid=both,
+            width=8cm, height=8cm,
+        ]
+        \node[label={above right:\textbf{A}},circle,fill,inner sep=2pt] at (axis cs:2,4) {};
+        \node[label={above left:\textbf{B}},circle,fill,inner sep=2pt] at (axis cs:-3,2) {};
+        \node[label={below left:\textbf{C}},circle,fill,inner sep=2pt] at (axis cs:-4,-2) {};
+        \node[label={below right:\textbf{D}},circle,fill,inner sep=2pt] at (axis cs:3,-3) {};
+        \node[label={above right:\textbf{E}},circle,fill,inner sep=2pt] at (axis cs:4,1) {};
+        \node[label={above right:\textbf{F}},circle,fill,inner sep=2pt] at (axis cs:-1,4) {};
+        \node[label={below right:\textbf{G}},circle,fill,inner sep=2pt] at (axis cs:1,-4) {};
+        \node[label={below left:\textbf{H}},circle,fill,inner sep=2pt] at (axis cs:-2,-1) {};
+        \end{axis}
+    \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}[c]{0.40\textwidth}
+    \renewcommand{\arraystretch}{1.8}
+    \begin{itemize}
+        \item $A( \mathbf{2} , \mathbf{4} )$ \textit{(2 dreta, 4 dalt)}
+        \item $B( \dots\dots , \dots\dots )$
+        \item $C( \mathbf{-4} , \mathbf{-2} )$ \textit{(4 esq., 2 baix)}
+        \item $D( \dots\dots , \dots\dots )$
+        \item $E( \dots\dots , \dots\dots )$
+        \item $F( \dots\dots , \dots\dots )$
+        \item $G( \dots\dots , \dots\dots )$
+        \item $H( \dots\dots , \dots\dots )$
+    \end{itemize}
+\end{minipage}
+
+\newpage
+
+% --- EXERCICI 6 ---
+\section*{6. Llegeix els punts (Nivell 2 - Zeros)}
+Aquests punts estan just a sobre de la línia. Això vol dir que un dels números serà un zero. \textit{Fixa't en l'exemple de l'A i el B!}
+
+\noindent
+\begin{minipage}[c]{0.55\textwidth}
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines = middle, xmin=-5, xmax=5, ymin=-5, ymax=5,
+            xtick={-4,...,4}, ytick={-4,...,4}, grid=both,
+            width=8cm, height=8cm,
+        ]
+        \node[label={above right:\textbf{A}},circle,fill,inner sep=2pt] at (axis cs:0,3) {};
+        \node[label={above right:\textbf{B}},circle,fill,inner sep=2pt] at (axis cs:4,0) {};
+        \node[label={above left:\textbf{C}},circle,fill,inner sep=2pt] at (axis cs:-2,0) {};
+        \node[label={below right:\textbf{D}},circle,fill,inner sep=2pt] at (axis cs:0,-2) {};
+        \node[label={above right:\textbf{E}},circle,fill,inner sep=2pt] at (axis cs:0,5) {};
+        \node[label={above left:\textbf{F}},circle,fill,inner sep=2pt] at (axis cs:-5,0) {};
+        \node[label={below left:\textbf{G}},circle,fill,inner sep=2pt] at (axis cs:0,-4) {};
+        \node[label={above left:\textbf{H}},circle,fill,inner sep=2pt] at (axis cs:1,0) {};
+        \end{axis}
+    \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}[c]{0.40\textwidth}
+    \renewcommand{\arraystretch}{1.8}
+    \begin{itemize}
+        \item $A( \mathbf{0} , \mathbf{3} )$
+        \item $B( \mathbf{4} , \mathbf{0} )$
+        \item $C( \dots\dots , \dots\dots )$
+        \item $D( \dots\dots , \dots\dots )$
+        \item $E( \dots\dots , \dots\dots )$
+        \item $F( \dots\dots , \dots\dots )$
+        \item $G( \dots\dots , \dots\dots )$
+        \item $H( \dots\dots , \dots\dots )$
+    \end{itemize}
+\end{minipage}
+
+% --- EXERCICI 7 ---
+\section*{7. Llegeix els punts (Repte sense pistes)}
+Ara tu sol! Hi ha punts normals, punts amb negatius i punts amb zeros. Troba les coordenades de tots vuit.
+
+\noindent
+\begin{minipage}[c]{0.55\textwidth}
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines = middle, xmin=-5, xmax=5, ymin=-5, ymax=5,
+            xtick={-4,...,4}, ytick={-4,...,4}, grid=both,
+            width=8cm, height=8cm,
+        ]
+        \node[label={above right:\textbf{A}},circle,fill,inner sep=2pt] at (axis cs:3,3) {};
+        \node[label={above left:\textbf{B}},circle,fill,inner sep=2pt] at (axis cs:-2,4) {};
+        \node[label={below left:\textbf{C}},circle,fill,inner sep=2pt] at (axis cs:-4,0) {};
+        \node[label={below right:\textbf{D}},circle,fill,inner sep=2pt] at (axis cs:0,-3) {};
+        \node[label={below left:\textbf{E}},circle,fill,inner sep=2pt] at (axis cs:-1,-4) {};
+        \node[label={above right:\textbf{F}},circle,fill,inner sep=2pt] at (axis cs:5,-2) {};
+        \node[label={above left:\textbf{G}},circle,fill,inner sep=2pt] at (axis cs:0,2) {};
+        \node[label={below right:\textbf{H}},circle,fill,inner sep=2pt] at (axis cs:2,0) {};
+        \end{axis}
+    \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}[c]{0.40\textwidth}
+    \renewcommand{\arraystretch}{1.8}
+    \begin{itemize}
+        \item $A( \dots\dots , \dots\dots )$
+        \item $B( \dots\dots , \dots\dots )$
+        \item $C( \dots\dots , \dots\dots )$
+        \item $D( \dots\dots , \dots\dots )$
+        \item $E( \dots\dots , \dots\dots )$
+        \item $F( \dots\dots , \dots\dots )$
+        \item $G( \dots\dots , \dots\dots )$
+        \item $H( \dots\dots , \dots\dots )$
+    \end{itemize}
+\end{minipage}
+
+\vspace{0.5cm}
+
+\newpage
+
+\begin{center}
+    {\Large \textbf{PART 3: DE LA TAULA AL GRÀFIC}}
+\end{center}
+
+% --- EXERCICI 8 ---
+\section*{8. Taula 1: $f(x) = x + 2$}
+
+\textbf{Com funciona això?} Cada fila de la taula ens dóna la informació per dibuixar \textbf{UN punt}. 
+\begin{itemize}
+    \item La columna de l'Entrada és la $\mathbf{x}$ (moviment horitzontal).
+    \item La columna de la Sortida és la $\mathbf{y}$ (moviment vertical).
+\end{itemize}
+
+Així, la primera fila on l'entrada és -2 i la sortida és 0, ens dóna el punt $\mathbf{(-2, 0)}$. \\
+La segona fila ens dóna el punt $\mathbf{(-1, 1)}$. \\
+\textit{Hem dibuixat aquests dos primers punts per tu. Dibuixa la resta de les files i uneix-los amb un regle formant una línia recta!}
+
+\vspace{0.3cm}
+
+\noindent
+\begin{minipage}[c]{0.40\textwidth}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Entrada ($x$)} & \textbf{Sortida ($y$)} \\ \hline
+        -2 & 0 \\ \hline
+        -1 & 1 \\ \hline
+         0 & 2 \\ \hline
+         1 & 3 \\ \hline
+         2 & 4 \\ \hline
+    \end{tabular}
+\end{minipage}%
+\hfill
+\begin{minipage}[c]{0.55\textwidth}
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines = middle, xmin=-4, xmax=4, ymin=-2, ymax=6,
+            xtick={-3,...,3}, ytick={-1,...,5}, grid=both,
+            width=8cm, height=7cm,
+        ]
+        \node[circle,fill,inner sep=2pt] at (axis cs:-2,0) {};
+        \node[circle,fill,inner sep=2pt] at (axis cs:-1,1) {};
+        \draw[dashed, gray] (-1,0) -- (-1,1) -- (0,1);
+        \end{axis}
+    \end{tikzpicture}
+\end{minipage}
+
+% --- EXERCICI 9 ---
+\section*{9. Taula 2: $f(x) = 2 \cdot x - 1$}
+Ara hauràs de calcular algunes sortides tu mateix! 
+Per trobar la $y$, has de \textbf{substituir} (canviar) la $x$ pel número de l'entrada. \\
+\textit{Exemple: Si l'entrada és 0, fem $2 \cdot 0 - 1 = 0 - 1 = -1$. El punt és $(0, -1)$.} \\
+Completa la taula, dibuixa els punts i uneix-los amb una recta.
+
+\noindent
+\begin{minipage}[c]{0.45\textwidth}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{Entrada ($x$)} & \textbf{Càlcul} & \textbf{Sortida ($y$)} \\ \hline
+         0 & $2 \cdot 0 - 1$ & \textbf{-1} \\ \hline
+         1 & $2 \cdot 1 - 1$ & \textbf{1} \\ \hline
+         2 & $2 \cdot 2 - 1$ & \\ \hline
+         3 & \dots\dots\dots\dots & \\ \hline
+    \end{tabular}
+\end{minipage}%
+\hfill
+\begin{minipage}[c]{0.50\textwidth}
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines = middle, xmin=-2, xmax=5, ymin=-3, ymax=7,
+            xtick={-1,...,4}, ytick={-2,...,6}, grid=both,
+            width=8cm, height=7cm,
+        ]
+        \end{axis}
+    \end{tikzpicture}
+\end{minipage}
+
+\newpage
+% --- EXERCICI 10 ---
+\section*{10. Taula 3: $f(x) = -x + 4$}
+Aquesta recta anirà cap a baix! Substitueix la $x$ a la fórmula per trobar la sortida, completa la taula i dibuixa els punts. Compte amb el primer, que és un número negatiu i té un "menys" al davant!
+
+\noindent
+\begin{minipage}[c]{0.45\textwidth}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{Entrada ($x$)} & \textbf{Càlcul} & \textbf{Sortida ($y$)} \\ \hline
+        -1 & $-(-1) + 4 = 1 + 4$ & \textbf{5} \\ \hline
+         0 & & \\ \hline
+         1 & & \\ \hline
+         2 & & \\ \hline
+         4 & & \\ \hline
+    \end{tabular}
+\end{minipage}%
+\hfill
+\begin{minipage}[c]{0.50\textwidth}
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines = middle, xmin=-3, xmax=6, ymin=-2, ymax=7,
+            xtick={-2,...,5}, ytick={-1,...,6}, grid=both,
+            width=8cm, height=7cm,
+        ]
+        \end{axis}
+    \end{tikzpicture}
+\end{minipage}
+
+% --- EXERCICI 11 ---
+\section*{11. Taula 4: $f(x) = x - 3$ (Sense pistes!)}
+Ara et toca a tu sol. Escull tu quins números d'entrada vols posar a la taula (et recomanem el 0, 1, 2, 3...), calcula la sortida $y$, i dibuixa la línia.
+
+\noindent
+\begin{minipage}[c]{0.40\textwidth}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Entrada ($x$)} & \textbf{Sortida ($y$)} \\ \hline
+          &  \\ \hline
+          &  \\ \hline
+          &  \\ \hline
+          &  \\ \hline
+          &  \\ \hline
+    \end{tabular}
+\end{minipage}%
+\hfill
+\begin{minipage}[c]{0.55\textwidth}
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines = middle, xmin=-2, xmax=6, ymin=-4, ymax=4,
+            xtick={-1,...,5}, ytick={-3,...,3}, grid=both,
+            width=8cm, height=7cm,
+        ]
+        \end{axis}
+    \end{tikzpicture}
+\end{minipage}
+
+\newpage
+\begin{center}
+    {\Large \textbf{PART 4: MÀQUINES A LA VIDA REAL}}
+\end{center}
+
+% --- EXERCICI 12 ---
+\section*{12. Entrades pel Cinema (Molt Guiat)}
+Cada entrada de cinema val \textbf{6 €}. 
+Completa la taula i dibuixa els punts que falten al gràfic (n'hi ha un de regal!). Uneix-los amb una regla.
+
+\noindent
+\begin{minipage}[t]{0.45\textwidth}
+    \vspace{0pt}
+    \renewcommand{\arraystretch}{1.4}
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Entrades ($x$)} & \textbf{Preu total ($y$)} \\ \hline
+        0 & 0 € \\ \hline
+        1 & $1 \cdot 6 = 6$ € \\ \hline
+        2 & \dots\dots\dots € \\ \hline
+        3 & \dots\dots\dots € \\ \hline
+        4 & \dots\dots\dots € \\ \hline
+    \end{tabular}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+    \vspace{0pt}
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines = left, xlabel = {Entrades}, ylabel = {Euros (€)},
+            xmin=0, xmax=5, ymin=0, ymax=30,
+            xtick={0,1,...,5}, ytick = {0,6,12,18,24,30},
+            grid=both, width=7.5cm, height=6cm,
+        ]
+        \addplot[only marks, mark=*] coordinates {(1,6)};
+        \end{axis}
+    \end{tikzpicture}
+\end{minipage}
+
+% --- EXERCICI 13 ---
+\section*{13. Comprar Pomes (Guiat)}
+A la fruiteria, un quilo de pomes val \textbf{2 €}. L'operació serà multiplicar els quilos per 2: $f(x) = 2 \cdot x$. Completa tota la taula i dibuixa el gràfic.
+
+\noindent
+\begin{minipage}[t]{0.45\textwidth}
+    \vspace{0pt}
+    \renewcommand{\arraystretch}{1.4}
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Quilos ($x$)} & \textbf{Preu total ($y$)} \\ \hline
+        0 & \dots\dots\dots € \\ \hline
+        1 & \dots\dots\dots € \\ \hline
+        2 & \dots\dots\dots € \\ \hline
+        3 & \dots\dots\dots € \\ \hline
+        4 & \dots\dots\dots € \\ \hline
+    \end{tabular}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+    \vspace{0pt}
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines = left, xlabel = {Quilos}, ylabel = {Euros (€)},
+            xmin=0, xmax=5, ymin=0, ymax=10,
+            xtick={0,1,...,5}, ytick = {0,2,...,10},
+            grid=both, width=7.5cm, height=6cm,
+        ]
+        \end{axis}
+    \end{tikzpicture}
+\end{minipage}
+
+\newpage
+% --- EXERCICI 14 ---
+\section*{14. El Viatge en Taxi (Poc Guiat)}
+Pujar a un taxi costa \textbf{3 € només d'inici} (baixada de bandera). Després, et cobren \textbf{1 € per cada quilòmetre} que fas. 
+L'operació és: $f(x) = 3 + 1 \cdot x$. Completa-ho tu tot sol!
+
+\noindent
+\begin{minipage}[t]{0.45\textwidth}
+    \vspace{0pt}
+    \renewcommand{\arraystretch}{1.4}
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Quilòmetres ($x$)} & \textbf{Preu total ($y$)} \\ \hline
+        0 (només pujar) &  \\ \hline
+        1 &  \\ \hline
+        2 &  \\ \hline
+        3 &  \\ \hline
+        4 &  \\ \hline
+    \end{tabular}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+    \vspace{0pt}
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines = left, xlabel = {Quilòmetres}, ylabel = {Euros (€)},
+            xmin=0, xmax=6, ymin=0, ymax=10,
+            xtick={0,1,...,5}, ytick = {0,1,...,10},
+            grid=both, width=7.5cm, height=6cm,
+        ]
+        \end{axis}
+    \end{tikzpicture}
+\end{minipage}
+
+\vspace{0.5cm}
+
+% --- EXERCICI 15 ---
+\section*{15. Estalviar pel Mòbil Nou (El teu repte!)}
+La Maria té \textbf{10 €} guardats. A partir d'ara, cada setmana estalviarà \textbf{5 €} de la seva paga.
+Omple la taula de valors que tu triïs i fes el gràfic. L'operació serà: $f(x) = 10 + 5 \cdot x$.
+
+\noindent
+\begin{minipage}[t]{0.45\textwidth}
+    \vspace{0pt}
+    \renewcommand{\arraystretch}{1.4}
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Setmanes ($x$)} & \textbf{Diners totals ($y$)} \\ \hline
+        0 &  \\ \hline
+          &  \\ \hline
+          &  \\ \hline
+          &  \\ \hline
+          &  \\ \hline
+    \end{tabular}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+    \vspace{0pt}
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines = left, xlabel = {Setmanes}, ylabel = {Euros (€)},
+            xmin=0, xmax=5, ymin=0, ymax=40,
+            xtick={0,1,...,5}, ytick = {0,5,...,40},
+            grid=both, width=7.5cm, height=6cm,
+        ]
+        \end{axis}
+    \end{tikzpicture}
+\end{minipage}
+
+\vspace{0.3cm}
+\textbf{Pregunta:} Si el mòbil costa 35 €, quantes setmanes haurà d'esperar? \hrulefill
+
+\newpage
+
+\begin{center}
+    {\Large \textbf{PART 5: QUÈ HEM APRÈS?}}
+\end{center}
+
+% --- EXERCICI 16 ---
+\section*{16. Posa-ho en paraules}
+Ara que has acabat, explica breument el que has après en aquesta activitat per assegurar-te que ho tens dominat.
+
+\vspace{0.5cm}
+
+\textbf{a) Com li explicaries a un amic on s'ha de col·locar el punt $P(3, -4)$ començant des del centre (0,0)?} \\
+\hrulefill \\
+\hrulefill \\
+
+\vspace{0.5cm}
+
+\textbf{b) Què passa quan un punt té un "0" a les seves coordenades? (Pots posar un exemple de punt i explicar on aniria).} \\
+\hrulefill \\
+\hrulefill \\
+\hrulefill \\
+
+\vspace{0.5cm}
+
+\textbf{c) Si tenim una taula de valors i la funció és $f(x) = 2 \cdot x + 3$, com fas per trobar el valor de la sortida ($y$) si la teva entrada és $x = 4$?} \\
+\hrulefill \\
+\hrulefill \\
+
+
+\end{document}
