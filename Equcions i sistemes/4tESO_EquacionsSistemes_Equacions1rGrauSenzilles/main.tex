@@ -1,0 +1,112 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{amsmath}
+
+% 1. MARGES I CAPÇALERA
+\geometry{top=4cm, bottom=3cm, left=2cm, right=2cm, headheight=2.5cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+% Recorda tenir els fitxers d'imatge o comenta aquestes línies
+\fancyhead[L]{\includegraphics[height=1.8cm]{Logo_Departament.png}} 
+\fancyhead[R]{\includegraphics[height=1.8cm]{Logo_Institut.png}}
+
+\fancyfoot[C]{Pàgina \thepage\ de \pageref{LastPage}}
+
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+
+% --- CAPÇALERA D'IDENTIFICACIÓ ---
+\begingroup
+\renewcommand{\arraystretch}{2.2}
+\begin{tabularx}{\textwidth}{|X|p{4cm}|}
+    \hline
+    \textbf{Nom i cognoms:} & \textbf{Grup:} \\ \hline
+    \textbf{Activitat:} Iniciació a les equacions & \textbf{Data:} \\ \hline
+\end{tabularx}
+\endgroup
+
+\vspace{0.8cm}
+
+\begin{center}
+    {\Large \textbf{RESOLUCIÓ D'EQUACIONS DE PRIMER GRAU}}
+\end{center}
+
+\vspace{0.5cm}
+
+% --- EXERCICI 1 ---
+\section*{1. Equacions bàsiques: $x + a = b$}
+\textit{Passa el número a l'altre costat de l'igual canviant el signe (si suma, passa restant; si resta, passa sumant). Després comprova el resultat.}
+
+\begin{enumerate}[label=\alph*), itemsep=1ex]
+    \begin{minipage}[t]{0.45\textwidth}
+        \item $x + 5 = 12$
+        \item $x + 9 = 20$
+        \item $x - 3 = 8$
+        \item $x - 10 = 2$
+        \item $x + 7 = 3$
+    \end{minipage}
+    \begin{minipage}[t]{0.45\textwidth}
+        \item $x + 12 = 4$
+        \item $x - 5 = -2$
+        \item $x - 8 = -12$
+        \item $x + 15 = 0$
+        \item $x - (-4) = 6$
+    \end{minipage}
+\end{enumerate}
+
+\vspace{0.8cm}
+
+% --- EXERCICI 2 ---
+\section*{2. Agrupar termes similars: $ax + bx = c + d$}
+\textit{Primer suma o resta les "x" i els números per separat. Després, el número que multiplica la $x$ passa dividint a l'altre costat. Després comprova el resultat}
+
+\begin{enumerate}[label=\alph*), itemsep=1ex]
+    \begin{minipage}[t]{0.45\textwidth}
+        \item $3x + 2x = 8 + 7$
+        \item $4x + x = 15 + 5$
+        \item $9x - 3x = 10 + 8$
+        \item $6x - 4x = 20 - 12$
+        \item $2x + 2x = 10 - 2$
+    \end{minipage}
+    \begin{minipage}[t]{0.45\textwidth}
+        \item $3x + x = 5 - 13$
+        \item $4x + 2x = -10 - 8$
+        \item $x - 5x = 14 + 2$
+        \item $7x - 2x = -12 - 3$
+        \item $-3x - 2x = 18 + 7$
+    \end{minipage}
+\end{enumerate}
+
+\vspace{0.8cm}
+\newpage
+% --- EXERCICI 3 ---
+\section*{3. Equacions generals: $ax + b = cx + d$}
+\textit{Passa totes les "x" a l'esquerra i els números a la dreta (canviant el signe si canvien de costat) i resol. Després comprova el resultat.}
+
+\begin{enumerate}[label=\alph*), itemsep=1ex]
+    \begin{minipage}[t]{0.45\textwidth}
+        \item $4x + 2 = 2x + 10$
+        \item $6x + 5 = 3x + 17$
+        \item $8x - 4 = 5x + 11$
+        \item $3x - 9 = x - 1$
+        \item $5x + 12 = 2x + 3$
+    \end{minipage}
+    \begin{minipage}[t]{0.45\textwidth}
+        \item $x + 10 = 4x + 1$
+        \item $2x + 3 = 6x + 19$
+        \item $5x - 1 = 8x + 8$
+        \item $4x + 20 = x + 2$
+        \item $2x - 5 = 7x + 10$
+    \end{minipage}
+\end{enumerate}
+
+\end{document}
