@@ -1,0 +1,541 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage[most]{tcolorbox} 
+\pgfplotsset{compat=1.18}
+
+% 1. MARGES I CAPÇALERA
+\geometry{top=3cm, bottom=2.5cm, left=2cm, right=2cm, headheight=2cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\includegraphics[height=1.8cm]{Logo_Departament.png}} 
+\fancyhead[R]{\includegraphics[height=1.8cm]{Logo_Institut.png}}
+\fancyfoot[C]{Pàgina \thepage\ de \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Comanda per dibuixar mini-màquines
+\newcommand{\minimachine}[2]{
+    \begin{tikzpicture}[scale=0.6, baseline=(current bounding box.center)]
+        \draw[fill=orange!10, rounded corners] (0,0) rectangle (2,1.2);
+        \node at (1,0.6) {\textbf{+3}};
+        \draw[->] (-0.8, 0.6) -- (-0.2, 0.6);
+        \node[left] at (-0.5, 0.6) {#1};
+        \draw[->] (2.2, 0.6) -- (2.8, 0.6);
+        \node[right] at (2.8, 0.6) {\textbf{#2}};
+    \end{tikzpicture}
+}
+
+\newcommand{\minimachinee}[2]{
+    \begin{tikzpicture}[scale=0.6, baseline=(current bounding box.center)]
+        \draw[fill=orange!10, rounded corners] (0,0) rectangle (2,1.2);
+        \node at (1,0.6) {\textbf{·2}};
+        \draw[->] (-0.8, 0.6) -- (-0.2, 0.6);
+        \node[left] at (-0.5, 0.6) {#1};
+        \draw[->] (2.2, 0.6) -- (2.8, 0.6);
+        \node[right] at (2.8, 0.6) {\textbf{#2}};
+    \end{tikzpicture}
+}
+
+
+\begin{document}
+
+% --- CAPÇALERA D'IDENTIFICACIÓ ---
+\begingroup
+\renewcommand{\arraystretch}{2.2}
+\begin{tabularx}{\textwidth}{|X|p{4cm}|}
+    \hline
+    \textbf{Nom i cognoms:} & \textbf{Grup:} \\ \hline
+    \textbf{Activitat:} Coordenades i Funcions & \textbf{Data:} \\ \hline
+\end{tabularx}
+\endgroup
+
+\vspace{0.5cm}
+
+\begin{center}
+    {\Large \textbf{PART 1: ON ÉS EL TRESOR? (COORDENADES)}}
+\end{center}
+
+\begin{tcolorbox}[colback=blue!5,colframe=blue!40,title=\textbf{Recorda!}]
+    Les coordenades són com l'adreça d'un punt: $(x, y)$.
+    \begin{itemize}
+        \item El primer número ($\mathbf{x}$): Dreta (+) o Esquerra (-).
+        \item El segon número ($\mathbf{y}$): Dalt (+) o Baix (-).
+    \end{itemize}
+\end{tcolorbox}
+
+% --- EXERCICI 1 ---
+\section*{1. Uneix els punts}
+Identifica les coordenades dels punts següents.
+\begin{itemize}
+    \item \textbf{Exemple:} Mira el punt \textbf{M}. Està a la dreta 2 i amunt 3. Per tant: $M(2, 3)$.
+\end{itemize}
+
+\begin{center}
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines = middle,
+            xmin=-6, xmax=6, ymin=-6, ymax=6,
+            xtick={-5,...,5}, ytick={-5,...,5},
+            grid=both,
+            width=10cm, height=10cm,
+            xlabel=$x$, ylabel=$y$,
+        ]
+            \node[label={above right:\textbf{M}},circle,fill,gray,inner sep=2pt] at (axis cs:2,3) {}; % Exemple
+            
+            \node[label={above:\textbf{A}},circle,fill,inner sep=2pt] at (axis cs:0,5) {};
+            \node[label={right:\textbf{B}},circle,fill,inner sep=2pt] at (axis cs:3,-4) {};
+            \node[label={left:\textbf{C}},circle,fill,inner sep=2pt] at (axis cs:-5,2) {};
+            \node[label={right:\textbf{D}},circle,fill,inner sep=2pt] at (axis cs:5,2) {};
+            \node[label={left:\textbf{E}},circle,fill,inner sep=2pt] at (axis cs:-3,-4) {};
+        \end{axis}
+    \end{tikzpicture}
+\end{center}
+
+\textbf{1. Escriu les coordenades:}
+\begin{itemize}
+    \item $A(\dots, \dots)$ \quad $B(\dots, \dots)$ \quad $C(\dots, \dots)$ \quad $D(\dots, \dots)$ \quad $E(\dots, \dots)$
+\end{itemize}
+\textbf{2. Uneix els punts en ordre alfabètic ($A \to B \to C \to D \to E \to A$) amb un regle.} \\
+\textbf{Quina figura ha sortit?} \hrulefill
+
+\newpage
+
+% --- EXERCICI 2 ---
+\section*{2. Practiquem amb més punts}
+Situa els següents punts a la graella. 
+\begin{itemize}
+    \item \textbf{Exemple:} El punt $A(2, 4)$ ja està dibuixat (2 a la dreta, 4 amunt).
+\end{itemize}
+
+\vspace{0.3cm}
+
+\noindent
+\begin{minipage}[t]{0.20\textwidth}
+    \vspace{0pt} % Alineació top
+    \textbf{Llista:}
+    \begin{itemize}[leftmargin=*]
+        \item $A(2, 4)$ \checkmark
+        \item $B(4, 2)$
+        \item $C(5, 0)$
+        \item $D(4, -2)$
+        \item $E(2, -4)$
+        \item $F(-2, -4)$
+        \item $G(-4, -2)$
+        \item $H(-5, 0)$
+        \item $I(-4, 2)$
+        \item $J(-2, 4)$
+    \end{itemize}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.75\textwidth}
+    \vspace{0pt} % Alineació top
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines = middle,
+            xmin=-6, xmax=6, ymin=-6, ymax=6,
+            xtick={-5,...,5}, ytick={-5,...,5},
+            grid=both,
+            width=12cm, height=12cm, 
+        ]
+        \node[label={above right:\textbf{A}},circle,fill,gray,inner sep=2pt] at (axis cs:2,4) {};
+        \end{axis}
+    \end{tikzpicture}
+\end{minipage}
+
+\vspace{0.5cm}
+\textbf{a) Uneix els punts en ordre ($A \to B \to \dots \to J \to A$). Quina figura és?} \hrulefill
+
+\vspace{0.3cm}
+\textbf{b) Explica amb les teves paraules com has situat el punt $F(-2, -4)$:} \\
+\textit{Primer m'he mogut 2 passos cap a l'\hrulefill perquè el primer número és negatiu.} \\
+\textit{Després m'he mogut 4 passos cap a \hrulefill perquè el segon número és \hrulefill.}
+
+\newpage
+
+% --- EXERCICI 3 (SORPRESA) ---
+\section*{3. El dibuix misteriós}
+Aquest dibuix té dues parts. Segueix les instruccions:
+
+\textbf{PART 1 (Color BLAU):} Situa i uneix els punts en aquest ordre: \\
+$(1, -3) \to (3, -3) \to (3, 2) \to (2, 2) \to (2, 3) \to (-2, 3) \to (-2, -3) \to (-1, -3) \to (-1, -1) \to (1, -1) \to (1, -3)$.
+
+\textbf{PART 2 (Color VERMELL):} Dibuixa un rectangle unint aquests punts (no els uneixis amb els blaus): \\
+$(-2, 0) \to (-3, 0) \to (-3, 2) \to (-2, 2) \to (-2, 0)$.
+
+\textbf{PART 3 (Color VERMELL):} Dibuixa un altre rectangle aquí: \\
+$(1, 1) \to (3, 1) \to (3, 2) \to (1, 2) \to (1, 1)$.
+
+\begin{center}
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines = middle,
+            xmin=-5, xmax=5, ymin=-5, ymax=5,
+            xtick={-4,...,4}, ytick={-4,...,4},
+            grid=both,
+            width=10cm, height=10cm,
+        ]
+        \end{axis}
+    \end{tikzpicture}
+\end{center}
+\textbf{Quin personatge ha sortit?} \hrulefill
+
+\vspace{1cm}
+\newpage
+% --- PART 2: MÀQUINES ---
+\begin{center}
+    {\Large \textbf{PART 2: MÀQUINES DE FUNCIONS}}
+\end{center}
+
+% Dibuix de la màquina generat amb TikZ
+\begin{center}
+\begin{tikzpicture}
+    % Caixa màquina
+    \draw[fill=orange!10, rounded corners] (0,0) rectangle (4,2.5);
+    \node[font=\bfseries] at (2,1.25) {MÀQUINA $f(x)$};
+    
+    % Entrada (Embut)
+    \draw[fill=gray!20] (-1, 2) -- (0, 1.8) -- (0, 0.7) -- (-1, 0.5) -- cycle;
+    % Text entrada més a l'esquerra
+    \node at (-2.5, 1.25) {Entrada};
+    \draw[->, thick] (-1.2, 1.25) -- (-0.5, 1.25);
+
+    % Sortida
+    \draw[fill=gray!20] (4, 1.8) -- (5, 2) -- (5, 0.5) -- (4, 0.7) -- cycle;
+    % Text sortida més a la dreta
+    \node at (6.5, 1.25) {Sortida};
+    \draw[->, thick] (4.7, 1.25) -- (5.4, 1.25);
+\end{tikzpicture}
+\end{center}
+
+% Ex 4
+\section*{4. La màquina de SUMAR 3}
+Aquesta màquina agafa el número que entra i li suma 3.
+\[ f(x) = x + 3 \]
+
+Mira com funciona
+\begin{center} % Això centra les màquines dins l'espai
+        \renewcommand{\arraystretch}{2} % Això dóna aire entre màquines automàticament
+        \begin{tabular}{c} % 'c' vol dir centrat
+            \minimachine{2}{5} \\
+            \minimachine{3}{6} \\
+            \minimachine{4}{7}
+        \end{tabular}
+\end{center}
+
+
+\textbf{Completa la taula:}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|c|c|c|}
+    \hline
+    \textbf{Entrada (x)} & \textbf{Operació} & \textbf{Sortida f(x)} \\ \hline
+    2 & $2 + 3$ & \textbf{5} \\ \hline
+    4 & $4 + 3$ & \textbf{7} \\ \hline
+    5 & $5 + \dots$ & \dots \\ \hline
+    6 & \dots + \dots & \dots \\ \hline
+    7 & \dots + \dots & \dots \\ \hline
+    8 & \dots + \dots & \dots \\ \hline
+    9 & \dots + \dots & \dots \\ \hline
+\end{tabular}
+
+
+\newpage
+
+% Ex 5
+\section*{5. La màquina de MULTIPLICAR PER 2}
+Aquesta és una màquina diferent. Multiplica per 2 tot el que entra.
+\[ f(x) = 2 \cdot x \]
+
+\begin{center} % Això centra les màquines dins l'espai
+        \renewcommand{\arraystretch}{2} % Això dóna aire entre màquines automàticament
+        \begin{tabular}{c} % 'c' vol dir centrat
+            \minimachinee{2}{4} \\
+            \minimachinee{3}{6} \\
+            \minimachinee{4}{8}
+        \end{tabular}
+\end{center}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|c|c|}
+    \hline
+    \textbf{Entrada (x)} & \textbf{Sortida f(x)} \\ \hline
+    3 & 6 \\ \hline
+    5 & 10 \\ \hline
+    6 & \dots \\ \hline
+    7 & \dots \\ \hline
+    8 & \dots \\ \hline
+    9 & \dots \\ \hline
+    10 & \dots \\ \hline
+\end{tabular}
+\end{center}
+
+\newpage
+
+% Ex 6: Calculadora i negatius
+\section*{6. Com posar negatius a la calculadora?}
+Per calcular amb números negatius, com ara $x = -3$, hem de vigilar.
+\begin{tcolorbox}[colback=yellow!10, title=Truc de calculadora]
+    Per posar un número negatiu, busca la tecla \fbox{\textbf{(-)}} o \fbox{\textbf{+/-}}. \\
+    Si la teva màquina fa $f(x) = x + 5$ i vols posar un -3:
+    Prem: \fbox{(-)} \fbox{3} \fbox{+} \fbox{5} \fbox{=}
+\end{tcolorbox}
+
+\textbf{Prova-ho amb la màquina de SUMAR 5 ($f(x) = x + 5$):}
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|c|c|c|}
+    \hline
+    \textbf{Entrada (x)} & \textbf{Càlcul} & \textbf{Sortida f(x)} \\ \hline
+    -2 & $-2 + 5$ & \textbf{3} \\ \hline
+    -4 & $-4 + 5$ & \textbf{1} \\ \hline
+    -5 & \dots\dots\dots\dots & \dots\dots \\ \hline
+    -6 & \dots\dots\dots\dots & \dots\dots \\ \hline
+\end{tabular}
+\end{center}
+
+% Ex 7: Representació amb negatius
+\section*{7. La màquina de SUMAR 1}
+Aquesta màquina suma 1 unitat al valor de l'entrada. Completa la taula (compte amb els negatius!) i dibuixa els punts.
+
+\noindent
+\begin{minipage}[t]{0.45\textwidth}
+    \vspace{0pt} % Alineació vertical perfecta amb el gràfic
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Entrada (x)} & \textbf{Sortida f(x)} \\ \hline
+        -4 & -3 \\ \hline
+        -3 & -2 \\ \hline
+        -2 &  \\ \hline
+        -1 &  \\ \hline
+        0 &  \\ \hline
+        1 &  \\ \hline
+        2 &  \\ \hline
+    \end{tabular}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.50\textwidth}
+    \vspace{0pt} % Alineació vertical perfecta amb la taula
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines = middle,
+            xmin=-4, xmax=5, ymin=-3, ymax=5,
+            xtick={-4,-3,-2,-1,0,1,2,3,4},
+            ytick={-3,-2,-1,0,1,2,3,4,5},
+            grid=both,
+            width=8cm, height=8cm,
+        ]
+        \end{axis}
+    \end{tikzpicture}
+\end{minipage}
+
+\newpage
+% Ex 8: Autonomia
+\section*{8. La màquina del TRIPLE ($3 \cdot x$)}
+Tu sol! Completa la taula amb 4 valors nous i fes el gràfic per a $f(x) = 3 \cdot x$.
+
+\noindent
+\begin{minipage}[t]{0.45\textwidth}
+    \vspace{0pt} 
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Entrada (x)} & \textbf{Sortida f(x)} \\ \hline
+        -3 & -9 \\ \hline
+        -2 &  \\ \hline
+        -1 &  \\ \hline
+         0 &  \\ \hline
+         1 &  \\ \hline
+         2 &  \\ \hline
+         3 &  \\ \hline
+    \end{tabular}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.50\textwidth}
+    \vspace{0pt} 
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines = middle,
+            xmin=-3, xmax=3, ymin=-9, ymax=9,
+            xtick={-3,-2,...,3},
+            ytick={-9,-6, -3, ..., 9},
+            grid=both,
+            width=8cm, height=8cm,
+        ]
+        \end{axis}
+    \end{tikzpicture}
+\end{minipage}
+
+\newpage
+
+% DETECTIUS
+\section*{9. Fes de detectiu}
+Descobreix què fa cada màquina. Justifica la teva resposta.
+
+\textbf{CAS A:}
+\begin{itemize}
+    \item Entra 2 $\to$ Surt 4
+    \item Entra 5 $\to$ Surt 7
+    \item Entra 10 $\to$ Surt 12
+\end{itemize}
+La màquina fa: \hrulefill \\
+\textit{Perquè si miro els números, veig que sempre...} \hrulefill
+
+\vspace{0.5cm}
+\textbf{CAS B:}
+\begin{itemize}
+    \item Entra 2 $\to$ Surt 10
+    \item Entra 3 $\to$ Surt 15
+    \item Entra 4 $\to$ Surt 20
+\end{itemize}
+La màquina fa: \hrulefill \\
+\textit{Justificació:} \hrulefill
+
+\vspace{0.5cm}
+\textbf{CAS C (Difícil!):}
+\begin{itemize}
+    \item Entra 4 $\to$ Surt 2
+    \item Entra 10 $\to$ Surt 5
+    \item Entra 20 $\to$ Surt 10
+\end{itemize}
+La màquina fa: \hrulefill \\
+\textit{Justificació:} \hrulefill
+
+\vspace{1cm}
+
+\newpage
+% --- PART 3: REAL ---
+\begin{center}
+    {\Large \textbf{PART 3: SITUACIONS REALS}}
+\end{center}
+
+\section*{10. La botiga de llaminadura}
+Cada llaminadura val \textbf{0,50 €}. 
+\begin{enumerate}
+    \item Completa la taula.
+    \item Dibuixa els punts i \textbf{uneix-los amb una línia recta}.
+\end{enumerate}
+
+\noindent
+\begin{minipage}[t]{0.45\textwidth}
+    \vspace{0pt}
+    \renewcommand{\arraystretch}{1.4}
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Llaminadures ($x$)} & \textbf{Preu ($f(x)$)} \\ \hline
+        0 & 0 € \\ \hline
+        1 & $1 \cdot 0,50 = 0,50$ € \\ \hline
+        2 & $2 \cdot 0,50 = 1,00$ € \\ \hline
+        3 & \dots\dots\dots € \\ \hline
+        4 & \dots\dots\dots € \\ \hline
+    \end{tabular}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+    \vspace{0pt}
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines = left, xlabel = {Llaminadures}, ylabel = {Euros (€)},
+            xmin=0, xmax=6, ymin=0, ymax=4,
+            xtick={0,1,...,6},
+            ytick = {0,1,...,4},
+            grid=both, width=7.5cm, height=6cm,
+        ]
+        \addplot[only marks, mark=*] coordinates {(1,0.5) (2,1)};
+        \end{axis}
+    \end{tikzpicture}
+\end{minipage}
+
+\vspace{0.2cm}
+\textbf{Pregunta:} Si tens 2,50 €, quantes gominoles pots comprar? \hrulefill
+
+\vspace{0.5cm}
+
+\section*{11. Lloguer de bicicletes}
+Una botiga de bicis cobra \textbf{2 € fixos} per agafar la bici i després \textbf{1 € per cada hora} que la fas servir.
+\[ \text{Preu} = 2 + 1 \cdot (\text{hores}) \]
+
+\noindent
+\begin{minipage}[t]{0.45\textwidth}
+    \vspace{0pt}
+    \renewcommand{\arraystretch}{1.4}
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Hores ($x$)} & \textbf{Preu ($f(x)$)} \\ \hline
+        0 (només agafar-la) & 2 € \\ \hline
+        1 & $2 + 1 \cdot 1 = 3$ € \\ \hline
+        2 & $2 + 1 \cdot 2 = 4$ € \\ \hline
+        3 & \dots\dots\dots € \\ \hline
+        4 & \dots\dots\dots € \\ \hline
+    \end{tabular}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+    \vspace{0pt}
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines = left, xlabel = {Hores}, ylabel = {Euros (€)},
+            xmin=0, xmax=7, ymin=0, ymax=10,
+            xtick={0,1,...,7},
+            ytick={0,1,...,10},
+            grid=both, width=7.5cm, height=6cm,
+        ]
+        \addplot[only marks, mark=*] coordinates {(0,2) (1,3)};
+        \end{axis}
+    \end{tikzpicture}
+\end{minipage}
+
+\vspace{0.2cm}
+\textbf{Pregunta:} Quant costarà llogar-la 10 hores? \hrulefill \\
+\textbf{Mirant la línia del gràfic:} Si allargues la línia... quant costaria 6 hores? \hrulefill
+
+\vspace{0.5cm}
+
+\section*{12. La guardiola (Estalviar)}
+En Joan té \textbf{5 €} a la guardiola. Cada setmana, el seu avi li dóna \textbf{2 €} més i els guarda.
+
+\noindent
+\begin{minipage}[t]{0.45\textwidth}
+    \vspace{0pt}
+    \renewcommand{\arraystretch}{1.4}
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Setmanes ($x$)} & \textbf{Diners ($f(x)$)} \\ \hline
+        0 (Inici) & 5 € \\ \hline
+        1 & $5 + 2 = 7$ € \\ \hline
+        2 & $7 + 2 = 9$ € \\ \hline
+        3 & \dots\dots € \\ \hline
+        4 & \dots\dots € \\ \hline
+        5 & \dots\dots € \\ \hline
+    \end{tabular}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+    \vspace{0pt}
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines = left, xlabel = {Setmanes}, ylabel = {Euros (€)},
+            xmin=0, xmax=6, ymin=0, ymax=20,
+            xtick={0,1,...,6},
+            ytick = {0,2,...,20},
+            grid=both, width=7.5cm, height=6cm,
+        ]
+        \end{axis}
+    \end{tikzpicture}
+\end{minipage}
+
+\vspace{0.2cm}
+\textbf{Uneix els punts amb un regle.} Si continuessis la línia... quants diners tindria a la setmana 6? (Mira el gràfic, no calculis!) \hrulefill
+
+\end{document}
