@@ -1,0 +1,198 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{tikz}
+
+% 1. MARGES I CAPÇALERA ORIGINALS
+\geometry{top=4cm, bottom=3cm, left=2cm, right=2cm, headheight=2.5cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\includegraphics[height=1.8cm]{Logo_Departament.png}} 
+\fancyhead[R]{\includegraphics[height=1.8cm]{Logo_Institut.png}}
+
+\fancyfoot[C]{Pàgina \thepage\ de \pageref{LastPage}}
+
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+
+% --- CAPÇALERA D'IDENTIFICACIÓ ---
+\begingroup
+\renewcommand{\arraystretch}{2.2}
+\begin{tabularx}{\textwidth}{|X|p{4cm}|}
+    \hline
+    \textbf{Nom i cognoms:} & \textbf{Grup:} \\ \hline
+    \textbf{Activitat:} Fitxa 1. Angles, Triangles i Pitàgores & \textbf{Data:} \\ \hline
+\end{tabularx}
+\endgroup
+
+\vspace{0.5cm}
+
+\section*{Part 1: Angles i Triangles}
+
+\textbf{Exercici 1. Classificació i mesura d'angles.}
+Classifica cada angle segons la seva obertura (agut, recte, obtús o pla) i mesura'l amb el transportador d'angles.
+
+\vspace{0.3cm}
+\begin{tabularx}{\textwidth}{@{} c c c @{}}
+    \begin{tikzpicture}
+        \draw[thick] (0,0) -- (1.5,0); \draw[thick] (0,0) -- (1.06,1.06); % 45
+        \draw (0.4,0) arc (0:45:0.4);
+    \end{tikzpicture} &
+    \begin{tikzpicture}
+        \draw[thick] (0,0) -- (1.5,0); \draw[thick] (0,0) -- (-0.75,1.3); % 120
+        \draw (0.4,0) arc (0:120:0.4);
+    \end{tikzpicture} &
+    \begin{tikzpicture}
+        \draw[thick] (0,0) -- (1.5,0); \draw[thick] (0,0) -- (0,1.5); % 90
+        \draw (0.2,0) -- (0.2,0.2) -- (0,0.2);
+    \end{tikzpicture} \\
+    Tipus: \makebox[1.5cm]{\hrulefill} & Tipus: \makebox[1.5cm]{\hrulefill} & Tipus: \makebox[1.5cm]{\hrulefill} \\
+    Mesura: \makebox[1.5cm]{\hrulefill} & Mesura: \makebox[1.5cm]{\hrulefill} & Mesura: \makebox[1.5cm]{\hrulefill} \\[0.8cm]
+    \begin{tikzpicture}
+        \draw[thick] (-1,0) -- (1,0); \filldraw (0,0) circle (1.5pt); % 180
+        \draw (0.3,0) arc (0:180:0.3);
+    \end{tikzpicture} &
+    \begin{tikzpicture}
+        \draw[thick] (0,0) -- (1.5,0); \draw[thick] (0,0) -- (1.3,0.75); % 30
+        \draw (0.5,0) arc (0:30:0.5);
+    \end{tikzpicture} &
+    \begin{tikzpicture}
+        \draw[thick] (0,0) -- (1.5,0); \draw[thick] (0,0) -- (-1.2,0.5); % 155
+        \draw (0.4,0) arc (0:155:0.4);
+    \end{tikzpicture} \\
+    Tipus: \makebox[1.5cm]{\hrulefill} & Tipus: \makebox[1.5cm]{\hrulefill} & Tipus: \makebox[1.5cm]{\hrulefill} \\
+    Mesura: \makebox[1.5cm]{\hrulefill} & Mesura: \makebox[1.5cm]{\hrulefill} & Mesura: \makebox[1.5cm]{\hrulefill} \\
+\end{tabularx}
+
+\vspace{0.4cm}
+
+\textbf{Exercici 2. Triangles: el tercer angle.}
+Calcula l'angle desconegut ($180^\circ$ en total), classifica el triangle i comprova-ho mesurant.
+
+\vspace{0.3cm}
+\begin{tabularx}{\textwidth}{@{} c c @{}}
+    \begin{tikzpicture}[scale=1.2]
+        \draw[thick] (0,0) -- (2,0) -- (1,1.732) -- cycle;
+        \node at (0.3,0.2) {$60^\circ$}; \node at (1.7,0.2) {$60^\circ$}; \node at (1,1.3) {$?$};
+    \end{tikzpicture} &
+    \begin{tikzpicture}[scale=1.2]
+        \draw[thick] (0,0) -- (2,0) -- (0,1.5) -- cycle;
+        \draw (0.2,0) -- (0.2,0.2) -- (0,0.2); \node at (1.5,0.2) {$37^\circ$}; \node at (0.3,1.1) {$?$};
+    \end{tikzpicture} \\
+    Angle ?: \makebox[1.5cm]{\hrulefill} (mesura: \makebox[1cm]{\hrulefill}) & Angle ?: \makebox[1.5cm]{\hrulefill} (mesura: \makebox[1cm]{\hrulefill}) \\
+    Classif: \makebox[3.5cm]{\hrulefill} & Classif: \makebox[3.5cm]{\hrulefill} \\
+\end{tabularx}
+
+\textbf{Completa el diari d'aula amb els aprenentatges fins ara.}
+\newpage
+\section*{Part 2: El Teorema de Pitàgores}
+
+\textbf{Exercici 3. Càlcul de costats.} Troba el costat desconegut. En els exercicis sense dibuix, \textbf{has de fer tu la representació} (no cal que sigui a escala).
+
+\textit{Troba la hipotenusa ($h^2 = c_1^2 + c_2^2$):}
+\begin{enumerate}
+    \item Catets de $3$ i $4$ cm. 
+    \begin{tikzpicture}[baseline=(current bounding box.north), scale=0.6]
+        \draw[thick] (0,0) -- (4,0) node[midway, below]{$4$} -- (0,3) node[midway, above right]{$h=?$} -- cycle node[midway, left]{$3$};
+        \draw (0.3,0) -- (0.3,0.3) -- (0,0.3);
+    \end{tikzpicture}
+    \vspace{0.5cm}
+    \item Catets de $5$ i $12$ m.
+    \begin{tikzpicture}[baseline=(current bounding box.north), scale=0.4]
+        \draw[thick] (0,0) -- (12,0) node[midway, below]{$12$} -- (0,5) node[midway, above right]{$h=?$} -- cycle node[midway, left]{$5$};
+        \draw (0.8,0) -- (0.8,0.8) -- (0,0.8);
+    \end{tikzpicture}
+    \vspace{0.5cm}
+    \item Un triangle rectangle té uns catets que mesuren $8$ mm i $15$ mm. Dibuixa'l i calcula la hipotenusa.
+    \vspace{3.5cm}
+\end{enumerate}
+
+\textit{Troba el catet que falta:}
+\begin{enumerate}
+    \setcounter{enumi}{3}
+    \item Hipotenusa $10$ cm i catet $6$ cm.
+    \begin{tikzpicture}[baseline=(current bounding box.north), scale=0.6]
+        \draw[thick] (0,0) -- (8,0) node[midway, below]{$c=?$} -- (0,6) node[midway, above right]{$10$} -- cycle node[midway, left]{$6$};
+        \draw (0.3,0) -- (0.3,0.3) -- (0,0.3);
+    \end{tikzpicture}
+    \vspace{0.5cm}
+    \item Hipotenusa $13$ m i catet $5$ m.
+    \begin{tikzpicture}[baseline=(current bounding box.north), scale=0.4]
+        \draw[thick] (0,0) -- (12,0) node[midway, below]{$c=?$} -- (0,5) node[midway, above right]{$13$} -- cycle node[midway, left]{$5$};
+        \draw (0.8,0) -- (0.8,0.8) -- (0,0.8);
+    \end{tikzpicture}
+    \vspace{0.5cm}
+    \item Una escala fa $25$ cm (hipotenusa) i es recolza a terra a $7$ cm de la paret. Dibuixa el triangle i troba l'altura.
+    \vspace{3.5cm}
+\end{enumerate}
+
+\textbf{Completa el diari d'aula amb els aprenentatges fins ara.}
+\vspace{1cm}
+
+\textbf{Exercici 4. Problemes d'aplicació.}
+Anota les dades i fes la representació de cada problema, \textbf{marcant clarament l'angle recte i la hipotenusa}.
+
+\begin{enumerate}
+    \item Una escala de bombers de $5$ m es recolza en una paret. Si la base de l'escala està a $3$ m de la paret, a quina alçada arriba?
+    
+    \begin{tikzpicture}[scale=0.7]
+        \draw[very thick] (0,0) -- (4,0) node[midway, below]{terra};
+        \draw[very thick] (0,0) -- (0,4.5) node[at end, left]{paret};
+        \draw[brown, ultra thick] (3,0) -- (0,4) node[midway, above right, black]{escala (5m)};
+        \draw (0.3,0) -- (0.3,0.3) -- (0,0.3);
+        \node at (1.5,-1.0) {$3$ m};
+    \end{tikzpicture}
+    \vspace{0.5cm}
+
+    \item Dos amics caminen des d'un punt $P$. L'Anna camina $6$ km cap al Nord i en Joan $8$ km cap a l'Est. Quina distància els separa en línia recta?
+    \vspace{3cm}
+
+    \item Un cable de $17$ m subjecta una antena. El cable està ancorat a terra a $8$ m de la base de l'antena. Quina alçada té l'antena?
+    \vspace{2.5cm}
+
+    \item \textbf{Repte:} Calcula l'altura d'un triangle isòsceles de base $12$ cm i costats iguals de $10$ cm. (Pista: L'altura divideix la base en dues parts iguals).
+    \vspace{2.5cm}
+\end{enumerate}
+
+\section*{Exercici 5. El trencaclosques de Pitàgores (Opcional)}
+
+Dibuixa un triangle rectangle de catets de $6\text{ cm}$ i $8\text{ cm}$. Retalla els quadrats corresponents a cada catet. Pots aconseguir que el quadrat de la hipotenusa quedi omplert amb els quadrats que has retallat dels catets? Pots retallar els quadrats dels catets però no et pot quedar espai per omplir ni pot sobrar paper.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.35] % Escala ajustada per ocupar aprox 1/4 de full
+    % Triangle central (Catets 6 i 8, Hipotenusa 10)
+    \draw[fill=gray!20, thick] (0,0) -- (8,0) -- (0,6) -- cycle;
+    \draw (0.6,0) -- (0.6,0.6) -- (0,0.6); % Angle recte
+    
+    % Quadrat del catet de 6 cm (esquerra)
+    \draw[thick, fill=blue!10] (0,0) -- (-6,0) -- (-6,6) -- (0,6) -- cycle;
+    \node at (-3,3) {\small $6^2$};
+    
+    % Quadrat del catet de 8 cm (a sota)
+    \draw[thick, fill=orange!10] (0,0) -- (8,0) -- (8,-8) -- (0,-8) -- cycle;
+    \node at (4,-4) {\small $8^2$};
+    
+    % Quadrat de la hipotenusa (exactament sobre la hipotenusa)
+    % El vector de la hipotenusa és (8, -6). El vector perpendicular és (6, 8).
+    \draw[thick, fill=green!10] (8,0) -- (0,6) -- (6,14) -- (14,8) -- cycle;
+    \node[rotate=-36.87] at (7,7) {\small $Superfície=?$};
+\end{tikzpicture}
+\end{center}
+
+\begin{itemize}
+    \item Quina és la superfície del quadrat corresponent al catet de $6\text{ cm}$? I al de $8\text{ cm}$? \makebox[3cm]{\hrulefill}
+    \item Quina és la superfície del quadrat corresponent a la hipotenusa? \makebox[4cm]{\hrulefill}
+    \item Quina relació creus que té l'exercici amb el Teorema de Pitàgores?
+\end{itemize}
+\vspace{2cm}
+
+\end{document}
