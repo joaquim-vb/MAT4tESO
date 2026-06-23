@@ -1,0 +1,661 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{multicol}
+
+% Paquets de gràfiques i geometria
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{angles, quotes, calc}
+
+% Paquet afegit per a les càpsules d'explicació i avisos
+\usepackage[most]{tcolorbox}
+\usepackage{colortbl}
+
+% Definició de l'entorn de la càpsula d'explicació
+\newtcolorbox{capsula}{
+    colback=blue!5!white,
+    colframe=blue!75!black,
+    title=�� Recorda per a aquest exercici:,
+    fonttitle=\bfseries,
+    arc=2mm,
+    boxrule=1pt,
+    left=5pt, right=5pt, top=5pt, bottom=5pt
+}
+
+% 1. MARGES I CAPÇALERA ORIGINALS RECUPERATS
+\geometry{top=4cm, bottom=3cm, left=2cm, right=2cm, headheight=2.5cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+% Logos recuperats de la plantilla original
+\fancyhead[L]{\includegraphics[height=1.8cm]{Logo_Departament.png}}
+\fancyhead[R]{\includegraphics[height=1.8cm]{Logo_Institut.png}}
+
+\fancyfoot[L]{}
+\fancyfoot[C]{Pàgina \thepage\ de \pageref{LastPage}}
+\fancyfoot[R]{}
+
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+
+% --- CAPÇALERA D'IDENTIFICACIÓ ---
+\begingroup
+\renewcommand{\arraystretch}{2.2}
+\begin{tabularx}{\textwidth}{|X|p{4cm}|}
+\hline
+\textbf{Nom i cognoms:} & \textbf{Grup:} \\ \hline
+\textbf{Activitat:} Dossier de Recuperació & \textbf{Data:} \\ \hline
+\end{tabularx}
+\endgroup
+
+\vspace{0.5cm}
+
+% --- AVÍS IMPORTANT ---
+\begin{tcolorbox}[colback=red!5!white, colframe=red!75!black, title=⚠️ Condició d'Examen, fonttitle=\bfseries\large, arc=2mm]
+L'entrega d'aquest dossier completament resolt és una \textbf{condició indispensable} per poder presentar-se a l'examen de recuperació que se celebrarà el proper \textbf{dia 8 de juny}. 
+\end{tcolorbox}
+
+% ==========================================
+% SdA 1. POTÈNCIES I RADICALS
+% ==========================================
+\section*{SdA1. Potències i radicals}
+
+\begin{capsula}
+Per expressar en forma de potència única, fes servir les propietats bàsiques: \\
+$a^n \cdot a^m = a^{n+m}$ \hspace{1cm} $\frac{a^n}{a^m} = a^{n-m}$ \hspace{1cm} $(a^n)^m = a^{n \cdot m}$ \hspace{1cm} $a^n \cdot b^n = (a \cdot b)^n$
+\end{capsula}
+
+\textbf{1. Expressa en forma de potència única aplicant les propietats de les potències:}
+\begin{multicols}{2}
+\begin{enumerate}[label=\alph*)]
+    \item $(-2) \cdot (-2)^3 =$ \vspace{0.5cm}
+    \item $3^{-3} =$ \vspace{0.5cm}
+    \item $\left(\frac{2}{7}\right)^4 : \left(\frac{7}{2}\right)^{-2} =$ \vspace{0.5cm}
+    \item $\left(\left(\frac{5}{2}\right)^{-1}\right)^{-2} =$ \vspace{0.5cm}
+\end{enumerate}
+\end{multicols}
+
+\begin{capsula}
+Per obtenir exponents positius utilitza la propietat $a^{-n} = \frac{1}{a^n}$ i $\left(\frac{a}{b}\right)^{-n} = \left(\frac{b}{a}\right)^n$. Quan tinguis bases compostes (com el 24 o el 18), recorda \textbf{descompondre en factors primers} abans d'operar.
+\end{capsula}
+
+\textbf{2. Expressa el resultat en forma de potències d’exponent positiu i base un nombre primer.} (AJUDA: comença descomponent en factors)
+\begin{enumerate}[label=\alph*)]
+    \item $24^2 \cdot 18^3 =$ \vspace{2cm}
+    \item $\frac{40^3 \cdot 25^3}{36^7} =$ \vspace{2cm}
+\end{enumerate}
+
+\textbf{3. Expressa el resultat en forma de producte de potències:}
+\begin{enumerate}[label=\alph*)]
+    \item $\left(a^{-2}\right)^{-5} \cdot \left(\frac{b^2}{a^{-5}}\right)^{-5} =$ \vspace{2cm}
+    \item $\frac{(a^{-2})^3 \cdot b^3 \cdot a^0 \cdot b^{-4}}{(a^3 \cdot b^{-1})^5} =$ \vspace{2cm}
+\end{enumerate}
+
+\begin{capsula}
+Un radical es pot expressar com una potència d'exponent fraccionari: $\sqrt[n]{a^m} = a^{\frac{m}{n}}$. Per extreure factors, divideix l'exponent de l'interior entre l'índex de l'arrel.
+\end{capsula}
+
+\textbf{4. Expressa els radicals en forma de potències i simplifica tant com puguis:}
+\begin{multicols}{2}
+\begin{enumerate}[label=\alph*)]
+    \item $3 \cdot \sqrt{3} \cdot \sqrt[3]{3} =$ \vspace{2cm}
+    \item $5 \cdot \sqrt[6]{5^3} \cdot \sqrt{5} =$ \vspace{2cm}
+\end{enumerate}
+\end{multicols}
+
+\textbf{5. Fes les operacions i simplifica:} 
+\begin{enumerate}[label=\alph*)]
+    \item $5\sqrt{24} - \sqrt{72} - 3\sqrt{32} =$ \vspace{1.5cm}
+    \item $2\sqrt[3]{16} - 12\sqrt[3]{2} + \sqrt[3]{54} =$ \vspace{1.5cm}
+    \item $2\sqrt{10} \cdot \left(-4\sqrt{2}\right) =$ \vspace{1.5cm}
+\end{enumerate}
+
+\newpage
+% ==========================================
+% SdA 2. POLINOMIS I FRACCIONS ALGEBRAIQUES
+% ==========================================
+\section*{SdA2. Polinomis i fraccions algebraiques}
+
+\begin{capsula}
+Les \textbf{arrels} d'un polinomi són aquells valors de $x$ que fan que el valor numèric del polinomi sigui zero, és a dir, $P(x)=0$. Si tens un polinomi factoritzat, iguala cada factor a zero.
+\end{capsula}
+
+\textbf{1. Quines són les arrels dels següents polinomis?}
+\begin{enumerate}[label=\alph*)]
+    \item $P(x) = x \cdot (x - 2) \cdot (x + 1) \cdot (x - 3)$ \vspace{1cm}
+    \item $Q(x) = x^2 + 8x + 12$ \vspace{2cm}
+\end{enumerate}
+
+\begin{capsula}
+Per sumar i restar polinomis, agrupa els termes que tinguin \textbf{la mateixa part literal} (mateix grau). Recorda que un signe menys davant d'un parèntesi canvia tots els signes del seu interior!
+\end{capsula}
+
+\textbf{2. Realitza les següents sumes i restes de polinomis. El resultat l’has de donar agrupant els termes semblants i ordenant segons l’exponent:}
+\begin{enumerate}[label=\alph*)]
+    \item $(-2x^3 - 4x^2 + 2x + 1) + (x^3 - 6x^2 - 5x + 2) =$ \vspace{1.5cm}
+    \item $(-2x^8 - 3x^7 + 5x^3 - 1) - (5x^8 + 6x^7 + x^3 - x^2 + 6x) =$ \vspace{1.5cm}
+    \item $\left(\frac{2}{5}x^4 + 8x^3 - 3x^2 + 1\right) + \left(6x^4 + \frac{3}{2}x^3 + x^2 + x - 10\right) =$ \vspace{1.5cm}
+\end{enumerate}
+
+\begin{capsula}
+Fórmules notables (Aprèn-te-les de memòria!): \\
+Quadrat de la suma: $(a + b)^2 = a^2 + 2ab + b^2$ \\
+Quadrat de la diferència: $(a - b)^2 = a^2 - 2ab + b^2$ \\
+Suma per diferència: $(a + b)(a - b) = a^2 - b^2$
+\end{capsula}
+
+\textbf{3. Realitza els següents productes de polinomis. El resultat l’has de donar agrupant els termes semblants. Recorda utilitzar les fórmules notables si és possible.}
+\begin{enumerate}[label=\alph*)]
+    \item $(5x^2 + 1) \cdot (3x^3 - 5x) =$ \vspace{1cm}
+    \item $(3x - 4)^2 =$ \vspace{0.5cm}
+    \item $(2x + 3) \cdot (2x - 3) =$ \vspace{0.5cm}
+\end{enumerate}
+
+\textbf{4. Realitza les següents divisions de polinomis utilitzant el mètode que et vagi millor. Comprova el resultat.}
+\begin{enumerate}[label=\alph*)]
+    \item $(x^3 + x^2 - 7x + 2) \div (x - 2)$ \vspace{2.5cm}
+    \item $(6x^3 - 7x^2 - 10x + 5) \div (3x^2 + x - 2)$ \vspace{2.5cm}
+\end{enumerate}
+
+\begin{capsula}
+Per \textbf{factoritzar} un polinomi, segueix sempre aquest ordre:
+1r. Treure factor comú (si es pot).
+2n. Buscar identitats notables.
+3r. Aplicar la regla de Ruffini (o fórmula de 2n grau).
+\end{capsula}
+
+\textbf{5. Factoritza els següents polinomis:}
+\begin{enumerate}[label=\alph*)]
+    \item $x^2 + 12x - 133 =$ \vspace{2cm}
+    \item $x^5 - 9x^4 + 15x^3 - 7x^2 =$ \vspace{2cm}
+\end{enumerate}
+
+\newpage
+% ==========================================
+% SdA 3. EQUACIONS I SISTEMES
+% ==========================================
+\section*{SdA3. Equacions i sistemes}
+
+\begin{capsula}
+En les equacions amb fraccions, el primer pas és trobar el \textbf{mínim comú múltiple (mcm)} dels denominadors per eliminar-los. En equacions amb productes notables, desenvolupa'ls abans de reduir termes.
+\end{capsula}
+
+\textbf{1. Resol les següents equacions de primer grau.}
+\begin{enumerate}[label=\alph*)]
+    \item $8x + 5 - 2x + 6 = x + 4$ \vspace{1.5cm}
+    \item $\frac{4(3x+6)}{5} + 12 = \frac{3(2x+6)}{2} + 2x$ \vspace{2cm}
+    \item $9 \cdot (8 - 2x)^2 - 4 \cdot (3x - 7)^2 = 0$ \vspace{2cm}
+\end{enumerate}
+
+\begin{capsula}
+Per resoldre una equació de 2n grau de la forma $ax^2 + bx + c = 0$, utilitza la fórmula:
+$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$
+\end{capsula}
+
+\textbf{2. Resol les següents equacions de segon grau:}
+\begin{multicols}{2}
+\begin{enumerate}[label=\alph*)]
+    \item $x^2 - 7x + 12 = 0$ \vspace{2cm}
+    \item $2x^2 - 8 = 0$ \vspace{2cm}
+    \item $\frac{x^2}{2} - 3x = 0$ \vspace{2cm}
+\end{enumerate}
+\end{multicols}
+
+\vspace{1cm}
+
+\begin{capsula}
+El \textbf{discriminant} és el valor que hi ha dins de l'arrel a la fórmula general: $\Delta = b^2 - 4ac$. \\
+Si $\Delta > 0 \rightarrow$ 2 solucions. Si $\Delta = 0 \rightarrow$ 1 solució. Si $\Delta < 0 \rightarrow$ Cap solució.
+\end{capsula}
+
+\textbf{3. Indica el nombre de solucions que tenen les següents equacions de 2n grau i justifica la teva resposta mitjançant el discriminant:}
+\begin{enumerate}[label=\alph*)]
+    \item $4x^2 + 4x + 1 = 0$ \vspace{1.5cm}
+    \item $x^2 + 6x + 11 = 0$ \vspace{1.5cm}
+    \item $3x^2 - 17x - 6 = 0$ \vspace{1.5cm}
+\end{enumerate}
+
+\begin{capsula}
+En les \textbf{equacions biquadrades} ($ax^4 + bx^2 + c = 0$), fes el canvi de variable $t = x^2$. En les equacions ja factoritzades igualades a zero, recorda que n'hi ha prou amb igualar cada factor a zero.
+\end{capsula}
+
+\textbf{4. Resol les següents equacions:}
+\begin{enumerate}[label=\alph*)]
+    \item $2x^4 - 7x^2 - 4 = 0$ \vspace{2cm}
+    \item $x \cdot (x - 3) \cdot \left(x + \frac{1}{2}\right) \cdot (x + \sqrt{2}) = 0$ \vspace{1.5cm}
+    \item $x^3 - x^2 - 14x + 24 = 0$ \vspace{2.5cm}
+\end{enumerate}
+
+\newpage
+
+\textbf{5. Per als següents problemes, és imprescindible escriure l’equació corresponent i resoldre-la pas a pas per arribar a la solució:}
+\begin{enumerate}[label=\alph*)]
+    \item Entre dues persones tenen en total 542 € i una d’elles té 300 € més que l'altra. Quants diners té cadascuna? \vspace{3cm}
+    \item Un pare té 3 vegades l’edat del fill. Si entre els dos sumen 48 anys, quina edat té cadascú? \vspace{3cm}
+\end{enumerate}
+
+\newpage
+% ==========================================
+% SdA 4. FUNCIONS
+% ==========================================
+\section*{SdA 4. Funcions.}
+
+\begin{capsula}
+Recorda:
+\begin{itemize}[topsep=0pt, itemsep=0pt]
+    \item \textbf{Funció lineal} ($y=mx$): Línia recta que passa per l'origen (0,0).
+    \item \textbf{Funció afí} ($y=mx+n$): Línia recta que no passa per l'origen. $n$ és l'ordenada a l'origen.
+    \item \textbf{Funció quadràtica} ($y=ax^2+bx+c$): Paràbola. Si $a>0$ té forma de U, si $a<0$ té forma de $\cap$.
+\end{itemize}
+\end{capsula}
+
+\textbf{1. Representa gràficament les següents funcions. Utilitza colors diferents i regle en el cas de les rectes. Indica si són funcions lineals, afins o quadràtiques.}
+\begin{multicols}{2}
+1) $f_1(x) = 2x$ \\
+2) $f_2(x) = x + 1$ \\
+3) $f_3(x) = -x^2 + 2x + 4$
+\end{multicols}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{x} & \textbf{-2} & \textbf{-1} & \textbf{0} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} \\ \hline
+$f_1(x)$ & & & & & & & \\ \hline
+$f_2(x)$ & & & & & & & \\ \hline
+$f_3(x)$ & & & & & & & \\ \hline
+\end{tabular}
+\end{center}
+
+\vspace{0.5cm}
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    width=12cm, height=12cm, % Mida gran perquè puguin dibuixar còmodament
+    axis lines=middle,
+    grid=both,
+    grid style={line width=.1pt, draw=gray!30},
+    major grid style={line width=.2pt,draw=gray!50},
+    xmin=-5, xmax=5,
+    ymin=-5, ymax=9,
+    xtick={-5,-4,-3,-2,-1,1,2,3,4,5},
+    ytick={-5,-4,-3,-2,-1,1,2,3,4,5,6,7,8},
+    xlabel={$x$},
+    ylabel={$y$},
+    ticklabel style={font=\footnotesize, fill=white},
+    % Aquest entorn el deixem buit de \addplot perquè dibuixi l'alumne
+]
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\begin{capsula}
+Una funció és \textbf{creixent} quan, al mirar d'esquerra a dreta, la gràfica puja. És \textbf{decreixent} quan baixa. La \textbf{TVM} (Taxa de Variació Mitjana) a l'interval $[a,b]$ es calcula fent: $TVM = \frac{f(b) - f(a)}{b - a}$.
+\end{capsula}
+
+\textbf{2. Una funció té la següent representació gràfica:}
+
+% Descomenta quan tinguis la imatge
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    width=8cm, height=8cm,
+    axis lines=middle,
+    grid=both,
+    grid style={line width=.1pt, draw=gray!30},
+    major grid style={line width=.2pt,draw=gray!50},
+    xmin=-4, xmax=4,
+    ymin=-5, ymax=2.5,
+    xtick={-4,-3,-2,-1,1,2,3,4},
+    ytick={-5,-4,-3,-2,-1,1,2},
+    ticklabel style={font=\tiny, fill=white},
+    samples=100
+]
+% Dibuixem una funció cúbica que encaixa amb l'enunciat (té màxim i mínim clars)
+\addplot[thick, teal, domain=-2.8:2.8] {x^3/3 - x^2/2 - 2*x + 1};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}[label=\alph*)]
+    \item Indica dos intervals en què la funció sigui creixent i dos intervals en què la funció sigui decreixent. \vspace{1.5cm}
+    \item La funció té màxims o mínims? Quins? \vspace{1.5cm}
+    \item Quina és la Taxa de Variació Mitjana de la funció entre els punts x=0 i x=1? \vspace{1.5cm}
+\end{enumerate}
+\newpage
+\begin{capsula}
+El \textbf{pendent ($m$)} indica la inclinació de la recta. Si és positiu puja, si és negatiu baixa. L'\textbf{ordenada a l'origen ($n$)} és el punt on la recta talla l'eix Y (vertical).
+\end{capsula}
+
+\textbf{3. En relació a les següents funcions:}
+\begin{multicols}{2}
+$f(x) = 3x - 3$ \\
+$g(x) = 2x + 2$ \\
+$h(x) = -x + 4$ \\
+$p(x) = -x$
+\end{multicols}
+
+\begin{center}
+\begin{tikzpicture}
+\foreach \i/\f/\color in {
+    0/{3*x - 3}/blue, 
+    1/{2*x + 2}/red, 
+    2/{-x + 4}/green!70!black, 
+    3/{-x}/orange} 
+{
+    \begin{scope}[xshift=\i*4.5cm]
+    \begin{axis}[
+        width=4.5cm, height=4.5cm,
+        axis lines=middle, grid=minor,
+        xmin=-4, xmax=4, ymin=-4, ymax=4,
+        xtick={-3,-2,-1,1,2,3}, ytick={-3,-2,-1,1,2,3},
+        ticklabel style={font=\tiny},
+        xticklabels={,,}, yticklabels={,,} % Ocultem els números per fer-ho més net
+    ]
+    \addplot[thick, \color, domain=-3.5:3.5] {\f};
+    \end{axis}
+    \end{scope}
+}
+\end{tikzpicture}
+\end{center}
+\textbf{a) Associa cada funció amb el seu gràfic. Raona la resposta.}
+\vspace{1cm}
+
+\textbf{b) Indica el valor del seu pendent i de la seva ordenada a l’origen (2 punts):}
+\begin{center}
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{|l|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
+\hline
+Funció & \centering $f(x)$ & \centering $g(x)$ & \centering $h(x)$ & \centering\arraybackslash $p(x)$ \\ \hline
+Pendent & & & & \\ \hline
+Ordenada a l'origen & & & & \\ \hline
+\end{tabular}
+\end{center}
+
+\newpage
+\begin{capsula}
+Un \textbf{núvol de punts} (o diagrama de dispersió) relaciona dues variables. L'eix horitzontal (X) representa una variable (ex: edat) i el vertical (Y) l'altra (ex: alçada). 
+\end{capsula}
+
+\textbf{Exercici 4.} L’alçada i l’edat dels components d’un equip de bàsquet estan relacionats segons es mostra a la següent gràfica (1 punt):
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    width=10cm, height=7cm,
+    title={\textbf{Edat vs Alçada de l'equip}},
+    xlabel={Edat (anys)},
+    ylabel={Alçada (cm)},
+    xmin=10, xmax=17,
+    ymin=120, ymax=200,
+    xtick={10,11,12,13,14,15,16,17},
+    ytick={120,130,140,150,160,170,180,190,200},
+    grid=both,
+    major grid style={line width=.2pt,draw=gray!50},
+    minor grid style={line width=.1pt,draw=gray!20},
+    minor tick num=1,
+    only marks,
+    mark=*,
+    mark options={fill=blue!80!black, scale=1.5}
+]
+% Coordenades: (Edat, Alçada)
+\addplot coordinates {
+    (11, 130) % Resposta a Maria
+    (12, 145)
+    (13, 160) % Resposta a Joan
+    (14, 155)
+    (14, 170)
+    (15, 190) % Membre més alt
+    (16, 175) % Membre de més edat
+};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+Respon les següents preguntes:
+\begin{itemize}
+    \item Si Joan té 13 anys, quina pot ser la seva altura? \vspace{0.8cm}
+    \item Si Maria medeix 130 cm, quina pot ser la seva edat? \vspace{0.8cm}
+    \item Quin és el membre de l’equip de més edat? \vspace{0.8cm}
+    \item Quin és el membre més alt de l’equip? \vspace{0.8cm}
+\end{itemize}
+\newpage
+\textbf{5. La següent gràfica resumeix l’excursió que hem realitzat per la serra del Cadí:}
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    width=12cm, height=7cm,
+    title={\textbf{Excursió a la serra del Cadí}},
+    xlabel={Temps (hores des de l'inici)},
+    ylabel={Distància recorreguda (km)},
+    xmin=0, xmax=6,
+    ymin=0, ymax=14,
+    xtick={0,1,2,3,4,5,6},
+    ytick={0,2,4,6,8,10,12,14},
+    grid=both,
+    major grid style={line width=.2pt,draw=gray!50},
+    thick,
+    mark=*,
+    mark options={fill=white, draw=red, scale=1.2}
+]
+% Coordenades: (Temps, Distància)
+\addplot[color=red, thick] coordinates {
+    (0,0)     % Inici
+    (1, 4)    % 1a hora, 4 km
+    (2, 8)    % 2a hora, 8 km
+    (3, 8)    % 3a hora, 8 km (Descans d'1 hora)
+    (4, 11)   % 4a hora, 11 km
+    (5, 12)   % Final: 5 hores, 12 km
+};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}[label=\alph*)]
+    \item Quant temps va durar l’excursió? \vspace{1cm}
+    \item Quant temps vam descansar? A quines hores? \vspace{1cm}
+    \item Quants quilòmetres es van recórrer en total? \vspace{1cm}
+    \item Construeix una taula de valors a partir dels punts assenyalats a la gràfica. \vspace{2cm}
+\end{enumerate}
+
+\newpage
+% ==========================================
+% SdA 5. ESTADÍSTICA
+% ==========================================
+\section*{SdA 5. Estadística.}
+
+\begin{capsula}
+\textbf{Tipus de variables:}
+\begin{itemize}[topsep=0pt, itemsep=0pt]
+    \item \textbf{Qualitativa:} Indica una qualitat o tret (ex: color d'ulls).
+    \item \textbf{Quantitativa discreta:} Pren valors numèrics aïllats (ex: nombre de germans).
+    \item \textbf{Quantitativa contínua:} Pot prendre qualsevol valor amb decimals (ex: pes).
+\end{itemize}
+\end{capsula}
+
+\textbf{1. De les variables següents, digues de quin tipus i subtipus són cadascuna d’elles.}
+\begin{enumerate}[label=\alph*)]
+    \item L’estat civil. \vspace{0.5cm}
+    \item L’alçada en centímetres. \vspace{0.5cm}
+    \item Nombre de turistes que van visitar el llac de Banyoles l’últim any. \vspace{0.5cm}
+    \item Grup de música preferit. \vspace{0.5cm}
+    \item La intenció de vot en unes eleccions sindicals. \vspace{0.5cm}
+\end{enumerate}
+
+\begin{capsula}
+Recorda les columnes d'una taula de freqüències: 
+$f_i$ = freqüència absoluta (recompte). 
+$F_i$ = freqüència absoluta acumulada (suma dels $f_i$ anteriors).
+$h_i$ = freqüència relativa ($f_i / N$).
+\end{capsula}
+
+\textbf{2. Disposem d’una taula de freqüències incompleta. Completa-la.}
+\begin{center}
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\rowcolor{cyan!15}
+\textbf{$x_i$} & \textbf{$f_i$} & \textbf{$F_i$} & \textbf{$h_i$} \\ \hline
+2 & & & 0,05 \\ \hline
+3 & 10 & & \\ \hline
+4 & & 25 & \\ \hline
+5 & & 35 & \\ \hline
+6 & & & \\ \hline
+ & 40 & & \\ \hline
+\end{tabular}
+\end{center}
+
+\vspace{0.5cm}
+
+\textbf{3. L’edat dels professors d’un centre escolar són:} \\
+35, 40, 37, 50, 54, 38, 39, 48, 37, 44, 42, 44, 30, 47, 42, 37, 37, 46, 42, 52, 43, 36, 35, 53, 54, 54, 36, 42, 46, 47, 42, 50, 45, 33, 36, 52, 49, 47, 38, 50
+
+\textbf{a) Elabora una taula de freqüències de la variable “edat dels professors” agrupant les edats en intervals de 5 unitats d’amplitud, tancats per l’esquerra i oberts per la dreta. (1,5 punts)}
+
+\begin{center}
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+classe (intervals) & Marca de classe & $f_i$ & $F_i$ & $h_i$ & $H_i$ & \% \\ \hline
+ & & & & & & \\ \hline
+ & & & & & & \\ \hline
+ & & & & & & \\ \hline
+ & & & & & & \\ \hline
+ & & & & & & \\ \hline
+ & & & & & & \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{capsula}
+Les \textbf{mesures de centralització} són:
+Mitjana ($\bar{x} = \frac{\sum x_i \cdot f_i}{N}$), Moda (valor amb més freqüència) i Mediana (valor que deixa el 50\% de dades per sobre i per sota).
+\end{capsula}
+
+\textbf{b) Calcula les 3 mesures de centralització de les dades.} \vspace{2cm}
+
+\textbf{c) Calcula els tres quartils i el rang interquartílic de les dades.} \vspace{2cm}
+
+\textbf{d) Representa les dades en un histograma. (1 punt)} \vspace{4cm}
+
+\begin{capsula}
+En un \textbf{mostreig estratificat}, cal respectar les proporcions. Pots utilitzar una regla de tres simple: si de $N$ total n'agafem $n$, de la població parcial $N_1$ n'haurem d'agafar $x$.
+\end{capsula}
+
+\textbf{4. Es vol fer un sondeig d’opinió per conèixer la intenció de vot dels habitants d’una ciutat. El cens electoral està format per 245.000 homes i 255.000 dones. Quants homes i dones convé incloure en una mostra de 4.000 persones?} \vspace{3cm}
+
+\newpage
+% ==========================================
+% SdA 6. TRIGONOMETRIA
+% ==========================================
+\section*{SdA 6. Trigonometria.}
+
+\begin{capsula}
+En un triangle rectangle, recorda la regla mnemotècnica \textbf{SOH CAH TOA}: \\
+$\sin(\alpha) = \frac{\text{Catet Oposat}}{\text{Hipotenusa}}$ \hspace{0.5cm} 
+$\cos(\alpha) = \frac{\text{Catet Contigu}}{\text{Hipotenusa}}$ \hspace{0.5cm} 
+$\tan(\alpha) = \frac{\text{Catet Oposat}}{\text{Catet Contigu}}$
+\end{capsula}
+
+\textbf{1. Troba les raons trigonomètriques dels angles $\alpha$ i $\beta$ de la figura (mides en cm).}
+
+% Descomenta quan tinguis la imatge
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+    % Vèrtexs
+    \coordinate (B) at (0,0);
+    \coordinate (C) at (8,0);
+    \coordinate (A) at (0,5);
+    
+    % Dibuix del triangle i angle recte
+    \draw[thick, fill=blue!5] (A) -- (B) -- (C) -- cycle;
+    \draw (0.4,0) -- (0.4,0.4) -- (0,0.4);
+    
+    % Etiquetes de vèrtexs i costats
+    \node[below left] at (B) {B};
+    \node[below right] at (C) {C};
+    \node[above left] at (A) {A};
+    \node[left] at (0,2.5) {5};
+    \node[below] at (4,0) {8};
+    
+    % Angles
+    \draw[thick, blue] (7,0) arc (180:148:1) node[midway, left=2pt] {$\alpha$};
+    \draw[thick, blue] (0,4) arc (-90:-32:1) node[midway, below right=0pt] {$\beta$};
+    \filldraw[blue] (C) circle (1.5pt);
+    \filldraw[blue] (A) circle (1.5pt);
+\end{tikzpicture}
+\end{center}
+\vspace{3cm}
+
+\begin{capsula}
+Recorda el \textbf{Teorema de Pitàgores}: En tot triangle rectangle, la hipotenusa al quadrat és igual a la suma dels quadrats dels catets ($h^2 = c_1^2 + c_2^2$).
+\end{capsula}
+
+\textbf{2. Quant mesura el catet b del següent triangle rectangle?}
+
+\begin{center}
+\begin{tikzpicture}[rotate=-25]
+    \coordinate (C) at (0,0);
+    \coordinate (A) at (3,0);
+    \coordinate (B) at (0,5);
+    
+    \draw[thick] (A) -- (B) -- (C) -- cycle;
+    \draw (0.3,0) -- (0.3,0.3) -- (0,0.3); % Angle recte
+    
+    \node[right] at (1.5,0) {3cm};
+    \node[above right] at (1.5,2.5) {6cm};
+    \node[below left] at (0,2.5) {b};
+\end{tikzpicture}
+\end{center}
+
+\textbf{3. Troba la longitud dels dos catets d’un triangle rectangle si saps que la hipotenusa mesura 15 cm i un dels angles aguts fa 54º.}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.6]
+    \coordinate (C) at (5,0);
+    \coordinate (B) at (0,0);
+    \coordinate (A) at (5,6.88); % 5 * tan(54) aprox 6.88
+    
+    \draw[thick, blue!80!black, fill=blue!5] (A) -- (B) -- (C) -- cycle;
+    \draw (4.6,0) -- (4.6,0.4) -- (5,0.4); % Angle recte a C
+    
+    \node[right] at (5,3.44) {a};
+    \node[below] at (2.5,0) {b};
+    \node[above left] at (2.5,3.44) {15};
+    
+    % Angle 54
+    \draw[thick] (1.5,0) arc (0:54:1.5);
+    \node at (2.2,0.6) {$\alpha=54^\circ$};
+\end{tikzpicture}
+\end{center}
+\vspace{3cm}
+
+\begin{capsula}
+\textbf{Relacions fonamentals de la trigonometria:} \\
+1) $\sin^2(\alpha) + \cos^2(\alpha) = 1$ \hspace{1cm} 2) $\tan(\alpha) = \frac{\sin(\alpha)}{\cos(\alpha)}$
+\end{capsula}
+
+\textbf{4. (2p) Sabem que donat un angle $\alpha$ es compleix la relació $\sin^2\alpha + \cos^2\alpha = 1$ i la relació $\text{tg}\alpha = \frac{\sin\alpha}{\cos\alpha}$. Utilitzant aquestes fórmules:}
+\begin{enumerate}[label=\alph*)]
+    \item Calcula el sinus d’un angle agut $\alpha$ si $\cos\alpha = 0,3$. \vspace{2cm}
+    \item Digues quant val la tangent de l’angle. \vspace{2cm}
+\end{enumerate}
+
+\begin{capsula}
+Per resoldre \textbf{problemes trigonomètrics}, fes sempre un esbós dibuixant un triangle rectangle que representi la situació, marca l'angle, la incògnita i la dada coneguda, i escull quina de les 3 raons trigonomètriques els relaciona.
+\end{capsula}
+
+\textbf{Exercici 6.} Un ciclista puja per un pendent que té una inclinació respecte a l’horitzontal de 25º. Quan arriba al cim del pendent, ha recorregut 1.200 metres. A quina alçada es troba el cim? \vspace{4cm}
+
+\textbf{Problema 5.} Una escala forma un angle de 60º amb el terra, i el seu peu es troba a una distància de 2,4m de la paret. Quina és la longitud de l’escala? \textit{Fes un esquema gràfic de la situació que planteja el problema.} \vspace{4cm}
+\end{document}
