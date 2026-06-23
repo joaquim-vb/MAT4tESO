@@ -1,0 +1,309 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{tikz}
+
+% 1. MARGES I CAPÇALERA
+\geometry{top=3cm, bottom=3cm, left=2cm, right=2cm, headheight=2.5cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\includegraphics[height=1.8cm]{Logo_Departament.png}} 
+\fancyhead[R]{\includegraphics[height=1.8cm]{Logo_Institut.png}}
+\fancyfoot[C]{Pàgina \thepage\ de \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\newcommand{\splitcell}[2]{\begin{tabular}{@{}c@{}}#1 \\ #2\end{tabular}}
+
+\begin{document}
+
+% --- CAPÇALERA D'IDENTIFICACIÓ ---
+\begingroup
+\renewcommand{\arraystretch}{2.2}
+\begin{tabularx}{\textwidth}{|X|p{4cm}|}
+    \hline
+    \textbf{Nom i cognoms:} & \textbf{Grup:} \\ \hline
+    \textbf{Fitxa 4 estadística:} Interpretació i comparació de gràfics & \textbf{Data:} \\ \hline
+\end{tabularx}
+\endgroup
+
+\vspace{0.4cm}
+
+% --- EXERCICI 1 ---
+\noindent \textbf{EXERCICI 1: Hores d'esport} \\
+El següent gràfic mostra les hores d'esport a la setmana que fan els alumnes d'una classe de 4t d'ESO.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.9]
+    \draw[lightgray, thin, dashed] (0,0) grid[xstep=1, ystep=1] (8,6);
+    \draw[thick, ->] (0,0) -- (8.5,0);
+    \draw[thick, ->] (0,0) -- (0,6.5);
+    
+    \node[rotate=90, align=center] at (-1.5, 3) {Nombre d'alumnes \\ (Freqüència absoluta)};
+    \node at (4, -1.2) {Hores d'esport a la setmana};
+    
+    \foreach \x in {0,1,2,3,4,5,6,7} {
+        \draw (\x+0.5, 0.1) -- (\x+0.5, -0.1) node[below] {\x};
+    }
+    \foreach \y in {0,1,2,3,4,5,6} {
+        \draw (0.1, \y) -- (-0.1, \y) node[left] {\y};
+    }
+    
+    \draw[thick, fill=blue!20] (0.1,0) rectangle (0.9, 2);
+    \draw[thick, fill=blue!20] (1.1,0) rectangle (1.9, 4);
+    \draw[thick, fill=blue!20] (2.1,0) rectangle (2.9, 6);
+    \draw[thick, fill=blue!20] (3.1,0) rectangle (3.9, 5);
+    \draw[thick, fill=blue!20] (4.1,0) rectangle (4.9, 2);
+    \draw[thick, fill=blue!20] (5.1,0) rectangle (5.9, 1);
+    \draw[thick, fill=blue!20] (6.1,0) rectangle (6.9, 0);
+    \draw[thick, fill=blue!20] (7.1,0) rectangle (7.9, 0);
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}[label=\alph*)]
+    \item Quants alumnes hi ha en aquesta classe en total? \vspace{0.6cm}
+    \item Quina és la moda (el valor més freqüent)? \vspace{0.6cm}
+    \item Quina és la mitjana?\vspace{0.6cm}
+    \item Quina és la mediana?\vspace{0.6cm}
+    \item Quants alumnes fan 3 o més hores d'esport a la setmana? \vspace{0.6cm}
+    
+\end{enumerate}
+
+\vspace{0.2cm}
+\newpage
+
+% --- EXERCICI 2 ---
+\noindent \textbf{EXERCICI 2: Comparació de rendiment (Qui té millor mitjana?)} \\
+S'han analitzat les notes d'un mateix examen en dos grups diferents (Grup A i Grup B), formats per 15 alumnes cadascun.
+Observa els gràfics següents:
+
+\vspace{0.3cm}
+\begin{minipage}{0.48\textwidth}
+    \begin{center}
+    \textbf{Grup A} \\ \vspace{0.2cm}
+    \begin{tikzpicture}[scale=0.65]
+        \draw[lightgray, thin, dashed] (0,0) grid[xstep=1, ystep=1] (10,8);
+        \draw[thick, ->] (0,0) -- (10.5,0);
+        \draw[thick, ->] (0,0) -- (0,8.5);
+        
+        % Títols dels eixos afegits
+        \node[font=\small] at (5, -1.2) {Nota a l'examen};
+        \node[rotate=90, font=\small] at (-1.2, 4) {Nombre d'alumnes};
+        
+        \foreach \x in {1,2,3,4,5,6,7,8,9,10} {
+            \node[below, font=\small] at (\x-0.5, -0.1) {\x};
+        }
+        \foreach \y in {0,2,4,6,8} {
+            \draw (0.1, \y) -- (-0.1, \y) node[left, font=\small] {\y};
+        }
+        
+        \draw[thick, fill=orange!30] (2,0) rectangle (3, 2); % Nota 3
+        \draw[thick, fill=orange!30] (3,0) rectangle (4, 4); % Nota 4
+        \draw[thick, fill=orange!30] (4,0) rectangle (5, 5); % Nota 5
+        \draw[thick, fill=orange!30] (5,0) rectangle (6, 3); % Nota 6
+        \draw[thick, fill=orange!30] (6,0) rectangle (7, 1); % Nota 7
+    \end{tikzpicture}
+    \end{center}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\textwidth}
+    \begin{center}
+    \textbf{Grup B} \\ \vspace{0.2cm}
+    \begin{tikzpicture}[scale=0.65]
+        \draw[lightgray, thin, dashed] (0,0) grid[xstep=1, ystep=1] (10,8);
+        \draw[thick, ->] (0,0) -- (10.5,0);
+        \draw[thick, ->] (0,0) -- (0,8.5);
+        
+        % Títols dels eixos afegits
+        \node[font=\small] at (5, -1.2) {Nota a l'examen};
+        \node[rotate=90, font=\small] at (-1.2, 4) {Nombre d'alumnes};
+        
+        \foreach \x in {1,2,3,4,5,6,7,8,9,10} {
+            \node[below, font=\small] at (\x-0.5, -0.1) {\x};
+        }
+        \foreach \y in {0,2,4,6,8} {
+            \draw (0.1, \y) -- (-0.1, \y) node[left, font=\small] {\y};
+        }
+        
+        \draw[thick, fill=green!30] (5,0) rectangle (6, 1); % Nota 6
+        \draw[thick, fill=green!30] (6,0) rectangle (7, 3); % Nota 7
+        \draw[thick, fill=green!30] (7,0) rectangle (8, 7); % Nota 8
+        \draw[thick, fill=green!30] (8,0) rectangle (9, 3); % Nota 9
+        \draw[thick, fill=green!30] (9,0) rectangle (10, 1); % Nota 10
+    \end{tikzpicture}
+    \end{center}
+\end{minipage}
+
+\begin{enumerate}[label=\alph*)]
+    \item Sense fer cap càlcul exacte, quin grup creus que té una nota mitjana més alta? Raona la teva resposta fixant-te en la forma i posició dels gràfics. \vspace{1.5cm}
+    \item Quina és la moda (la nota més repetida) a cada grup? \vspace{0.8cm}
+    \item Quants alumnes han aprovat (treure un 5 o més) al Grup A? I al Grup B? \vspace{0.8cm}
+    \item Ara sí, calcula la nota mitjana exacta de cada grup per comprovar la teva intuïció de l'apartat \textit{a}. Creus que la mitjana serveix per resumir el gràfic de forma adequada? \vspace{2cm}
+\end{enumerate}
+
+\newpage
+
+% --- EXERCICI 3 ---
+\noindent \textbf{EXERCICI 3: Comparació de regularitat (Qui és més constant?)} \\
+L'entrenadora d'un equip de bàsquet dubta entre dues jugadores per llançar els tirs lliures decisius. Ha fet un gràfic amb els punts que han anotat exactament en els últims 20 partits.
+
+\vspace{0.3cm}
+\begin{minipage}{0.48\textwidth}
+    \begin{center}
+    \textbf{Jugadora 1} \\ \vspace{0.2cm}
+    \begin{tikzpicture}[scale=0.6]
+        \draw[lightgray, thin, dashed] (0,0) grid[xstep=1, ystep=1] (10,10);
+        \draw[thick, ->] (0,0) -- (10.5,0);
+        \draw[thick, ->] (0,0) -- (0,10.5);
+        
+        % Títols dels eixos (eix Y afegit)
+        \node[font=\small] at (5, -1.2) {Punts per partit};
+        \node[rotate=90, font=\small] at (-1.5, 5) {Nombre de partits};
+        
+        \node[below, font=\small] at (1, -0.1) {5};
+        \node[below, font=\small] at (3, -0.1) {10};
+        \node[below, font=\small] at (5, -0.1) {15};
+        \node[below, font=\small] at (7, -0.1) {20};
+        \node[below, font=\small] at (9, -0.1) {25};
+        \foreach \y in {0,2,4,6,8,10} {
+            \draw (0.1, \y) -- (-0.1, \y) node[left, font=\small] {\y};
+        }
+        
+        \draw[thick, fill=purple!30] (2.5,0) rectangle (3.5, 5); % 10 punts (5 vegades)
+        \draw[thick, fill=purple!30] (4.5,0) rectangle (5.5, 10); % 15 punts (10 vegades)
+        \draw[thick, fill=purple!30] (6.5,0) rectangle (7.5, 5); % 20 punts (5 vegades)
+    \end{tikzpicture}
+    \end{center}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\textwidth}
+    \begin{center}
+    \textbf{Jugadora 2} \\ \vspace{0.2cm}
+    \begin{tikzpicture}[scale=0.6]
+        \draw[lightgray, thin, dashed] (0,0) grid[xstep=1, ystep=1] (10,10);
+        \draw[thick, ->] (0,0) -- (10.5,0);
+        \draw[thick, ->] (0,0) -- (0,10.5);
+        
+        % Títols dels eixos (eix Y afegit)
+        \node[font=\small] at (5, -1.2) {Punts per partit};
+        \node[rotate=90, font=\small] at (-1.5, 5) {Nombre de partits};
+        
+        \node[below, font=\small] at (1, -0.1) {5};
+        \node[below, font=\small] at (3, -0.1) {10};
+        \node[below, font=\small] at (5, -0.1) {15};
+        \node[below, font=\small] at (7, -0.1) {20};
+        \node[below, font=\small] at (9, -0.1) {25};
+        \foreach \y in {0,2,4,6,8,10} {
+            \draw (0.1, \y) -- (-0.1, \y) node[left, font=\small] {\y};
+        }
+        
+        \draw[thick, fill=teal!30] (0.5,0) rectangle (1.5, 2); % 5 pts
+        \draw[thick, fill=teal!30] (2.5,0) rectangle (3.5, 4); % 10 pts
+        \draw[thick, fill=teal!30] (4.5,0) rectangle (5.5, 8); % 15 pts
+        \draw[thick, fill=teal!30] (6.5,0) rectangle (7.5, 4); % 20 pts
+        \draw[thick, fill=teal!30] (8.5,0) rectangle (9.5, 2); % 25 pts
+    \end{tikzpicture}
+    \end{center}
+\end{minipage}
+
+\begin{enumerate}[label=\alph*)]
+    \item Si ens fixem on tenen el centre de les seves dades, creus que tenen una mitjana de punts molt diferent o bastant semblant? \vspace{1.2cm}
+    \item Calcula la \textbf{mitjana} i la \textbf{mediana} de punts de cada jugadora per comprovar-ho. (\textit{Consell: si tens dificultats per fer-ho directament des del gràfic, construeix primer una taula de freqüències per a cada jugadora al marge del full}). \vspace{3cm}
+    \item Llavors, en què es diferencien exactament els dos gràfics? Explica-ho fixant-te en l'\textit{amplitud} d'aquestes barres. \vspace{2cm}
+    \item Si el proper partit és la gran final i necessites assegurar-te que la jugadora anoti com a mínim entre 10 i 20 punts (sense arriscar a que tingui un dia molt dolent i n'anoti només 5), a qui triaries i per què? \vspace{2cm}
+\end{enumerate}
+\newpage
+
+% --- EXERCICI 4 ---
+\noindent \textbf{EXERCICI 4: Durada de la bateria dels mòbils} \\
+Una revista tecnològica ha provat la bateria de molts telèfons d'una mateixa marca jugant a videojocs sense parar fins que s'apaguen. Han fet aquest gràfic de \textbf{Freqüències acumulades relatives (\%)}. 
+L'eix vertical ens diu \textbf{quin percentatge de mòbils ja s'han apagat} al cap d'una certa quantitat d'hores.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.95]
+    \draw[lightgray, thin, dashed] (0,0) grid[xstep=1, ystep=1] (10,5);
+    \draw[thick, ->] (0,0) -- (10.5,0);
+    \draw[thick, ->] (0,0) -- (0,5.5);
+    
+    \node[rotate=90, align=center] at (-1.8, 2.5) {\% de mòbils que \\ ja s'han apagat};
+    \node at (5, -1.2) {Hores jugant};
+    
+    \foreach \x in {0,1,2,3,4,5,6,7,8,9,10} {
+        \draw (\x, 0.1) -- (\x, -0.1) node[below] {\x h};
+    }
+    \foreach \y/\ytext in {0/0, 1.25/25, 2.5/50, 3.75/75, 5/100} {
+        \draw (0.1, \y) -- (-0.1, \y) node[left] {\ytext \%};
+    }
+    
+    % Corba (Ogive)
+    \draw[thick, red] plot coordinates {(2,0) (4, 1.25) (6, 2.5) (8, 3.75) (10, 5)};
+    \filldraw[red] (2,0) circle (2pt);
+    \filldraw[red] (4,1.25) circle (2pt);
+    \filldraw[red] (6,2.5) circle (2pt);
+    \filldraw[red] (8,3.75) circle (2pt);
+    \filldraw[red] (10,5) circle (2pt);
+    
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}[label=\alph*)]
+    \item Si compres aquest mòbil, quantes hores com a màxim et durarà la bateria si tens la mala sort de que et toqui estar en el \textbf{25\%} dels mòbils que s'apaguen més ràpid? \vspace{1.5cm}
+    \item Quantes hores aguanta exactament el 50\% dels mòbils? \vspace{1.5cm}
+    \item T'ha tocat un mòbil excel·lent i descobreixes que et trobes en el grup de l'últim 25\% (és a dir, només un 25\% dels mòbils duren més que el teu). Quantes hores mínimes has superat? \vspace{1.5cm}
+\end{enumerate}
+
+\newpage
+
+% --- EXERCICI 5 ---
+\noindent \textbf{EXERCICI 5: El pes dels nadons (Percentils)} \\
+El concepte de \textbf{percentil} s'utilitza moltíssim en medicina. Aquest gràfic mostra la freqüència acumulada relativa del pes en néixer de milers de nadons. En lloc de parlar només del 25\%, 50\% o 75\% (quartils), l'eix vertical ens permet llegir qualsevol percentatge de l'1 al 100: aquests són els \textbf{percentils}.
+
+\begin{center}
+\begin{tikzpicture}[x=3.5cm, y=0.6cm] % <-- Escala rectangular: ample i menys alt
+    % Graella
+    \draw[lightgray, thin, dashed] (2,0) grid[xstep=0.5, ystep=1] (5,10);
+    
+    % Eixos
+    \draw[thick, ->] (2,0) -- (5.2,0);
+    \draw[thick, ->] (2,0) -- (2,10.6);
+    
+    % Títols eixos
+    \node[rotate=90, align=center] at (1.4, 5) {\% de nadons amb aquest \\ pes o inferior (Percentil)};
+    \node at (3.5, -1.3) {Pes del nadó (kg)};
+    
+    % Marques eix X (fem servir yshift per no dependre de l'escala)
+    \foreach \x in {2, 2.5, 3, 3.5, 4, 4.5, 5} {
+        \draw ([yshift=3pt]\x, 0) -- ([yshift=-3pt]\x, 0) node[below=2pt] {\x};
+    }
+    
+    % Marques eix Y (fem servir xshift per no dependre de l'escala)
+    \foreach \y in {0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100} {
+        \draw ([xshift=3pt]2, \y/10) -- ([xshift=-3pt]2, \y/10) node[left=2pt] {\y \%};
+    }
+    
+    % Corba (Ogive) amb punts clau
+    \draw[thick, blue] plot coordinates {(2,0) (2.5, 1) (3, 5) (3.5, 8) (4, 9) (4.5, 10)};
+    \filldraw[blue] (2,0) circle (2pt);
+    \filldraw[blue] (2.5,1) circle (2pt);
+    \filldraw[blue] (3,5) circle (2pt);
+    \filldraw[blue] (3.5,8) circle (2pt);
+    \filldraw[blue] (4,9) circle (2pt);
+    \filldraw[blue] (4.5,10) circle (2pt);
+    
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}[label=\alph*)]
+    \item Un pediatre li diu a una família: "\textit{El vostre fill pesa 2,5 kg. Això vol dir que està al \textbf{Percentil 10}}". Mirant el gràfic i entenent l'eix vertical, què vol dir exactament aquesta frase respecte a tota la resta de nadons? \vspace{1cm}
+    \item Quin és el pes exacte que marca el \textbf{Percentil 50} (és a dir, el pes que deixa just la meitat dels nadons per sota i la meitat per sobre)? \vspace{1cm}
+    \item Una nena ha nascut pesant 4 kg. En quin percentil es troba? Si et diuen que el teu fill està en aquest percentil, vol dir que és més gran o més petit que la majoria? Raona-ho. \vspace{1cm}
+    \item \textbf{El repte:} Es considera que el pes és "habitual" si es troba dins del \textbf{80\% central} de la població. Per trobar aquest 80\% central, hem de descartar el 10\% de nadons que menys pesen i el 10\% de nadons que més pesen. Entre quins dos pesos es troba aquest grup central majoritari? \vspace{1cm}
+\end{enumerate}
+\end{document}
